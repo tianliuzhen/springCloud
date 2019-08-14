@@ -1,0 +1,13 @@
+2019-08-08 17:11:03.479 [ main ] --> [ INFO  ] [ com.aaa.securityweb.SecuritywebApplication : 50 ] - Starting SecuritywebApplication on wuxia with PID 16820 (E:\WorkSpace\securityweb\target\classes started by 信息 in E:\WorkSpace\securityweb)
+2019-08-08 17:11:03.479 [ main ] --> [ INFO  ] [ com.aaa.securityweb.SecuritywebApplication : 50 ] - Starting SecuritywebApplication on wuxia with PID 16820 (E:\WorkSpace\securityweb\target\classes started by 信息 in E:\WorkSpace\securityweb)
+2019-08-08 17:11:03.484 [ main ] --> [ INFO  ] [ com.aaa.securityweb.SecuritywebApplication : 650 ] - The following profiles are active: dev
+2019-08-08 17:11:03.484 [ main ] --> [ INFO  ] [ com.aaa.securityweb.SecuritywebApplication : 650 ] - The following profiles are active: dev
+2019-08-08 17:11:04.465 [ main ] --> [ WARN  ] [ org.mybatis.spring.mapper.ClassPathMapperScanner : 44 ] - No MyBatis mapper was found in '[com.aaa.securityweb]' package. Please check your configuration.
+2019-08-08 17:11:05.515 [ main ] --> [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Initializing ProtocolHandler ["http-nio-8881"]
+2019-08-08 17:11:05.531 [ main ] --> [ INFO  ] [ org.apache.catalina.core.StandardService : 173 ] - Starting service [Tomcat]
+2019-08-08 17:11:05.531 [ main ] --> [ INFO  ] [ org.apache.catalina.core.StandardEngine : 173 ] - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-08-08 17:11:06.013 [ main ] --> [ INFO  ] [ org.apache.jasper.servlet.TldScanner : 173 ] - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-08-08 17:11:06.022 [ main ] --> [ INFO  ] [ o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] : 173 ] - Initializing Spring embedded WebApplicationContext
+2019-08-08 17:11:07.441 [ main ] --> [ INFO  ] [ org.apache.coyote.http11.Http11NioProtocol : 173 ] - Starting ProtocolHandler ["http-nio-8881"]
+2019-08-08 17:11:07.506 [ main ] --> [ INFO  ] [ com.aaa.securityweb.SecuritywebApplication : 59 ] - Started SecuritywebApplication in 5.064 seconds (JVM running for 6.221)
+2019-08-08 17:11:07.506 [ main ] --> [ INFO  ] [ com.aaa.securityweb.SecuritywebApplication : 59 ] - Started SecuritywebApplication in 5.064 seconds (JVM running for 6.221)

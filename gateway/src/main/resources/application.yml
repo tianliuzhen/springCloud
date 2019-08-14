@@ -1,0 +1,38 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: gateway-service
+  cloud:
+    gateway:
+      routes:
+        - id: provider
+          #其他服务名
+          uri: lb://provider
+          #以aaa开头的url将会请求provider服务对应的接口
+          predicates:
+            - Path=/aaa/**
+          filters:
+          #转发之前去除一级前缀
+            - StripPrefix=1
+          #自定义请求路径
+        - id: juejin
+          uri: https://juejin.im/user/5aa50b96f265da23866f836e
+          predicates:
+            - Path=/juejin/**
+          filters:
+              - StripPrefix=1
+    discovery:
+      locator:
+        enabled: false
+        lowerCaseServiceId: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7080/eureka/
+#  spring.cloud.gateway.discovery.locator.enabled：
+#  是否与服务注册于发现组件进行结合，通过 serviceId 转发到具体的服务实例。默认为 false，设为 true 便开启通过服务中心的自动根据 serviceId 创建路由的功能。
+#  pring.cloud.gateway.discovery.locator.lowerCaseServiceId：
+#  是将请求路径上的服务名配置为小写（因为服务注册的时候，向注册中心注册时将服务名转成大写的了）
+

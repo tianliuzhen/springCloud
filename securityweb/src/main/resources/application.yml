@@ -1,0 +1,38 @@
+spring:
+ profiles:
+    active: dev
+#    include: log
+ application:
+    name: 'securityweb'
+    group: com.aaa
+ redis:
+   # Redis数据库索引（默认为0）
+   database: 0
+   host: 127.0.0.1
+   port: 6379
+   lettuce:
+     shutdown-timeout: 100 # 关闭超时时间
+     pool:
+       # 连接池最大连接数（使用负值表示没有限制）
+       max-active: 8
+       # 连接池最大阻塞等待时间（使用负值表示没有限制）
+       max-wait: -1
+       # 连接池中的最大空闲连接
+       max-idle: 8
+       # 连接池中的最小空闲连接
+       min-idle: 0
+     # 连接超时时间（毫秒）
+#设置目录
+logging:
+  level:
+    com:
+      aaa: info
+  #输出位置
+#  file: /E:/log/springbootdemo.log
+  # 在当前磁盘的根路径下创建spring文件夹和里面的log文件夹,使用 spring.log 作为默认文件
+  path: /spring/log/${spring.application.name}
+#  pattern:
+#    #  在控制台输出的日志的格式
+#    console: "%d{yyyy-MM-dd}--- [%thread] --- %-5level --- %logger{50} --- %msg%n"
+#    # 指定文件中日志输出的格式
+#    file: "%d{yyyy-MM-dd} === [%thread] === %-5level === %logger{50} ==== %msg%n"

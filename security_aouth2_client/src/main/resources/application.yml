@@ -1,0 +1,32 @@
+auth-server: http://localhost:8080 # 认证服务器地址
+
+server:
+  port: 8086
+security:
+  oauth2:
+    client:
+      client-id: demoApp # 授权服务器配置的client id
+      client-secret: demoAppSecret # 授权服务器配置的client secret 但是数据库存的是密文（加密后）与2.1 版本以下区别是 存的是 密文（加密后）
+      scope: all
+      access-token-uri: ${auth-server}/oauth/token # 获取access token接口
+      user-authorization-uri: ${auth-server}/oauth/authorize #  获取Authorization Code接口
+    resource:
+      token-info-uri: ${auth-server}/oauth/check_token # 验证token的接口
+#      user-info-uri: ${auth-server}/user # 一个可以获取认证授权的自定义接口，可以在授权服务器，也可以在其他服务器上
+#      prefer-token-info: true # 如果同时配置了token-info-uri 和 user-info-uri，这个现象设置使用哪个取验证授权
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      max-lifetime: 1500000
+      minimum-idle: 3
+      connection-timeout: 30000
+      idle-timeout: 30000
+      pool-name: SpringBootHikariCP
+      maximum-pool-size: 8
+

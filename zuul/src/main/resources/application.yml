@@ -1,0 +1,86 @@
+auth-server: http://localhost:8080 # 认证服务器地址
+###服务启动端口号
+server:
+  port: 7584
+###服务名称(服务注册到eureka名称)
+spring:
+  application:
+    name: zuul
+
+security:
+  oauth2:
+    client:
+      client-id: demoApp # 授权服务器配置的client id
+      client-secret: demoAppSecret # 授权服务器配置的client secret 但是数据库存的是密文（加密后）与2.1 版本以下区别是 存的是 密文（加密后）
+      scope: all
+      access-token-uri: ${auth-server}/oauth/token # 获取access token接口
+      user-authorization-uri: ${auth-server}/oauth/authorize #  获取Authorization Code接口
+    resource:
+      token-info-uri: ${auth-server}/oauth/check_token # 验证token的接口
+#      user-info-uri: ${auth-server}/user # 一个可以获取认证授权的自定义接口，可以在授权服务器，也可以在其他服务器上
+#      prefer-token-info: true # 如果同时配置了token-info-uri 和 user-info-uri，这个现象设置使用哪个取验证授权
+
+
+
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7080/eureka
+
+  # 检测与续约时间
+instance:
+  #   Eureka客户端向服务端发送心跳的时间间隔，单位为秒
+  lease-renewal-interval-in-seconds: 1
+  #   服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则踢出
+  lease-expiration-duration-in-seconds: 2
+
+
+#  Zuul指定path和serviceId
+zuul:
+# url 前缀
+  prefix: /v1
+  #忽略 某些微服务
+#  ignoredServices: '*'
+  routes:
+#    auth-server: oauth2
+    # 下面的aaaApi只是一个标识，保证唯一即可
+    aaaApi:
+      # 映射的路径
+      path: /aaa/**
+      # url为user服务的url  也可以使用 path+url配置（会破坏集成的Hystrix、Ribbon特性）因为指定具体ip及端口
+      url:
+      # 服务id
+      serviceId: provider
+      # 默认是 true 也就是所有/demo/xxxx的请求转发给http://demo.com.cn/xxxx ,去除掉demo前缀
+      # 当strip-prefix=true的时候 （http://localhost:5016/api/provide-user/1 -> http://localhost:4011/1）
+      # 当strip-prefix=false的时候（http://localhost:5016/api/provide-user/1 -> http://localhost:4011/api/1）
+      stripPrefix: true
+  #更细粒度的路由控制 忽略所有包含/provide-user/的路径
+#  ignored-patterns: /**/provide-user/**
+
+
+#  自定义请求路径
+#  zuul:
+#    routes:
+#     provider: /user/**
+
+#  Zuul忽略某些服务
+# zuul:
+#   ignoredServices: '*'
+#   routes:
+#     provider: /user/**
+#     ignoredServices:*忽略所有的服务，然后在routes中指定了user，所以最终就是Zuul代理user服务。
+
+#  同时指定path和URL，并且不破坏Hystrix、Ribbon特性
+#zuul:
+#  routes:
+#    user-route:
+#      path: /user/**
+#      service-id: provide-user
+#ribbon:
+#  eureka:
+#    enabled: false  # 为Ribbon禁用Eureka
+#provide-user: # 这边是serviceId
+#  ribbon:
+#    listOfServers: http://localhost:4011,http://localhost:4012

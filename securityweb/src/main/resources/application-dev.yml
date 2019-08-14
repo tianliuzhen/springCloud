@@ -1,0 +1,35 @@
+server:
+  port: 8881
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      max-lifetime: 1500000
+      minimum-idle: 3
+      connection-timeout: 30000
+      idle-timeout: 30000
+      pool-name: SpringBootHikariCP
+      maximum-pool-size: 8
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    http:
+      encoding:
+        force: true
+        charset: utf-8
+        enabled: true
+security:
+  oauth2:
+    client:
+      client-id: test_client_id
+      client-secret: test_client_secret
+      scope: read,write
+      auto-approve-scopes: '.*'
+# security 使能  如果不想一开始就使能Spring Security
+#security:basic:enabled: true
+

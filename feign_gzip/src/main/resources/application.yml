@@ -1,0 +1,26 @@
+
+###服务启动端口号
+server:
+  port: 9000
+###服务名称(服务注册到eureka名称)
+spring:
+  application:
+    name: customer
+
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7080/eureka
+
+  feign:
+    compression:
+      request:
+        enabled: true
+        mime-type: text/html,application/xml,application/json
+        min-request-size: 2048
+      response:
+        enabled: true
+  logging:
+    level:
+      com.aaa.feign_gzip.feign.GiteeFeignClient: debug

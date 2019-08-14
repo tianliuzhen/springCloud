@@ -1,0 +1,59 @@
+###服务启动端口号
+server:
+  port: 7081
+###服务名称(服务注册到eureka名称)
+spring:
+  application:
+    name: customer
+
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7080/eureka
+
+feign:
+  hystrix:
+    enabled: true
+# 设置超时时间为20s：
+#  hystrix:
+#    command:
+#      default:
+#        execution:
+#          isolation:
+#            thread:
+#              timeoutInMilliseconds: 20000
+#          设置从不超时：
+#        hystrix:
+#          command:
+#            default:
+#              execution:
+#                timeout:
+#                  enabled: false
+
+ # 检测与续约时间
+instance:
+  #   Eureka客户端向服务端发送心跳的时间间隔，单位为秒
+  lease-renewal-interval-in-seconds: 1
+  #   服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则踢出
+  lease-expiration-duration-in-seconds: 2
+
+
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: hystrix.stream
+
+  compression:
+    request:
+      enabled: true
+      mime-type: text/html,application/xml,application/json
+      min-request-size: 2048
+    response:
+      enabled: true
+
+    # 开启日志 格式为logging.level.+Feign客户端路径
+  logging:
+   level:
+    com.aaa.customer.webApi.RemoteApi: debug

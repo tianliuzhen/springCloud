@@ -1,0 +1,1 @@
+2019-08-08 17:32:49.717 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner.warn:44 - No MyBatis mapper was found in '[com.aaa.securityweb]' package. Please check your configuration.

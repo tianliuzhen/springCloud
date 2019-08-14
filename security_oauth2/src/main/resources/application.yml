@@ -1,0 +1,81 @@
+server:
+  port: 8080
+spring:application:name: oauth2
+
+###服务注册到eureka地址
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7082/eureka
+
+
+security:
+  oauth2:
+    client:
+      client-id: clientId
+      client-secret: clientSecret
+      scope: read,write
+      auto-approve-scopes: '.*'
+      registered-redirect-uri: http://www.baidu.com
+    resource:
+      filter-order=3:
+# security 使能  如果不想一开始就使能Spring Security
+#security:basic:enabled: true
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制）
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 8
+      # 连接池中的最小空闲连接
+      min-idle: 0
+    # 连接超时时间（毫秒）
+logging:
+  level:
+    org.springframework.security: info
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      max-lifetime: 1500000
+      minimum-idle: 3
+      connection-timeout: 30000
+      idle-timeout: 30000
+      pool-name: SpringBootHikariCP
+      maximum-pool-size: 8
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    http:
+      encoding:
+        force: true
+        charset: utf-8
+        enabled: true
+mybatis:
+#  type-aliases-package: com.curise.eshop.common.entity
+  configuration:
+    map-underscore-to-camel-case: true  #开启驼峰命名,l_name -> lName
+#    jdbc-type-for-null: NULL
+#    lazy-loading-enabled: true
+#    aggressive-lazy-loading: true
+#    cache-enabled: true #开启二级缓存
+#    call-setters-on-nulls: true #map空列不显示问题
+#  mapper-locations:
+#    - classpath:mybatis/*.xml
+
