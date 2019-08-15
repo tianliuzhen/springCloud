@@ -75,7 +75,7 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
                 secret(bCryptPasswordEncoder.encode("demoAppSecret"))
                 .redirectUris("http://baidu.com")
                 // 密码授权模式和刷新令牌
-                .authorizedGrantTypes("authorization_code", "client_credentials", "password", "refresh_token")
+                .authorizedGrantTypes("authorization_code", "client_credentials", "password","implicit", "refresh_token")
                 // scopes的值就是all（全部权限），read，write等权限。就是第三方访问资源的一个权限，访问范围
                 .scopes("all")
                 // 这个资源服务的ID，这个属性是可选的，但是推荐设置并在授权服务中进行验证。

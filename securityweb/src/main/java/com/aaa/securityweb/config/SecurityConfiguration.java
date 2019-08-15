@@ -60,7 +60,8 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter  implem
         // TODO Auto-generated method stub
         //super.configure(http);
         http    //表单登录，permitAll()表示这个不需要验证 登录页面，登录失败页面
-               // loginPage("/login")表示登录时跳转的页面，因为登录页面我们不需要登录认证，所以我们需要添加 permitAll() 方法。
+                // loginPage("/login")表示登录时跳转的页面，因为登录页面我们不需要登录认证，所以我们需要添加 permitAll() 方法。
+                // loginProcessingUrl  登录请求拦截的url,也就是form表单提交时指定的action   默认是 /login  这里可以自定义
                 .formLogin().loginPage("/login").loginProcessingUrl("/login/form").failureUrl("/login-error").permitAll()
                 // .successForwardUrl("/success")  //登录成功跳转的页面
                 .successHandler(myAuthenticationSuccessHandler)

@@ -28,12 +28,12 @@ public class SecurityOauth2Application {
          * 		http://localhost:8080/oauth/authorize?response_type=code&client_id=demoApp&redirect_uri=http://baidu.com
          *
          **    【通过code】 换token
-         * 		http://localhost:8080/oauth/token?grant_type=authorization_code&code=ebpSjP&client_id=&client_secret=demoAppSecret&redirect_uri=http://baidu.com
+         * 		http://localhost:8080/oauth/token?grant_type=authorization_code&code=A2f3bO&client_id=demoApp&client_secret=demoAppSecret&redirect_uri=http://baidu.com
          * 		这里的code字段是授权码模式中返回的code  例如： https://www.baidu.com/?code=tsuHSh
          *
-         ** 4、【简易模式-code】 获取code
+         ** 4、【简易模式-code】 获取token
          *      这种模式比 授权码模式少了 code环节，回调url直接携带token
-         *      http://localhost:8080/oauth/authorize?response_type=token&client_id=demoApp&redirect_uri=http://baidu.com
+         *      http://localhost:8080/oauth/authorize?response_type=token&client_id=demoApp&redirect_uri=http://localhost:1080/
          *      申请授权token，参数和申请授权码类似，client_id，redirect_uri回调地址，response_type有变动，
          *      改为直接获取token，scope权限，state用于认证标记，传过去什么回调时传回来什么
          *

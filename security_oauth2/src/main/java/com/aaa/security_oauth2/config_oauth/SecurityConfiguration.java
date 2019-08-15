@@ -64,7 +64,7 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
 
         http.requestMatchers().antMatchers("/oauth/**", "/login/**", "/logout/**").and().authorizeRequests()
-                .antMatchers("/oauth/**").authenticated().and().formLogin().//loginPage("/login").
+                .antMatchers("/oauth/**").authenticated().and().formLogin().loginPage("/login").//successForwardUrl("/whoim").
                 permitAll();
         http.csrf().disable();
      //一般用于认证的服务器不需要  设置  token访问
