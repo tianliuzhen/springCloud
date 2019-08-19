@@ -26,11 +26,13 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
 import org.springframework.security.oauth2.provider.ClientDetailsService;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
 import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
+import org.springframework.security.oauth2.provider.endpoint.AuthorizationEndpoint;
 import org.springframework.security.oauth2.provider.token.AccessTokenConverter;
 import org.springframework.security.oauth2.provider.token.TokenEnhancer;
 import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 
+import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Arrays;
@@ -57,6 +59,13 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
     @Resource
     private DataSource dataSource;
 
+   /* @Autowired
+    private AuthorizationEndpoint authorizationEndpoint;
+    @PostConstruct
+    public void init() {
+        authorizationEndpoint.setUserApprovalPage("forward:/oauth/approvale/confirm");
+        authorizationEndpoint.setErrorPage("forward:/oauth/approvale/error");
+    }*/
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer.
@@ -94,7 +103,6 @@ public class OAuth2ServerConfig extends AuthorizationServerConfigurerAdapter {
                 .setClientDetailsService(clientDetails);
          endpoints.tokenEnhancer(tokenEnhancer());
                 //
-
 
     }
     @Bean

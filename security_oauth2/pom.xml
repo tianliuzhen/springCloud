@@ -126,7 +126,11 @@
             <version>2.1.2.RELEASE</version>
             <scope>compile</scope>
         </dependency>
-
+       <!-- 页面要用到的框架-->
+        <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>

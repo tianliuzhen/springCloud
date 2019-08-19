@@ -33,7 +33,7 @@ public class SecurityOauth2Application {
          *
          ** 4、【简易模式-code】 获取token
          *      这种模式比 授权码模式少了 code环节，回调url直接携带token
-         *      http://localhost:8080/oauth/authorize?response_type=token&client_id=demoApp&redirect_uri=http://localhost:1080/
+         *      http://localhost:8080/oauth/authorize?response_type=token&client_id=demoApp&redirect_uri=http://localhost:1080/&state=123
          *      申请授权token，参数和申请授权码类似，client_id，redirect_uri回调地址，response_type有变动，
          *      改为直接获取token，scope权限，state用于认证标记，传过去什么回调时传回来什么
          *

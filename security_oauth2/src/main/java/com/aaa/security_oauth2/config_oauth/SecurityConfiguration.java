@@ -62,17 +62,14 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
     private RedisConnectionFactory connectionFactory;
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-
-        http.requestMatchers().antMatchers("/oauth/**", "/login/**", "/logout/**").and().authorizeRequests()
-                .antMatchers("/oauth/**").authenticated().and().formLogin().loginPage("/login").//successForwardUrl("/whoim").
-                permitAll();
-        http.csrf().disable();
+        http    .requestMatchers()
+                .and().authorizeRequests().antMatchers("/oauth/**", "/login/**", "/logout/**").permitAll()//可以直接访问
+//                .anyRequest().authenticated()//任何请求都必须经过授权
+                .and().formLogin().loginPage("/login").successForwardUrl("/success")
+                .and().logout().logoutUrl("/oauth/logout").clearAuthentication(true).invalidateHttpSession(true)
+                .and().csrf().disable();
+                ;
      //一般用于认证的服务器不需要  设置  token访问
-        // 开启oauth2.0 接口验证
-      /*  http.authorizeRequests().antMatchers(HttpMethod.OPTIONS).
-                permitAll().
-                anyRequest().authenticated().
-                and().httpBasic();*/
 
     }
    @Override

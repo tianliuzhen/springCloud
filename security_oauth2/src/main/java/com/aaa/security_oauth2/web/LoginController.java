@@ -1,12 +1,12 @@
 package com.aaa.security_oauth2.web;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.security.Principal;
 import java.util.Map;
@@ -20,19 +20,41 @@ import java.util.Map;
  */
 @Controller
 public class LoginController {
+
+    @Value("${site.oauth.website}")
+    private String website="http://localhost:1080";
+
+    /**
+     * 登录跳转
+     * @param
+     * @return
+     */
     @RequestMapping("/login")
     public String userLogin(){
         System.out.println("login");
         return "login";
     }
+    /**
+     * 登录失败
+     * @param
+     * @return
+     */
     @RequestMapping("/login-error")
     @ResponseBody
     public String loginError(){
         return "登录失败";
     }
+
+    /**
+     * 登录成功
+     * @param
+     * @return
+     */
     @RequestMapping("/success")
     public String loginForm(){
-        return "success";
+        // 可根据 yml进行配置
+        String url="http://localhost:1080/";
+        return "redirect:"+website;
     }
 
     @RequestMapping("/whoim")
@@ -40,16 +62,23 @@ public class LoginController {
     public Object whoIm(){
         return SecurityContextHolder.getContext().getAuthentication().getPrincipal();
     }
+
+
     @RequestMapping("/hello/{id}")
     @ResponseBody
     public String helloOath2(@PathVariable long id) {
         System.out.println("请求的ID编码为：" + id);
         return "helloOath2";
     }
-    @RequestMapping(value = "/userInfo",method = RequestMethod.GET,consumes = MediaType.ALL_VALUE,
-            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    @SuppressWarnings("unchecked")
+    @GetMapping(value = "/authorize/userInfo")
+    @CrossOrigin
+    @ResponseBody
     public String userinfo(Principal principal) {
         return  principal.getName();
+    }
+
+    @RequestMapping("/directUrl")
+    public String  directUrl(){
+         return "redirect:/https://www.hao123.com/";
     }
 }

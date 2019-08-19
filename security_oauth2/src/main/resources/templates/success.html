@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面</title>
+</head>
+<body onload="myfun()">
+</form>
+</body>
+</html>
+
+<script type="text/javascript">
+    var url="http://localhost:8080/oauth/authorize?response_type=token&client_id=demoApp&redirect_uri=http://localhost:1080/"
+    function myfun() {
+        window.location.href = url
+    　} 　　/*用window.onload调用myfun()*/
+    window.onload = myfun;//不要括号
+</script>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+
+<style>
+    .login-container {
+        margin: 50px;
+        width: 100%;
+
+    }
+
+    .form-container {
+        margin: 0px auto;
+        width: 50%;
+        box-shadow: 1px 1px 10px #888888;
+        height: 300px;
+        padding: 5px;
+        border: 1px #E9686B solid;
+    }
+    .inner-container{
+        margin: 0px auto;
+        width: 50%;
+        height: 300px;
+        padding: 5px;
+    }
+    .inputType {
+        margin-bottom: 10px;
+        width: 100%;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px #E9686B solid;
+        padding-left: 2px;
+        vertical-align:middle;
+    }
+
+
+    .btn {
+        width: 101.7%;
+        height: 35px;
+        line-height: 35px;
+        padding-left: 2px;
+        cursor: pointer;
+        margin-top: 10px;
+        border-radius: 3px;
+        background-color: #E9686B;
+        color: white;
+        border: none;
+        font-size: 15px;
+    }
+
+    .title{
+        margin-top: 15px;
+        font-size: 18px;
+        color: #E9686B;
+        text-align: center;
+    }
+    input[type=checkbox]{
+        -webkit-appearance: none;
+        border: 1px #E9686B solid;
+        cursor: pointer;
+        position: relative;
+        width: 15px;
+        height: 15px;
+        vertical-align:middle;
+    }
+    .remember-me{
+        vertical-align:middle;
+        color: #E9686B;
+    }
+    .remember{
+      /*  border: 1px #E9686B solid;*/
+    }
+</style>
+<body>
+<div class="login-container">
+    <div class="form-container">
+        <div class="inner-container">
+        <p class="title">用户登录</p>
+        <form name="loginForm" method="post" action="/login">
+            <input type="text" class="inputType" name="username" placeholder="用户名"/>
+            <br>
+            <input type="password" class="inputType" name="password" placeholder="密码"/>
+            <br>
+            <div class="remember">
+            <input type="checkbox"  name="remember-me"/>  <span  class="remember-me" >自动登录</span>
+            </div>
+            <button type="submit"  class="btn">登 &nbsp;&nbsp; 录</button>
+        </form>
+        </div>
+       <!-- <p style="color: red" th:if="${param.error}">用户名或密码错误</p>-->
+    </div>
+</div>
+</body>
+</html>
