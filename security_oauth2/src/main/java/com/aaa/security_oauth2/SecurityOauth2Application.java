@@ -1,5 +1,6 @@
 package com.aaa.security_oauth2;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -7,12 +8,16 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 /**
  * 通过 @EnableAuthorizationServer 来启用AuthorizationServer的默认实现，
  * 以提供/oauth/token、/oauth/check_token、/oauth/authorize等endpoint
+ *
+ * Mapper接口要加上@Mapper注解或者在启动类加上@MapperScan("xxx.xxx.xxx")包扫描的注解
+ *
  * @param
  * @return
  */
 @SpringBootApplication
 @EnableAuthorizationServer
 @EnableEurekaClient
+@MapperScan("com.aaa.security_oauth2.mapper")
 public class SecurityOauth2Application {
 
     public static void main(String[] args) {
