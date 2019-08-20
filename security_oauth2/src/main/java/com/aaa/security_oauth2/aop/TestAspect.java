@@ -1,14 +1,12 @@
 package com.aaa.security_oauth2.aop;
 
 import com.aaa.security_oauth2.entity.TestDTO;
-import com.aaa.security_oauth2.web.testWebController;
+import com.aaa.security_oauth2.web.TestWebController;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
-
-import java.lang.reflect.Field;
 
 /**
  * description: aop切面实现拦截参数赋值
@@ -20,7 +18,7 @@ import java.lang.reflect.Field;
 @Aspect
 @Component
 public class TestAspect {
-    @Pointcut("execution(public * com.aaa.security_oauth2.web.testWebController.add*(..))")
+    @Pointcut("execution(public * com.aaa.security_oauth2.web.TestWebController.add*(..))")
     public void addAdvice(){}
     @Around("addAdvice()")
     public Object Interceptor(ProceedingJoinPoint pjp) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException {
@@ -35,7 +33,7 @@ public class TestAspect {
                 //静态模式赋值
                 TestDTO user =new TestDTO();
                 user.setName("01");
-                testWebController.testDTO=user ;
+                TestWebController.testDTO=user ;
             }
         }
         try {

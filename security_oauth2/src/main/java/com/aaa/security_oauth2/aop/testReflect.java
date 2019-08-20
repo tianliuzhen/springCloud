@@ -16,7 +16,7 @@ import java.lang.reflect.Method;
 public class testReflect {
     public static void main(String[] args) {
         try {
-            Object demo1 = Class.forName("com.aaa.security_oauth2.web.testWebController").newInstance();
+            Object demo1 = Class.forName("com.aaa.security_oauth2.web.TestWebController").newInstance();
             // 返回一个 Field 对象，该对象反映此 Class 对象所表示的类或接口的指定已声明字段。
             Field field = demo1.getClass().getDeclaredField("testDTO");
             //跳过权限访问检查--暴力反射
@@ -36,7 +36,7 @@ public class testReflect {
 
        try {
            //获取Person类的Class对象
-           Class clazz=Class.forName("com.aaa.security_oauth2.web.testWebController");
+           Class clazz=Class.forName("com.aaa.security_oauth2.web.TestWebController");
 
            //获取Person类的所有方法信息
            Method[] method=clazz.getDeclaredMethods();

@@ -1,11 +1,15 @@
 package com.aaa.security_oauth2.web;
 
-import com.aaa.security_oauth2.aop.annotation.MyComponent;
 import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
 import com.aaa.security_oauth2.entity.TestDTO;
+import com.aaa.security_oauth2.mapper.UserMapper;
 import lombok.ToString;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * description: 该文件说明
@@ -16,14 +20,20 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @ToString
 @RestController
-public class testWebController {
+public class TestWebController {
+
+
     public  static TestDTO testDTO;
     public  static String str;
+
+    @Autowired
+    private UserMapper userMapper;
 
     @RequestMapping("/test")
     @MyMethodsComponent
     public String addData1() {
         System.out.println(testDTO);
+        List<Map> us= userMapper.getUsers();
         return "success_test";
     }
 
