@@ -1,5 +1,6 @@
 package com.aaa.security_oauth2.mapper;
 
+import com.aaa.security_oauth2.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
@@ -25,4 +26,7 @@ public interface UserMapper {
      */
     @Select({ " select * from sys_user " })
     List<Map> getUsers();
+
+    @Select({ " select * from sys_user " })
+    List<User> getUsers2();
 }

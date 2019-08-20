@@ -2,6 +2,7 @@ package com.aaa.security_oauth2.web;
 
 import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
 import com.aaa.security_oauth2.entity.TestDTO;
+import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.mapper.UserMapper;
 import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +34,8 @@ public class TestWebController {
     @MyMethodsComponent
     public String addData1() {
         System.out.println(testDTO);
-        //
-        List<Map> us= userMapper.getUsers();
+      /*  List<Map> us= userMapper.getUsers();*/
+        List<User> us2=userMapper.getUsers2();
         return "success_test";
     }
 
