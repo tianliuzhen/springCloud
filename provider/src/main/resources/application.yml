@@ -1,16 +1,28 @@
 ###服务启动端口号
 server:
-  port: 7082
+  port: 1182
 ###服务名称(服务注册到eureka名称)
 spring:
   application:
     name: provider
-
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      max-lifetime: 1500000
+      minimum-idle: 3
+      connection-timeout: 30000
+      idle-timeout: 30000
+      pool-name: SpringBootHikariCP
+      maximum-pool-size: 8
 ###服务注册到eureka地址
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7080/eureka
+      defaultZone: http://localhost:7082/eureka
 
   # 检测与续约时间
 instance:
@@ -18,3 +30,7 @@ instance:
   lease-renewal-interval-in-seconds: 1
   #   服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则踢出
   lease-expiration-duration-in-seconds: 2
+
+
+mybatis:
+  mapper-locations: classpath*:com/aaa/provider/dao/mapper/*.xml

@@ -16,7 +16,7 @@ import java.util.Map;
  * @date 2019/8/20
  */
 @Repository
-//@Mapper
+@Mapper
 public interface UserMapper {
 
     /**
@@ -29,4 +29,6 @@ public interface UserMapper {
 
     @Select({ " select * from sys_user " })
     List<User> getUsers2();
+
+    List<Map> getUsers3();
 }

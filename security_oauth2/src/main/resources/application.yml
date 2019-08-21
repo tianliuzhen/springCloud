@@ -72,13 +72,13 @@ mybatis:
 #  type-aliases-package: com.curise.eshop.common.entity
   configuration:
     map-underscore-to-camel-case: true  #开启驼峰命名,l_name -> lName
+  mapper-locations: classpath*:com/aaa/security_oauth2/mapper/mapper/*.xml
+
 #    jdbc-type-for-null: NULL
 #    lazy-loading-enabled: true
 #    aggressive-lazy-loading: true
 #    cache-enabled: true #开启二级缓存
 #    call-setters-on-nulls: true #map空列不显示问题
-#  mapper-locations:
-#    - classpath:mybatis/*.xml
 
 site:
   oauth:

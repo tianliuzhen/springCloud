@@ -34,8 +34,9 @@ public class TestWebController {
     @MyMethodsComponent
     public String addData1() {
         System.out.println(testDTO);
-      /*  List<Map> us= userMapper.getUsers();*/
-        List<User> us2=userMapper.getUsers2();
+//        List<Map> us= userMapper.getUsers();
+//        List<User> us2=userMapper.getUsers2();
+        List<Map> us= userMapper.getUsers3();
         return "success_test";
     }
 
