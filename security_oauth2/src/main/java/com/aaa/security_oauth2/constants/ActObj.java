@@ -1,6 +1,9 @@
 package com.aaa.security_oauth2.constants;
 
+import com.aaa.security_oauth2.config.config_enum.CodeEnum;
+import com.aaa.security_oauth2.config.config_enum.handlerJson.EnumDeserializerByCode;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.apache.commons.lang.enums.Enum;
@@ -15,7 +18,8 @@ import org.apache.commons.lang.enums.Enum;
 @Getter
 @AllArgsConstructor
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
-public enum ActObj  {
+@JsonDeserialize(using= EnumDeserializerByCode.class)
+public enum ActObj implements CodeEnum {
 
     ALL(0,"全部用户"),
 
@@ -27,9 +31,4 @@ public enum ActObj  {
     private int code;
     private String name;
 
-    public static void main(String[] args) {
-        for (ActObj a :ActObj.values()){
-            System.out.println(a);
-        }
-    }
 }

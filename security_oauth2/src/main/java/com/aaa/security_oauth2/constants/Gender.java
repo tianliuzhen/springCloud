@@ -3,11 +3,13 @@ package com.aaa.security_oauth2.constants;
 import com.aaa.security_oauth2.config.config_enum.CodeEnum;
 import com.aaa.security_oauth2.config.config_enum.handlerJson.EnumDeserializerByCode;
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.github.pagehelper.util.StringUtil;
 import com.google.common.collect.Maps;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.aspectj.apache.bcel.classfile.Code;
 
 import java.util.Arrays;
 import java.util.Map;
@@ -18,7 +20,7 @@ import java.util.Map;
 @Getter
 @AllArgsConstructor
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
-//@JsonDeserialize(using= EnumDeserializerByCode.class)
+@JsonDeserialize(using= EnumDeserializerByCode.class)
 public enum Gender implements CodeEnum {
     /**
      * 未设置性别
@@ -36,7 +38,12 @@ public enum Gender implements CodeEnum {
     private int code;
     private String name;
 
+    /**
+     * api文档说明
+     */
+    public static final String CODES = "[0：女，1：男]";
 
+/*
     private static Map<String,Gender> NAME_MAP = Maps.newConcurrentMap();
 
     static {
@@ -59,11 +66,11 @@ public enum Gender implements CodeEnum {
         return gender == null ? NULL : gender;
     }
 
-    /**
+    *//**
      * 通过 code 获取 Gender
      * @param code
      * @return
-     */
+     *//*
     public static Gender getStatusByCode(Integer code) {
         switch (code) {
             case 0:
@@ -73,5 +80,5 @@ public enum Gender implements CodeEnum {
             default:
                 return MALE;
         }
-    }
+    }*/
 }

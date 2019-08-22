@@ -1,7 +1,7 @@
 package com.aaa.security_oauth2.entity;
 
+import com.aaa.security_oauth2.constants.ActObj;
 import com.aaa.security_oauth2.constants.Gender;
-import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
  * @date 2019/8/20
  */
 @Data
-public class User {
+public class User2 {
 
     private String name;
 
@@ -29,7 +29,7 @@ public class User {
 
     private String tel;
 
-    private Gender gender;
+    private ActObj actObj;
 
     /**
      * 只有在    @ResponseBody 下才会正常显示转换后的格式

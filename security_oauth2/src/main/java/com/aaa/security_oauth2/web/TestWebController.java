@@ -1,12 +1,20 @@
 package com.aaa.security_oauth2.web;
 
 import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
+import com.aaa.security_oauth2.constants.ActObj;
 import com.aaa.security_oauth2.entity.TestDTO;
 import com.aaa.security_oauth2.entity.User;
+import com.aaa.security_oauth2.entity.User2;
 import com.aaa.security_oauth2.mapper.UserMapper;
+import com.aaa.security_oauth2.util.RedisUtil;
+import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,9 +35,11 @@ public class TestWebController {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    RedisUtil redisUtil;
     @RequestMapping("/directUrl2")
     @ResponseBody
-    public User  directUrl2(@RequestBody User user){
+    public User2  directUrl2(@RequestBody User2 user){
         /**
          * 这种方法才不是正常的 传 枚举的值
          *  {
@@ -53,6 +63,18 @@ public class TestWebController {
 //        List<User> us2=userMapper.getUsers2();
         List<User> us= userMapper.getUsers2();
         return us;
+    }
+
+    @RequestMapping("/test2")
+    @ResponseBody
+    @Cacheable(value="my-redis-cache1",cacheManager = "cacheManager",keyGenerator="authkeyGenerator")
+    public  PageInfo<User>  test2(@RequestParam("page") int page){
+        page=page==0?1:page;
+        PageHelper.startPage(page, 10);
+        List<User> listUser = userMapper.getUsers2();
+        PageInfo<User> pageInfoUser = new PageInfo<User>(listUser);
+        return pageInfoUser;
+
     }
 
     @RequestMapping("/add1")

@@ -1,3 +1,4 @@
+/*
 package com.aaa.security_oauth2.mapper.handler;
 
 import com.aaa.security_oauth2.constants.Gender;
@@ -10,11 +11,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+*/
 /**
  * mybatis 枚举转换输出 直接实现 原始基类
  * @param
  * @return
- */
+ *//*
+
 @MappedTypes({Gender.class})
 public class UserGenderTypeHandler implements TypeHandler<Gender> {
 
@@ -41,3 +44,4 @@ public class UserGenderTypeHandler implements TypeHandler<Gender> {
         return Gender.getStatusByCode(code);
     }
 }
+*/

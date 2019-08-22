@@ -81,7 +81,7 @@ public class EnumCacheUtils {
                 String errorMsg = StrFormatter.format("无法匹配枚举【{}】的值【{}】，值只能为【{}】", new Object[]{enumClass.getSimpleName(), code, Arrays.stream(enumClass.getEnumConstants()).map((e) -> {
                     return getCodeOrName(e).toString();
                 }).collect(Collectors.joining(","))});
-                throw new EnumDeserializeException(errorMsg);
+                throw new RuntimeException(errorMsg);
             }
         }
     }

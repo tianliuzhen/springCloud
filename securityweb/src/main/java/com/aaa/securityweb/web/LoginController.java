@@ -53,7 +53,7 @@ public class LoginController {
     }
     @RequestMapping("/test")
     @ResponseBody
-   @Cacheable(value="my-redis-cache1",cacheManager = "cacheManager",keyGenerator="authkeyGenerator")
+    @Cacheable(value="my-redis-cache1",cacheManager = "cacheManager",keyGenerator="authkeyGenerator")
     public Map test(){
         Map map=new HashMap();
         map.put(2,"d");
