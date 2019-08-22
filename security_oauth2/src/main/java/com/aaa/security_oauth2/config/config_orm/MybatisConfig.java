@@ -1,8 +1,11 @@
-package com.aaa.security_oauth2.config;
+package com.aaa.security_oauth2.config.config_orm;
 
+import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.boot.autoconfigure.ConfigurationCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.Properties;
 
 /**
  * description: 描述
@@ -27,4 +30,20 @@ public class MybatisConfig {
         };
     }
 
+    /**
+     * mybatis 分页插件
+     * @return
+     */
+    @Bean
+    public PageHelper  pageHelper(){
+        PageHelper pageHelper=new PageHelper();
+        Properties properties=new Properties();
+        properties.setProperty("offsetPageNum","true");
+        properties.setProperty("rowBoundsWithCount", "true");
+        properties.setProperty("reasonable", "true");
+        pageHelper.setProperties(properties);
+        return pageHelper;
+    }
 }
+
+

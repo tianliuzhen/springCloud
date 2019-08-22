@@ -1,4 +1,4 @@
-package com.aaa.security_oauth2.config;
+package com.aaa.security_oauth2.config.config_orm;
 
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.wrapper.ObjectWrapper;

@@ -1,9 +1,8 @@
-package com.aaa.security_oauth2.config;
+package com.aaa.security_oauth2.config.config_orm;
 
 import com.google.common.base.CaseFormat;
 import org.apache.ibatis.reflection.MetaObject;
 import org.apache.ibatis.reflection.wrapper.MapWrapper;
-import org.apache.ibatis.reflection.wrapper.ObjectWrapper;
 
 import java.util.Map;
 

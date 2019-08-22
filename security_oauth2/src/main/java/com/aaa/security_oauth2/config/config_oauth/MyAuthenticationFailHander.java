@@ -1,4 +1,4 @@
-package com.aaa.security_oauth2.config_oauth;
+package com.aaa.security_oauth2.config.config_oauth;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;

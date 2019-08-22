@@ -1,4 +1,4 @@
-package com.aaa.security_oauth2.config_oauth;
+package com.aaa.security_oauth2.config.config_oauth;
 
 import org.springframework.security.oauth2.common.DefaultOAuth2AccessToken;
 import org.springframework.security.oauth2.common.OAuth2AccessToken;

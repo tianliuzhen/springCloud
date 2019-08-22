@@ -43,7 +43,7 @@ security:
 logging:
   level:
     org.springframework.security: info
-
+#    com.aaa.security_oauth2.mapper : debug
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
@@ -69,10 +69,12 @@ spring:
         charset: utf-8
         enabled: true
 mybatis:
-#  type-aliases-package: com.curise.eshop.common.entity
   configuration:
     map-underscore-to-camel-case: true  #开启驼峰命名,l_name -> lName
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 开启日志
   mapper-locations: classpath*:com/aaa/security_oauth2/mapper/mapper/*.xml
+  typeAliasesPackage: com.aaa.security_oauth2.entity
+  typeHandlersPackage: com.aaa.security_oauth2.mapper.handler
 
 #    jdbc-type-for-null: NULL
 #    lazy-loading-enabled: true
@@ -80,6 +82,9 @@ mybatis:
 #    cache-enabled: true #开启二级缓存
 #    call-setters-on-nulls: true #map空列不显示问题
 
+
+
+# 回调url 变量
 site:
   oauth:
     website: 'http://localhost:1080'

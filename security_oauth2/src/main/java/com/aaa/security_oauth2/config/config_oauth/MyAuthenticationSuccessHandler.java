@@ -1,4 +1,4 @@
-package com.aaa.security_oauth2.config_oauth;
+package com.aaa.security_oauth2.config.config_oauth;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.security.core.Authentication;

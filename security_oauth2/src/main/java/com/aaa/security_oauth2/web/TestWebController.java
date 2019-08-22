@@ -4,10 +4,8 @@ import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
 import com.aaa.security_oauth2.entity.TestDTO;
 import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.mapper.UserMapper;
-import lombok.ToString;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -19,7 +17,6 @@ import java.util.Map;
  * @version 1.0
  * @date 2019/7/9
  */
-@ToString
 @RestController
 public class TestWebController {
 
@@ -30,14 +27,32 @@ public class TestWebController {
     @Autowired
     private UserMapper userMapper;
 
+    @RequestMapping("/directUrl2")
+    @ResponseBody
+    public User  directUrl2(@RequestBody User user){
+        /**
+         * 这种方法才不是正常的 传 枚举的值
+         *  {
+         * "name":"1",
+         * "gender":2
+         * }
+        * */
+        /**
+         * 这种方法才是正常的 传 枚举的类型
+         * {
+         * "name":"1",
+         * "gender": "MALE"
+         * }
+        * */
+        return user;
+    }
+
     @RequestMapping("/test")
-    @MyMethodsComponent
-    public String addData1() {
-        System.out.println(testDTO);
+    public  List<User> test(@RequestBody Map map ) {
 //        List<Map> us= userMapper.getUsers();
 //        List<User> us2=userMapper.getUsers2();
-        List<Map> us= userMapper.getUsers3();
-        return "success_test";
+        List<User> us= userMapper.getUsers2();
+        return us;
     }
 
     @RequestMapping("/add1")
@@ -61,4 +76,6 @@ public class TestWebController {
         System.out.println("热部署test");
         return "success";
     }
+
+
 }

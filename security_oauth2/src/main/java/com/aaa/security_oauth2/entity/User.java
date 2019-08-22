@@ -1,5 +1,11 @@
 package com.aaa.security_oauth2.entity;
 
+import com.aaa.security_oauth2.constants.Gender;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.Data;
 
 import java.time.LocalDateTime;
@@ -13,9 +19,25 @@ import java.time.LocalDateTime;
  */
 @Data
 public class User {
+
     private String name;
+
     private String username;
+
     private String password;
+
     private String tel;
+
+    private Gender gender;
+
+    /**
+     * 只有在    @ResponseBody 下才会正常显示转换后的格式
+     * @param
+     * @return
+     */
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
+
 }
