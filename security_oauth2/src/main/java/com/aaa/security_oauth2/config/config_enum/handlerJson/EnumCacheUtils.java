@@ -1,18 +1,13 @@
 package com.aaa.security_oauth2.config.config_enum.handlerJson;
 
 /**
- * description: 描述
+ * description: 这个缓存类会在一开始加载完我们项目中所有的 枚举类并放进 map 中 储存
+ *              主要用于反序列，使用时会对每一个 枚举字符串进行匹配 并返回相应的对象
  *
  * @author 田留振(liuzhen.tian @ haoxiaec.com)
  * @version 1.0
  * @date 2019/8/22
  */
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
-
 import cn.hutool.core.text.StrFormatter;
 import com.google.common.collect.Maps;
 import java.lang.reflect.InvocationTargetException;

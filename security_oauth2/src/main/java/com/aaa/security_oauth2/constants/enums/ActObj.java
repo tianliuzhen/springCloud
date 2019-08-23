@@ -1,4 +1,4 @@
-package com.aaa.security_oauth2.constants;
+package com.aaa.security_oauth2.constants.enums;
 
 import com.aaa.security_oauth2.config.config_enum.CodeEnum;
 import com.aaa.security_oauth2.config.config_enum.handlerJson.EnumDeserializerByCode;

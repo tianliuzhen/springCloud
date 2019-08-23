@@ -58,7 +58,7 @@ spring:
       idle-timeout: 30000
       pool-name: SpringBootHikariCP
       maximum-pool-size: 8
- # jsp 配置
+# jsp 配置
 #  mvc:
 #    view:
 #      prefix: /WEB-INF/views/
@@ -68,6 +68,14 @@ spring:
         force: true
         charset: utf-8
         enabled: true
+#  开启 jpa 配置
+  jpa:
+    # Specify the DBMS
+    database: mysql
+    show-sql: true
+    # Hibernate ddl auto (create, create-drop, update)
+    hibernate:
+      ddl-auto: none
 mybatis:
   configuration:
     map-underscore-to-camel-case: true  #开启驼峰命名,l_name -> lName

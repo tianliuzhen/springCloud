@@ -1,7 +1,6 @@
 package com.aaa.security_oauth2.entity;
 
-import com.aaa.security_oauth2.constants.ActObj;
-import com.aaa.security_oauth2.constants.Gender;
+import com.aaa.security_oauth2.constants.enums.ActObj;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

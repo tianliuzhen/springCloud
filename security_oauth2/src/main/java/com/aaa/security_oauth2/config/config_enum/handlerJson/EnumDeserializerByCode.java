@@ -7,12 +7,6 @@ package com.aaa.security_oauth2.config.config_enum.handlerJson;
  * @version 1.0
  * @date 2019/8/22
  */
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
-
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.TreeNode;
 import com.fasterxml.jackson.databind.DeserializationContext;

@@ -1,8 +1,7 @@
 package com.aaa.security_oauth2.mapper.handler;
 
 import com.aaa.security_oauth2.config.config_enum.MyTypeHandler;
-import com.aaa.security_oauth2.constants.ActObj;
-import com.aaa.security_oauth2.constants.Gender;
+import com.aaa.security_oauth2.constants.enums.ActObj;
 import org.apache.ibatis.type.MappedTypes;
 
 /**

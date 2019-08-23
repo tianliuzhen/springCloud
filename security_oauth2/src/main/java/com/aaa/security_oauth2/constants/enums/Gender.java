@@ -1,18 +1,11 @@
-package com.aaa.security_oauth2.constants;
+package com.aaa.security_oauth2.constants.enums;
 
 import com.aaa.security_oauth2.config.config_enum.CodeEnum;
 import com.aaa.security_oauth2.config.config_enum.handlerJson.EnumDeserializerByCode;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.github.pagehelper.util.StringUtil;
-import com.google.common.collect.Maps;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import org.aspectj.apache.bcel.classfile.Code;
-
-import java.util.Arrays;
-import java.util.Map;
 
 /**
  * 性别

@@ -106,7 +106,10 @@ public class EnumUtils {
         try {
             URL url = classLoader.getResource(pathName);
             URLConnection urlConnection = url.openConnection();
-            if(urlConnection instanceof FileURLConnection) return;//读取的是本地的
+            //读取的是本地的
+            if(urlConnection instanceof FileURLConnection) {
+                return;
+            }
             JarURLConnection jarURLConnection  = (JarURLConnection)urlConnection;
             jarFile = jarURLConnection.getJarFile();
         } catch (Exception e) {

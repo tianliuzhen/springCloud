@@ -1,20 +1,17 @@
 package com.aaa.security_oauth2.web;
 
 import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
-import com.aaa.security_oauth2.constants.ActObj;
 import com.aaa.security_oauth2.entity.TestDTO;
 import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.entity.User2;
 import com.aaa.security_oauth2.mapper.UserMapper;
 import com.aaa.security_oauth2.util.RedisUtil;
-import com.alibaba.fastjson.JSON;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -40,6 +37,7 @@ public class TestWebController {
     @RequestMapping("/directUrl2")
     @ResponseBody
     public User2  directUrl2(@RequestBody User2 user){
+        // 在未加 反序列化之前
         /**
          * 这种方法才不是正常的 传 枚举的值
          *  {
@@ -54,6 +52,14 @@ public class TestWebController {
          * "gender": "MALE"
          * }
         * */
+        // 在加 反序列化之后
+        /**
+         * 这种方法是正常的
+         *  {
+         * "name":"1",
+         * "gender":2
+         * }
+         * */
         return user;
     }
 
@@ -98,6 +104,5 @@ public class TestWebController {
         System.out.println("热部署test");
         return "success";
     }
-
 
 }
