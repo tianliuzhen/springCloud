@@ -5,11 +5,13 @@ import com.aaa.security_oauth2.entity.TestDTO;
 import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.entity.User2;
 import com.aaa.security_oauth2.mapper.UserMapper;
+import com.aaa.security_oauth2.service.baseJpa.CustomPrincipal;
 import com.aaa.security_oauth2.util.RedisUtil;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -85,7 +87,7 @@ public class TestWebController {
 
     @RequestMapping("/add1")
     @MyMethodsComponent
-    public String addData1(String deviceId) {
+    public String addData1(String deviceId, @AuthenticationPrincipal CustomPrincipal customPrincipal) {
         System.out.println(testDTO);
         return "success";
     }

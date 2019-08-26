@@ -54,11 +54,11 @@ public class SecurityOauth2ApplicationTests {
     public void jpaSaveAndFlush() {
         User user=new User();
         //如果是更新 设置主键 id 即可
-        user.setId(1);
-        user.setName("admin1").
+//        user.setId(1);
+        user.setName("admin123").
                 setUserName("admin1").setPassword("123456").
-                setGender(Gender.FEMALE).setTel("110").
-                setCreateTime(TimeUtil.dateToLocalDateTime(new Date()));
+                setGender(Gender.FEMALE).setTel("110");
+//                setCreateTime(TimeUtil.getLocalDateTime(new Date()));
         userService.saveAndFlush(user);
     }
     /**
@@ -79,6 +79,7 @@ public class SecurityOauth2ApplicationTests {
      */
     @Test
     public void jpaGet() {
-        userService.getUserByname("admin1");
+//        userService.getUserByname("admin1");
+        userDao.getUserByIdAndGender(23);
     }
 }

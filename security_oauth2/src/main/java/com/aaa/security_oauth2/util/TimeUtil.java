@@ -117,6 +117,11 @@ public class TimeUtil {
         }
         return d;
     }
+    public static LocalDateTime getLocalDateTime(Date date) {
+        LocalDateTime localDateTime = LocalDateTime.now();
+        return localDateTime;
+    }
+
 
     public static LocalDateTime dateToLocalDateTime(Date date) {
         Instant instant = date.toInstant();

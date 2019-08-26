@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 /**
  * 通过 @EnableAuthorizationServer 来启用AuthorizationServer的默认实现，
@@ -18,6 +19,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableAuthorizationServer
 @EnableEurekaClient
+@EnableJpaAuditing
 public class SecurityOauth2Application {
 
     public static void main(String[] args) {

@@ -1,6 +1,7 @@
 package com.aaa.security_oauth2.entity;
 
 import com.aaa.security_oauth2.constants.enums.Gender;
+import com.aaa.security_oauth2.service.baseJpa.BaseEntity;
 import com.alibaba.fastjson.annotation.JSONField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -16,6 +17,7 @@ import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 /**
  * description: 描述
@@ -32,32 +34,32 @@ import java.time.LocalDateTime;
 @JsonIgnoreProperties(value = {"hibernateLazyInitializer", "handler", "fieldHandler"}, ignoreUnknown = true)  //多对一 传输JSON问题
 @SQLDelete(sql = "update sys_user set is_del = 1 where id = ?") //设置逻辑删除 保证数据完整性
 @Where(clause = "is_del = 0")   // 解决逻辑删除问题查询问题
-public class User {
+public class User extends BaseEntity {
 
     @Id
     @Column(name = "Id", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "user_name")
     private String userName;
 
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "tel")
     private String tel;
 
+    @Column(name = "gender")
     private Gender gender;
 
-    /**
-     *  因为是 jackson 所以 只有在  @ResponseBody 下才会正常显示转换后的格式
-     * @param
-     * @return
-     */
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime createTime;
 
-    private Integer is_del;
+/*
+    @Column(name = "is_del")
+    private Integer isDel;*/
+
+
 }
