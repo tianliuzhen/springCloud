@@ -3,18 +3,26 @@ package com.aaa.security_oauth2.config.config_oauth;
 
 import com.aaa.security_oauth2.service.MyAuthenticationProvider;
 import com.aaa.security_oauth2.service.MyUserDetailsService;
+import com.aaa.security_oauth2.service.baseJpa.CustomPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.annotation.Order;
+import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.AuthenticationTrustResolver;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
@@ -27,16 +35,18 @@ import org.springframework.security.web.authentication.rememberme.PersistentToke
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.util.Optional;
 
 /**
- * description: 该文件说明
+ * description: springSecurity 认证配置
  *
  * @author 田留振(tianliuzhen @ haoxiaec.com)
  * @version 1.0
  * @date 2019/6/28
  */
 @Configuration
-@EnableGlobalMethodSecurity(prePostEnabled = true)
+@Order(SecurityProperties.BASIC_AUTH_ORDER)
+@EnableGlobalMethodSecurity(prePostEnabled = true,securedEnabled = true)
 @EnableWebSecurity
 public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
 
@@ -150,4 +160,31 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
         defaultTokenServices.setTokenStore(tokenStore());
         return defaultTokenServices;
     }
+
+    /**
+     * 判断是否是程序对数据库的操作，程序操作使用@SYSTEM作为create_by
+     *
+     * @param authenticationTrustResolver 可信任的授权分析器
+     * @return
+     */
+    @Bean
+    public AuditorAware<String> auditorAwareBean(@Autowired AuthenticationTrustResolver authenticationTrustResolver) {
+        return () -> {
+            final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            if (authentication == null || authenticationTrustResolver.isAnonymous(authentication)) {
+                return Optional.of("@SYSTEM");
+            }
+
+            final Object principal = authentication.getPrincipal();
+            if (principal instanceof String) {
+                return Optional.of((String) principal);
+            } else if (principal instanceof UserDetails) {
+                return Optional.ofNullable(((UserDetails) principal).getUsername());
+            } else {
+                return Optional.ofNullable(String.valueOf(principal));
+            }
+        };
+    }
+
+
 }

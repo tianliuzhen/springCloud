@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.io.Serializable;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * description: 该文件说明
@@ -19,6 +20,8 @@ public class UserInfo implements Serializable, UserDetails {
      *
      */
     private static final long serialVersionUID = 1L;
+
+    private Integer id;
     private String username;
     private String password;
     private String role;
@@ -26,9 +29,11 @@ public class UserInfo implements Serializable, UserDetails {
     private boolean accountNonLocked;
     private boolean credentialsNonExpired;
     private boolean enabled;
-    public UserInfo(String username, String password, String role, boolean accountNonExpired, boolean accountNonLocked,
+    private List<? extends GrantedAuthority> authorities;
+    public UserInfo(Integer id,String username, String password, String role, boolean accountNonExpired, boolean accountNonLocked,
                     boolean credentialsNonExpired, boolean enabled) {
         // TODO Auto-generated constructor stub
+        this.id = id;
         this.username = username;
         this.password = password;
         this.role = role;
@@ -43,6 +48,11 @@ public class UserInfo implements Serializable, UserDetails {
         // TODO Auto-generated method stub
         return AuthorityUtils.commaSeparatedStringToAuthorityList(role);
     }
+    public Integer getId() {
+        // TODO Auto-generated method stub
+        return id;
+    }
+
     @Override
     public String getPassword() {
         // TODO Auto-generated method stub
@@ -73,4 +83,5 @@ public class UserInfo implements Serializable, UserDetails {
         // TODO Auto-generated method stub
         return enabled;
     }
+
 }

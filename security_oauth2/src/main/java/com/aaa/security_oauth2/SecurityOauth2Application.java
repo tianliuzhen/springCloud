@@ -19,7 +19,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @SpringBootApplication
 @EnableAuthorizationServer
 @EnableEurekaClient
-@EnableJpaAuditing
+@EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
 public class SecurityOauth2Application {
 
     public static void main(String[] args) {

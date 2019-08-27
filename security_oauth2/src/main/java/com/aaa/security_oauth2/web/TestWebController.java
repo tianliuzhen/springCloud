@@ -1,17 +1,26 @@
 package com.aaa.security_oauth2.web;
 
 import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
+import com.aaa.security_oauth2.domain.baseEntity.Principal;
+import com.aaa.security_oauth2.domain.baseEntity.UserInfoDetail;
 import com.aaa.security_oauth2.entity.TestDTO;
 import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.entity.User2;
+import com.aaa.security_oauth2.entity.UserInfo;
 import com.aaa.security_oauth2.mapper.UserMapper;
 import com.aaa.security_oauth2.service.baseJpa.CustomPrincipal;
 import com.aaa.security_oauth2.util.RedisUtil;
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -85,11 +94,15 @@ public class TestWebController {
 
     }
 
-    @RequestMapping("/add1")
-    @MyMethodsComponent
-    public String addData1(String deviceId, @AuthenticationPrincipal CustomPrincipal customPrincipal) {
-        System.out.println(testDTO);
-        return "success";
+    @RequestMapping("/getuser")
+    @ResponseBody
+    public CustomPrincipal getuser(@AuthenticationPrincipal CustomPrincipal CustomPrincipal) {
+        return CustomPrincipal;
+    }
+    @RequestMapping("/getuser2")
+    @ResponseBody
+    public Object getuser2(){
+        return SecurityContextHolder.getContext().getAuthentication();
     }
 
     @RequestMapping("/add2")
@@ -106,5 +119,15 @@ public class TestWebController {
         System.out.println("热部署test");
         return "success";
     }
+    @RequestMapping("/whoim")
+    @ResponseBody
+    public Object whoIm(){
 
+
+        Object userDetails =  SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        UserInfoDetail user = (UserInfoDetail)userDetails;
+        return user;
+
+
+    }
 }

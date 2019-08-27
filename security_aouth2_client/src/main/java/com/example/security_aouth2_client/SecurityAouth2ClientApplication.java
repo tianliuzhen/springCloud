@@ -1,14 +1,15 @@
 package com.example.security_aouth2_client;
 
+import com.example.security_aouth2_client.config.CustomPrincipal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 /**
  * @EnableResourceServer  就是开启资源服务器
  * 省去了配置文件
@@ -33,7 +34,12 @@ public class SecurityAouth2ClientApplication {
         return authentication;
     }
     @GetMapping("/test")
-    public String test(){
+    public String test(Authentication authentication){
         return "test_string";
+    }
+    @RequestMapping("/getuser")
+    @ResponseBody
+    public CustomPrincipal getuser(@AuthenticationPrincipal CustomPrincipal CustomPrincipal) {
+        return CustomPrincipal;
     }
 }

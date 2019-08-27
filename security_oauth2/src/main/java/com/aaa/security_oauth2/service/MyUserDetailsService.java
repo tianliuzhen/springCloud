@@ -1,7 +1,9 @@
 package com.aaa.security_oauth2.service;
 
-import com.aaa.security_oauth2.entity.UserInfo;
+import com.aaa.security_oauth2.domain.baseEntity.UserInfo;
+import com.aaa.security_oauth2.domain.baseEntity.UserInfoDetail;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -9,7 +11,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Base64;
+import java.util.List;
 
 /**
  * description: 该文件说明
@@ -23,17 +27,24 @@ public class MyUserDetailsService implements UserDetailsService {
     @Autowired
     private PasswordEncoder passwordEncoder;
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserInfoDetail loadUserByUsername(String username) throws UsernameNotFoundException {
         //这里可以通过数据库来查找到实际的用户信息，这里我们先模拟下,后续我们用数据库来实现
         if(username.equals("admin"))
         {
             // boot2.0 强制要求 密码加密 passwordEncoder
             //假设返回的用户信息如下;  模拟数据库数据
-            UserInfo userInfo=new UserInfo("admin",  passwordEncoder.encode("123456"), "ROLE_ADMIN" +
-                    "", true,true,true, true);
+            UserInfo user=new UserInfo();
+            user.setId(1);
+            user.setUsername("admin");
+            user.setPassword(passwordEncoder.encode("123456"));
+            // 模拟权限
+            List<SimpleGrantedAuthority> authorities = new ArrayList<>();
+            authorities.add(0,new SimpleGrantedAuthority("admin_role"));
+
+            UserInfoDetail userInfo=new UserInfoDetail(user,authorities);
+            userInfo.setAuthorities(authorities);
             return userInfo;
         }
-
         return null;
     }
 

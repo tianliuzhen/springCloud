@@ -21,7 +21,7 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
- * description: 描述
+ * description: 实体类基础 一般也可以在建一个抽象类
  *
  * @author 田留振(liuzhen.tian @ haoxiaec.com)
  * @version 1.0
@@ -48,16 +48,16 @@ public abstract class BaseEntity implements Serializable {
      * @param
      * @return
      */
-    /*@JsonSerialize(using = LocalDateTimeSerializer.class)
+    @CreatedDate
+    @ApiModelProperty("创建时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonDeserialize(using = LocalDateTimeDeserializer.class)
     @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     @Column(name = "create_time")
-    private LocalDateTime createTime;*/
-    @CreatedDate
-    @ApiModelProperty("创建时间")
     private LocalDateTime createTime;
 
     @CreatedBy
     @ApiModelProperty("创建人")
+    @Column(name = "create_by")
     private String create_by;
 }

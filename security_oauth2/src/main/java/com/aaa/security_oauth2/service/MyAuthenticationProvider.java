@@ -1,5 +1,6 @@
 package com.aaa.security_oauth2.service;
 
+import com.aaa.security_oauth2.domain.baseEntity.UserInfoDetail;
 import com.aaa.security_oauth2.entity.UserInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -35,7 +36,7 @@ public class MyAuthenticationProvider implements AuthenticationProvider {
         String userName = authentication.getName();// 这个获取表单输入中返回的用户名;
         String password = (String) authentication.getCredentials();// 这个是表单中输入的密码；
         // 这里构建来判断用户是否存在和密码是否正确
-        UserInfo userInfo = (UserInfo) myUserDetailsService.loadUserByUsername(userName); // 这里调用我们的自己写的获取用户的方法；
+        UserInfoDetail userInfo = (UserInfoDetail) myUserDetailsService.loadUserByUsername(userName); // 这里调用我们的自己写的获取用户的方法；
         if (userInfo == null) {
             throw new BadCredentialsException("用户名不存在");
         }

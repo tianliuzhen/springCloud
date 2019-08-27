@@ -1,14 +1,19 @@
 package com.aaa.security_oauth2.web;
 
+import com.aaa.security_oauth2.domain.baseEntity.UserInfo;
+import com.aaa.security_oauth2.util.StrUtils;
+import com.alibaba.fastjson.JSON;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.view.RedirectView;
 
 import java.security.Principal;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
@@ -57,11 +62,7 @@ public class LoginController {
         return "redirect:"+website;
     }
 
-    @RequestMapping("/whoim")
-    @ResponseBody
-    public Object whoIm(){
-        return SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-    }
+
 
 
     @RequestMapping("/hello/{id}")
@@ -77,8 +78,39 @@ public class LoginController {
         return  principal.getName();
     }
 
+
     @RequestMapping("/directUrl")
     public String  directUrl(){
          return "redirect:/https://www.hao123.com/";
+    }
+    
+    /**
+     *
+     * @param 
+     * @return 
+     */
+    /**
+     * 用户授权信息
+     * @param principal
+     * @return
+     */
+    @ApiOperation(value = "用户授权信息")
+    @RequestMapping(value = "/users/info",method = RequestMethod.GET,consumes = MediaType.ALL_VALUE,
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    public Map<String, Object> user(Principal principal, Authentication authentication) {
+        OAuth2AuthenticationDetails auth2AuthenticationDetails = (OAuth2AuthenticationDetails)authentication.getDetails();
+        String tokenValue = auth2AuthenticationDetails.getTokenValue();
+        String typeStr = tokenValue.split("_")[0];
+        // demo_e5729d8c-cbf6-481b-a5dd-57bc70e317fd
+        Map<String, Object> map = new LinkedHashMap<>();
+        UserInfo user=new UserInfo();
+        user.setId(1);
+        user.setUsername("admin");
+        user.setPassword("123456");
+        map.put("principal", user);
+        System.out.println(principal.toString());
+        return map;
     }
 }

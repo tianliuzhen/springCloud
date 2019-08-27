@@ -8,7 +8,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 /**
- * description: 该文件说明
+ * description: oauth2  配置
  *
  * @author 田留振(tianliuzhen @ haoxiaec.com)
  * @version 1.0
