@@ -1,4 +1,4 @@
-package com.example.security_aouth2_client.config;
+package com.example.security_aouth2_client.config.customBase;
 
 /**
  * description: 描述

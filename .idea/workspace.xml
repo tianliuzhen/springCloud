@@ -9,39 +9,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="springSecurity实现@AuthenticationPrincipal CustomPrincipal CustomPrincipal&#10;主要是">
-      <change afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipalExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomUserInfoTokenServices.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/OAuth2ResourceServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/TrustResolverConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/GetUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/CorsConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/SimpleCORSFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/TrustResolverConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/Principal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserInfoDetail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/baseJpa/CustomPrincipal.java" afterDir="false" />
+    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/web/testController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/dto/UserLoginDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_aouth2_client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/Apple.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/fruit/FruitColor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/fruit/FruitName.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/fruit/FruitProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/fruit/KakaConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/OAuth2ServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/OAuth2ServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/entity/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/entity/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyAuthenticationProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipalExtractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomPrincipalExtractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomUserInfoTokenServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomUserInfoTokenServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/OAuth2ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/OAuth2ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/mapper/UserMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/baseJpa/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/baseJpa/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/Oauth2ApprovalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/Oauth2ApprovalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -95,116 +78,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java">
+        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyAuthenticationProvider.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="552">
-              <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2994#2995#0" expanded="true" />
-                <element signature="e#3032#3033#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="-10">
+              <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomUserInfoTokenServices.java">
+        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/mapper/UserMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="414">
+              <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/OAuth2ResourceServerConfig.java">
+        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/entity/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1223#1224#0" expanded="true" />
-                <element signature="e#1286#1287#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="259">
-              <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
-              <folding>
-                <element signature="e#904#905#0" expanded="true" />
-                <element signature="e#986#987#0" expanded="true" />
-                <element signature="e#1390#1391#0" expanded="true" />
-                <element signature="e#1426#1427#0" expanded="true" />
-                <element signature="e#1571#1572#0" expanded="true" />
-                <element signature="e#1609#1610#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/SecurityConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#850#851#0" expanded="true" />
-                <element signature="e#875#876#0" expanded="true" />
-                <element signature="e#912#913#0" expanded="true" />
-                <element signature="e#940#941#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipalExtractor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/baseJpa/CustomPrincipal.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
-              <folding>
-                <element signature="e#2070#2100#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="273">
+              <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -212,8 +107,68 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="265">
               <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/Oauth2ApprovalController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomPrincipalExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-209">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomUserInfoTokenServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1081">
+              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -233,8 +188,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>findLocalEnums</find>
-      <find>EnumUtil</find>
       <find>EnumDeserializerByCode</find>
       <find>EnumCacheUtils</find>
       <find>findJarEnums</find>
@@ -263,6 +216,8 @@
       <find>UsernamePasswordAuthenticationToken</find>
       <find>MyAuthenticationProvider</find>
       <find>myAuthenticationProvider</find>
+      <find>@Column(name = &quot;user_name&quot;)</find>
+      <find>//假设返回的用户信息如下;  模拟数据库数据</find>
     </findStrings>
     <replaceStrings>
       <replace>BaseEnum</replace>
@@ -276,14 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/config/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/SecuritywebApplication.java" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/baseJpa/CustomPrincipal.java" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_orm/SpringSecurityAuditorAware.java" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java" />
-        <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/TrustResolverConfig.java" />
         <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/TrustResolverConfig.java" />
         <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/baseJpa/BaseEntity.java" />
         <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/OAuth2ServerConfig.java" />
@@ -318,15 +265,23 @@
         <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserJson.java" />
         <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/Principal.java" />
         <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserDetails.java" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/OAuth2ResourceServerConfig.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipal.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomUserInfoTokenServices.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomUserInfoTokenServices.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java" />
+        <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/web/testController.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/Oauth2ApprovalController.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/dto/userLoginDTO.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/dto/UserLoginDTO.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/entity/User.java" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/mapper/UserMapper.java" />
       </list>
     </option>
   </component>
@@ -369,8 +324,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
-    <option name="y" value="-8" />
+    <option name="x" value="1910" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
@@ -381,6 +335,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -518,6 +473,31 @@
               <item name="security_aouth2_client" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="security_aouth2_client" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="customBase" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_aouth2_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
+              <item name="security_aouth2_client" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_aouth2_client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -624,19 +604,6 @@
               <item name="aaa" type="462c0819:PsiDirectoryNode" />
               <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="config_oauth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aaa" type="462c0819:PsiDirectoryNode" />
-              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
               <item name="config_redis" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -686,6 +653,31 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aaa" type="462c0819:PsiDirectoryNode" />
               <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+              <item name="mapper" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -711,12 +703,142 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aaa" type="462c0819:PsiDirectoryNode" />
               <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="serviceJpa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="springCloud" type="462c0819:PsiDirectoryNode" />
               <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
@@ -899,7 +1021,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -913,7 +1034,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566895543648" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1566956491158" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/securityweb/src/main/java/com" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/securityweb/src/main/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -965,7 +1086,7 @@
     </option>
     <option name="contentProportion" value="0.15692641" />
   </component>
-  <component name="RunManager" selected="Spring Boot.SecurityAouth2ClientApplication">
+  <component name="RunManager" selected="Spring Boot.SecurityOauth2Application">
     <configuration name="TestWebController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aaa.security_oauth2.web.TestWebController" />
       <module name="security_oauth2" />
@@ -975,22 +1096,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SecurityOauth2ApplicationTests.jpa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="security_oauth2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.aaa.security_oauth2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.aaa.security_oauth2" />
-      <option name="MAIN_CLASS_NAME" value="com.aaa.security_oauth2.SecurityOauth2ApplicationTests" />
-      <option name="METHOD_NAME" value="jpa" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1148,12 +1253,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.TestWebController" />
+      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaDel" />
+      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaGet" />
+      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
+      <item itemvalue="Spring Boot.CustomerApplication" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
+      <item itemvalue="Spring Boot.FeignGzipApplication" />
+      <item itemvalue="Spring Boot.GatewayApplication" />
+      <item itemvalue="Spring Boot.HystrixApplication" />
+      <item itemvalue="Spring Boot.Provider2Application" />
+      <item itemvalue="Spring Boot.ProviderApplication" />
+      <item itemvalue="Spring Boot.RabbitmqApplication" />
+      <item itemvalue="Spring Boot.SecurityAouth2ClientApplication" />
+      <item itemvalue="Spring Boot.SecurityAouth2ServerApplication" />
+      <item itemvalue="Spring Boot.SecurityOauth2Application" />
+      <item itemvalue="Spring Boot.SecuritywebApplication" />
+      <item itemvalue="Spring Boot.Test2Application" />
+      <item itemvalue="Spring Boot.TestApplication" />
+      <item itemvalue="Spring Boot.ZuulApplication" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
         <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaGet" />
+        <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
         <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaDel" />
-        <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpa" />
         <item itemvalue="Application.TestWebController" />
       </list>
     </recent_temporary>
@@ -1203,7 +1328,8 @@
       <workItem from="1566352013933" duration="66055000" />
       <workItem from="1566781552461" duration="25440000" />
       <workItem from="1566868660280" duration="11661000" />
-      <workItem from="1566884176814" duration="11287000" />
+      <workItem from="1566884176814" duration="14652000" />
+      <workItem from="1566954420911" duration="2102000" />
     </task>
     <task id="LOCAL-00001" summary="oauth2添加简易模式和自定义回调地址">
       <created>1565831617446</created>
@@ -1296,13 +1422,17 @@
       <option name="project" value="LOCAL" />
       <updated>1566786494149</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="springSecurity实现@AuthenticationPrincipal CustomPrincipal CustomPrincipal&#10;主要是 新增 如下&#10; user-info-uri: ${auth-server}/users/info # 一个可以获取认证授权的自定义接口，可以在授权服务器，也可以在其他服务器上">
+      <created>1566895612176</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1566895612176</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.08.23 at 18h 07m 22s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SecurityOauth2ApplicationTests_jpaGet - 2019.08.23 at 18h 11m 27s.xml">
       <configuration name="SecurityOauth2ApplicationTests.jpaGet" configurationId="JUnit" />
     </history-entry>
@@ -1330,15 +1460,18 @@
     <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.08.26 at 10h 05m 21s.xml">
       <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SecurityOauth2ApplicationTests_jpaGet - 2019.08.28 at 09h 33m 23s.xml">
+      <configuration name="SecurityOauth2ApplicationTests.jpaGet" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="573047000" />
+    <option name="totallyTimeSpent" value="578514000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.24840085" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.2510661" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1362,7 +1495,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.27982646" />
       <window_info anchor="bottom" id="Problems" order="15" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.4273319" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.27006507" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.14818764" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1482,7 +1615,8 @@
     <MESSAGE value="枚举类反序列化" />
     <MESSAGE value="基本整合jpa 实现 curd" />
     <MESSAGE value="整合jpa 实现 自动生成时间" />
-    <option name="LAST_COMMIT_MESSAGE" value="整合jpa 实现 自动生成时间" />
+    <MESSAGE value="springSecurity实现@AuthenticationPrincipal CustomPrincipal CustomPrincipal&#10;主要是 新增 如下&#10; user-info-uri: ${auth-server}/users/info # 一个可以获取认证授权的自定义接口，可以在授权服务器，也可以在其他服务器上" />
+    <option name="LAST_COMMIT_MESSAGE" value="springSecurity实现@AuthenticationPrincipal CustomPrincipal CustomPrincipal&#10;主要是 新增 如下&#10; user-info-uri: ${auth-server}/users/info # 一个可以获取认证授权的自定义接口，可以在授权服务器，也可以在其他服务器上" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1500,10 +1634,10 @@
           <option name="timeStamp" value="41" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java</url>
-          <line>42</line>
+          <url>file://$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java</url>
+          <line>86</line>
           <properties />
-          <option name="timeStamp" value="51" />
+          <option name="timeStamp" value="42" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1514,6 +1648,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>passwordEncoder.encode(&quot;123456&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>CustomPrincipal</expression-string>
         <language-id>JAVA</language-id>
@@ -1554,175 +1693,9 @@
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>SecurityContextHolder.getContext().getAuthentication().getPrincipal()</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.5.RELEASE/spring-security-oauth2-2.3.5.RELEASE.jar!/org/springframework/security/oauth2/provider/token/TokenEnhancer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.5.RELEASE/spring-security-oauth2-2.3.5.RELEASE.jar!/org/springframework/security/oauth2/provider/token/ResourceServerTokenServices.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/AuthoritiesExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/DefaultUserInfoRestTemplateFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/FixedAuthoritiesExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/FixedPrincipalExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/JwtAccessTokenConverterConfigurer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/SpringSocialTokenServices.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-206">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/UserInfoRestTemplateCustomizer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/UserInfoRestTemplateFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/UserInfoTokenServices.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-759">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/ResourceServerTokenServicesConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="61" column="13" selection-start-line="61" selection-start-column="13" selection-end-line="61" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/PrincipalExtractor.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/OAuth2ResourceServerConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1450">
-          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/JwtAccessTokenConverterRestTemplateCustomizer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/OAuth2AutoConfiguration.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/OAuth2ClientProperties.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/CorsConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.8.RELEASE/spring-core-5.1.8.RELEASE.jar!/org/springframework/cglib/proxy/MethodProxy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="103" selection-start-line="103" selection-end-line="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/core/Authentication.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/UsernamePasswordAuthenticationToken.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserInfoDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyAuthenticationProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="24" column="59" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/AuthenticationProvider.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1780,34 +1753,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/DashboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/Oauth2ApprovalController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
-          <caret line="37" column="38" lean-forward="true" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/TrustResolverConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/boot/spring-security-oauth2-autoconfigure/2.0.0.RELEASE/spring-security-oauth2-autoconfigure-2.0.0.RELEASE.jar!/org/springframework/boot/autoconfigure/security/oauth2/resource/ResourceServerProperties.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
@@ -1817,20 +1762,6 @@
             <element signature="e#2594#2595#0" expanded="true" />
             <element signature="e#3661#3662#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1869,10 +1800,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1567" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="15" column="79" lean-forward="true" selection-start-line="15" selection-start-column="79" selection-end-line="15" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#986#987#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/web/testController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="31" column="30" lean-forward="true" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-431" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/DashboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="130" lean-forward="true" selection-start-line="130" selection-end-line="130" />
+        <state relative-caret-position="458">
+          <caret line="127" column="54" selection-start-line="127" selection-start-column="54" selection-end-line="127" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2994#2995#0" expanded="true" />
@@ -1881,48 +1863,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/MyComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="107" column="11" selection-start-line="107" selection-start-column="11" selection-end-line="107" selection-end-column="11" />
-          <folding>
-            <element signature="e#2070#2100#0" expanded="true" />
-          </folding>
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserInfo.java">
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/MyMethodsComponent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/AnnotationAop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/ReflectUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/TestAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/CustomTokenEnhancer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipal.java">
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_redis/CacheConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
+        <state relative-caret-position="-2953">
+          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/constants/enums/Gender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserInfoDetail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="667">
+          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#850#851#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-            <element signature="e#912#913#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
+            <element signature="e#919#920#0" expanded="true" />
+            <element signature="e#969#970#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomPrincipalExtractor.java">
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/constants/enums/ActObj.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state relative-caret-position="345">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/Principal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/annotation/GetUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka/src/main/java/com/aaa/eureka/EurekaApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/SecurityConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="57" column="55" lean-forward="true" selection-start-line="57" selection-start-column="55" selection-end-line="57" selection-end-column="55" />
+        <state relative-caret-position="228">
+          <caret line="38" column="14" lean-forward="true" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1931,38 +1970,124 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/OAuth2ResourceServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="27" column="28" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-            <element signature="e#1286#1287#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/CustomUserInfoTokenServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="95" column="16" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="16" />
+        <state relative-caret-position="596">
+          <caret line="28" column="28" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java">
+    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/TrustResolverConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="40" column="17" lean-forward="true" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        <state relative-caret-position="184">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomPrincipal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding>
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#986#987#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1426#1427#0" expanded="true" />
-            <element signature="e#1571#1572#0" expanded="true" />
-            <element signature="e#1609#1610#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="112" column="22" selection-start-line="112" selection-start-column="22" selection-end-line="112" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/mapper/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/dto/UserLoginDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="87" column="5" lean-forward="true" selection-start-line="87" selection-start-column="5" selection-end-line="87" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/domain/baseEntity/UserInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomPrincipalExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomUserInfoTokenServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1081">
+          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/entity/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="46" column="24" selection-start-line="46" selection-start-column="24" selection-end-line="46" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyAuthenticationProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="37" column="28" lean-forward="true" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/Oauth2ApprovalController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="39" column="49" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
         </state>
       </provider>
     </entry>

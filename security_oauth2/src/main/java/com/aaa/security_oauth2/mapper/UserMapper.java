@@ -1,5 +1,6 @@
 package com.aaa.security_oauth2.mapper;
 
+import com.aaa.security_oauth2.domain.baseEntity.UserInfo;
 import com.aaa.security_oauth2.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
@@ -31,4 +32,11 @@ public interface UserMapper {
     List<User> getUsers2();
 
     List<Map> getUsers3();
+  /**
+   *  根据用户名查找  用户信息
+   * @param userName
+   * @return
+   */
+    @Select({ " select * from sys_user where username =  #{userName} " })
+    UserInfo getUsersByUserName(String userName);
 }

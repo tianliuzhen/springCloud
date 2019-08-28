@@ -105,6 +105,10 @@ public class LoginController {
         String typeStr = tokenValue.split("_")[0];
         // demo_e5729d8c-cbf6-481b-a5dd-57bc70e317fd
         Map<String, Object> map = new LinkedHashMap<>();
+        String key=   principal.getName();
+        // TODO: 2019/8/27  模拟数据
+        // 此时应根据 key 从数据库 查询用户信息
+        // 此时模拟即可
         UserInfo user=new UserInfo();
         user.setId(1);
         user.setUsername("admin");

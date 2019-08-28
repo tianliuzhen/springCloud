@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 /**
  * @author lvhaibao
- * @description 处理登录和授权的控制器
+ * @description 处理登录和授权的控制器  自定义授权的页面
  * @date 2018/12/26 0026 17:31
  */
 @Slf4j
