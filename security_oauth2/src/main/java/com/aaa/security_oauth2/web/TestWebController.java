@@ -1,30 +1,28 @@
 package com.aaa.security_oauth2.web;
 
 import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
-import com.aaa.security_oauth2.domain.baseEntity.Principal;
-import com.aaa.security_oauth2.domain.baseEntity.UserInfoDetail;
+import com.aaa.security_oauth2.domain.baseEntity.UserInfo;
 import com.aaa.security_oauth2.entity.TestDTO;
 import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.entity.User2;
-import com.aaa.security_oauth2.entity.UserInfo;
 import com.aaa.security_oauth2.mapper.UserMapper;
 import com.aaa.security_oauth2.service.baseJpa.CustomPrincipal;
 import com.aaa.security_oauth2.util.RedisUtil;
+import com.aaa.security_oauth2.util.StrUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.core.context.SecurityContext;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 /**
  * description: 该文件说明
@@ -125,9 +123,32 @@ public class TestWebController {
 
 
         Object userDetails =  SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        UserInfoDetail user = (UserInfoDetail)userDetails;
-        return user;
+        System.out.println(userDetails.toString());
+        String str=userDetails.toString().replaceAll("UserInfoDetail\\(userInfo=UserInfo\\(","{").replaceAll("\\), authorities=null\\)","}");
+        System.out.println(str);
+        String jsonString = JSONObject.toJSONString(StrUtils.mapStringToMap(str));
+        UserInfo javaBean = JSON.parseObject(jsonString, UserInfo.class);
+        return userDetails;
 
 
+    }
+    public User getUser(User user) {
+        User user1 = new User();
+        Optional.ofNullable(user)
+                .ifPresent(u->{
+                    System.out.println(u);
+
+
+                    user1.setName("zhangsan");
+
+                });
+        return user1;
+     /*   return Optional.ofNullable(user)
+                .filter(u->"zhangsan".equals(u.getName()))
+                .orElseGet(()-> {
+                    User user1 = new User();
+                    user1.setName("zhangsan");
+                    return user1;
+                });*/
     }
 }

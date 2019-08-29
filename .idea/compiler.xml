@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="baseJar" />
         <module name="customer" />
         <module name="eureka" />
         <module name="feign_gzip" />
@@ -17,13 +18,13 @@
         <module name="security_aouth2_client" />
         <module name="security_oauth2" />
         <module name="securityweb" />
-        <module name="springCloud" />
         <module name="test" />
         <module name="test2" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="baseJar" target="1.5" />
       <module name="mybatis" target="1.8" />
       <module name="security_aouth2_server" target="1.8" />
     </bytecodeTargetLevel>

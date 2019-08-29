@@ -120,16 +120,33 @@
             <version>10.2.3</version>
             <scope>compile</scope>
         </dependency>
-
     </dependencies>
-
     <build>
+        <!--引入本地资源-->
+        <resources>
+            <resource>
+                <directory>lib</directory>
+                <targetPath>BOOT-INF/lib/</targetPath>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <!--  maven没有将本地的jar也打到生成的包中 在pom中给spring boot的打包插件设置一下includeSystemScope参数即可 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                </configuration>
+            </plugin>
         </plugins>
+
     </build>
 
 </project>
