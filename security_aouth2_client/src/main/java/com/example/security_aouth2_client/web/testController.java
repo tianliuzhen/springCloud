@@ -1,6 +1,6 @@
 package com.example.security_aouth2_client.web;
 
-import com.example.security_aouth2_client.config.customBase.CustomPrincipal;
+import com.example.security_aouth2_client.customBase.CustomPrincipal;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;

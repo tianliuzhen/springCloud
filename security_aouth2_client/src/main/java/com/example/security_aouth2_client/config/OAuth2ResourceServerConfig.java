@@ -1,6 +1,6 @@
 package com.example.security_aouth2_client.config;
 
-import com.example.security_aouth2_client.config.customBase.CustomUserInfoTokenServices;
+import com.example.security_aouth2_client.customBase.CustomUserInfoTokenServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.oauth2.resource.ResourceServerProperties;
 import org.springframework.context.annotation.Bean;

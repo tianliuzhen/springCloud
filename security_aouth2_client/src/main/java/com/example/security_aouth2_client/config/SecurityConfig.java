@@ -1,6 +1,6 @@
 package com.example.security_aouth2_client.config;
 
-import com.example.security_aouth2_client.config.customBase.CustomPrincipal;
+import com.example.security_aouth2_client.customBase.CustomPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

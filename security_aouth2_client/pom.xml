@@ -120,6 +120,21 @@
             <version>10.2.3</version>
             <scope>compile</scope>
         </dependency>
+        <!--引入本地jar  参数（groupId\artifactId\version）可自定义 如果此依赖不加则 无法打包 -->
+        <dependency>
+            <groupId>local-sdk</groupId>
+            <artifactId>test</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/hello.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>local-sdk2</groupId>
+            <artifactId>test2</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/tlz_securityBase.jar</systemPath>
+        </dependency>
     </dependencies>
     <build>
         <!--引入本地资源-->
