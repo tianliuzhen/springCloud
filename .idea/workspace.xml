@@ -1074,6 +1074,7 @@
       <item itemvalue="Application.test" />
       <item itemvalue="Application.Hello" />
       <item itemvalue="Application.test2" />
+      <item itemvalue="Application.hello" />
       <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaGet" />
       <item itemvalue="Spring Boot.CustomerApplication" />
       <item itemvalue="Spring Boot.EurekaApplication" />
@@ -1090,7 +1091,6 @@
       <item itemvalue="Spring Boot.Test2Application" />
       <item itemvalue="Spring Boot.TestApplication" />
       <item itemvalue="Spring Boot.ZuulApplication" />
-      <item itemvalue="Application.hello" />
     </list>
     <recent_temporary>
       <list>
