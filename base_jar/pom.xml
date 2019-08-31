@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>springCloud</artifactId>
+        <groupId>com.aaa.cluod</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.aaa</groupId>
+    <artifactId>base_jar</artifactId>
+    <!--
+      maven中的仓库分为两种，snapshot快照仓库和release发布仓库。snapshot快照仓库用于保存开发过程中的不稳定版本，release正式仓库则是用来保存稳定的发行版本。
+      定义一个组件/模块为快照版本，只需要在pom文件中在该模块的版本号后加上-SNAPSHOT即可(注意这里必须是大写)，
+    -->
+    <version>1.0-SNAPSHOT</version>
+
+    <!--上传到nexus仓库中，配合mvn deploy:deploy-->
+    <distributionManagement>
+        <repository>
+            <!--这里的id需要和settings.xml中的server的id一致-->
+            <id>deployment</id>
+            <name>Nexus release Repository</name>
+            <!--releases仓库-->
+            <url>http://106.12.189.101:8081/repository/tlz-test-host-mixed/</url>
+        </repository>
+    </distributionManagement>
+
+
+</project>
