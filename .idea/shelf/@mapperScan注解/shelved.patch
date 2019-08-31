@@ -1,0 +1,33 @@
+Index: security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.aaa.security_oauth2;\r\n\r\nimport org.springframework.boot.SpringApplication;\r\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\r\nimport org.springframework.cloud.netflix.eureka.EnableEurekaClient;\r\nimport org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;\r\n/**\r\n * 通过 @EnableAuthorizationServer 来启用AuthorizationServer的默认实现，\r\n * 以提供/oauth/token、/oauth/check_token、/oauth/authorize等endpoint\r\n * @param\r\n * @return\r\n */\r\n@SpringBootApplication\r\n@EnableAuthorizationServer\r\n@EnableEurekaClient\r\npublic class SecurityOauth2Application {\r\n\r\n    public static void main(String[] args) {\r\n        /**\r\n         * * 1、【密码授权模式-client】 同样支持 base auth\r\n         * \t\t密码模式需要参数：username,password,grant_type,client_id,client_secret\r\n         * \t\thttp://localhost:8080/oauth/token?username=admin&password=123456&grant_type=password&client_id=demoApp&client_secret=demoAppSecret\r\n         *\r\n         * *2、【客户端授权模式-password】 客户端模式需要参数：grant_type,client_id,client_secret\r\n         * \t\thttp://localhost:8080/oauth/token?grant_type=client_credentials&client_id=demoApp&client_secret=demoAppSecret\r\n         *\r\n         * *3、【授权码模式-code】 获取code\r\n         * \t\thttp://localhost:8080/oauth/authorize?response_type=code&client_id=demoApp&redirect_uri=http://baidu.com\r\n         *\r\n         **    【通过code】 换token\r\n         * \t\thttp://localhost:8080/oauth/token?grant_type=authorization_code&code=A2f3bO&client_id=demoApp&client_secret=demoAppSecret&redirect_uri=http://baidu.com\r\n         * \t\t这里的code字段是授权码模式中返回的code  例如： https://www.baidu.com/?code=tsuHSh\r\n         *\r\n         ** 4、【简易模式-code】 获取token\r\n         *      这种模式比 授权码模式少了 code环节，回调url直接携带token\r\n         *      http://localhost:8080/oauth/authorize?response_type=token&client_id=demoApp&redirect_uri=http://localhost:1080/&state=123\r\n         *      申请授权token，参数和申请授权码类似，client_id，redirect_uri回调地址，response_type有变动，\r\n         *      改为直接获取token，scope权限，state用于认证标记，传过去什么回调时传回来什么\r\n         *\r\n         *\r\n         * 【通过refresh token】 刷新token\r\n         *\t\thttp://localhost:8080/oauth/token?grant_type=refresh_token&refresh_token=7ba47059-d853-4050-9c64-69d0cade71a7&client_id=demoApp&client_secret=demoAppSecret\r\n         *\t\t其中grant_type为固定值：grant_type=refresh_token    , refresh_token = 通过code获取的token中的refresh_token\r\n         *\r\n         */\r\n        SpringApplication.run(SecurityOauth2Application.class, args);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java	(revision 4a4798b4a097e830a6a22ca6abb6250f84569946)
++++ security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java	(date 1566266434833)
+@@ -1,5 +1,6 @@
+ package com.aaa.security_oauth2;
+ 
++import org.mybatis.spring.annotation.MapperScan;
+ import org.springframework.boot.SpringApplication;
+ import org.springframework.boot.autoconfigure.SpringBootApplication;
+ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+@@ -7,12 +8,16 @@
+ /**
+  * 通过 @EnableAuthorizationServer 来启用AuthorizationServer的默认实现，
+  * 以提供/oauth/token、/oauth/check_token、/oauth/authorize等endpoint
++ *
++ * Mapper接口要加上@Mapper注解或者在启动类加上@MapperScan("xxx.xxx.xxx")包扫描的注解
++ *
+  * @param
+  * @return
+  */
+ @SpringBootApplication
+ @EnableAuthorizationServer
+ @EnableEurekaClient
++@MapperScan("com.aaa.security_oauth2.mapper")
+ public class SecurityOauth2Application {
+ 
+     public static void main(String[] args) {
