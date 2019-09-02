@@ -6,7 +6,6 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="base_jar" />
         <module name="baseJar" />
         <module name="customer" />
         <module name="eureka" />
@@ -25,6 +24,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="base_jar" target="1.5" />
       <module name="baseJar" target="1.5" />
       <module name="mybatis" target="1.8" />
       <module name="security_aouth2_server" target="1.8" />
