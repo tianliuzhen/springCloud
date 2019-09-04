@@ -72,7 +72,7 @@ public class LoginController {
         return "helloOath2";
     }
     @GetMapping(value = "/authorize/userInfo")
-    @CrossOrigin
+//    @CrossOrigin  //  跨域单个单个接口设置
     @ResponseBody
     public String userinfo(Principal principal) {
         return  principal.getName();

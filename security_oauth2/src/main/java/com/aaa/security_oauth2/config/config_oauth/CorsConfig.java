@@ -15,22 +15,39 @@ import org.springframework.web.filter.CorsFilter;
  * @date 2019/6/28
  */
 
+/**
+ * 跨域配置
+ */
 @Configuration
-@Order(0)
 public class CorsConfig {
+    // 设置允许跨域的源
+    private static String[] originsVal = new String[]{
+            "127.0.0.1:1080",
+            "localhost:1080",
+            "google.com"
+    };
 
-
-
-
+    /**
+     * 跨域过滤器
+     *
+     * @return
+     */
     @Bean
     public CorsFilter corsFilter() {
-        final UrlBasedCorsConfigurationSource urlBasedCorsConfigurationSource = new UrlBasedCorsConfigurationSource();
-        final CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowCredentials(true);
-        configuration.addAllowedHeader("*");
-        configuration.addAllowedOrigin("*");
-        configuration.addAllowedMethod("*");
-        urlBasedCorsConfigurationSource.registerCorsConfiguration("/**", configuration);
-        return new CorsFilter(urlBasedCorsConfigurationSource);
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        this.addAllowedOrigins(corsConfiguration);
+        corsConfiguration.addAllowedHeader("*");
+        corsConfiguration.addAllowedMethod("*");
+        corsConfiguration.addAllowedOrigin("*");
+        source.registerCorsConfiguration("/**", corsConfiguration);
+        return new CorsFilter(source);
+    }
+
+    private void addAllowedOrigins(CorsConfiguration corsConfiguration) {
+        for (String origin : originsVal) {
+            corsConfiguration.addAllowedOrigin("http://" + origin);
+            corsConfiguration.addAllowedOrigin("https://" + origin);
+        }
     }
 }
