@@ -10,11 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/CorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -106,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/CorsConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
-              <caret line="46" column="34" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="34" />
+            <state relative-caret-position="284">
+              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -533,7 +530,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567580520357" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567580827333" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -846,7 +843,7 @@
       <workItem from="1567389983822" duration="28000" />
       <workItem from="1567390038275" duration="3085000" />
       <workItem from="1567408905991" duration="1485000" />
-      <workItem from="1567576772328" duration="2662000" />
+      <workItem from="1567576772328" duration="2909000" />
     </task>
     <task id="LOCAL-00001" summary="oauth2添加简易模式和自定义回调地址">
       <created>1565831617446</created>
@@ -967,7 +964,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567390228245</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="spring跨域设置">
+      <created>1567580656342</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1567580656342</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1003,13 +1007,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="627260000" />
+    <option name="totallyTimeSpent" value="627507000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1910" y="0" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.26439232" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.26439232" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1033,7 +1037,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.27006507" />
       <window_info anchor="bottom" id="Problems" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.21258135" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.21258135" />
       <window_info anchor="bottom" id="Tail" order="17" />
       <window_info anchor="bottom" id="Build" order="18" weight="0.18221258" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1160,7 +1164,8 @@
     <MESSAGE value="登录写入数据库" />
     <MESSAGE value="单独的把单个文件打成jar 进行测试" />
     <MESSAGE value="去除无用jar" />
-    <option name="LAST_COMMIT_MESSAGE" value="去除无用jar" />
+    <MESSAGE value="spring跨域设置" />
+    <option name="LAST_COMMIT_MESSAGE" value="spring跨域设置" />
   </component>
   <component name="WindowStateProjectService">
     <state width="177" height="319" key="Git.Branch.Popup" />
@@ -1543,8 +1548,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/config/config_oauth/CorsConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="46" column="34" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="34" />
+        <state relative-caret-position="284">
+          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

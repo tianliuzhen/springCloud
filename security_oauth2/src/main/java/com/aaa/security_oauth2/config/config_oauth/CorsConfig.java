@@ -22,8 +22,8 @@ import org.springframework.web.filter.CorsFilter;
 public class CorsConfig {
     // 设置允许跨域的源
     private static String[] originsVal = new String[]{
-            "127.0.0.1:1080",
-            "localhost:1080",
+            "127.0.0.1:8080",
+            "localhost:8080",
             "google.com"
     };
 
