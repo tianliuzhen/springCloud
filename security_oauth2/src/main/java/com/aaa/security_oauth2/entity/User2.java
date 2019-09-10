@@ -8,6 +8,7 @@ import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -18,8 +19,9 @@ import java.time.LocalDateTime;
  * @date 2019/8/20
  */
 @Data
-public class User2 {
+public class User2 implements Serializable {
 
+    private static final long serialVersionUID = -2873761246116194998L;
     private String name;
 
     private String username;

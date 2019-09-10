@@ -35,7 +35,6 @@ import java.util.Objects;
 @SQLDelete(sql = "update sys_user set is_del = 1 where id = ?") //设置逻辑删除 保证数据完整性
 @Where(clause = "is_del = 0")   // 解决逻辑删除问题查询问题
 public class User extends BaseEntity {
-
     @Id
     @Column(name = "Id", unique = true, nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)

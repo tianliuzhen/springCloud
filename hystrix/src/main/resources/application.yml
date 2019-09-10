@@ -10,7 +10,7 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7080/eureka
+      defaultZone: http://localhost:7082/eureka
 
   # 检测与续约时间
 instance:

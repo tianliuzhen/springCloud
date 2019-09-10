@@ -72,7 +72,8 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter {
         http    .requestMatchers()
                 .and().authorizeRequests().antMatchers("/oauth/**", "/login/**", "/logout/**").permitAll()//可以直接访问
 //                .anyRequest().authenticated()//任何请求都必须经过授权
-                .and().formLogin().loginPage("/login").successForwardUrl("/success")
+                .and().formLogin().loginPage("/login")
+//                .successForwardUrl("/success")
                 .and().logout().logoutUrl("/oauth/logout").clearAuthentication(true).invalidateHttpSession(true)
                 .and().csrf().disable();
                 ;
