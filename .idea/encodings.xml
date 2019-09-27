@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
-    <file url="file://$PROJECT_DIR$/baseJar" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/customer" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/feign_gzip" charset="UTF-8" />
@@ -16,6 +15,8 @@
     <file url="file://$PROJECT_DIR$/securityweb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

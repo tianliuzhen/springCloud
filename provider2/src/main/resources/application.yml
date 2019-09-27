@@ -2,11 +2,16 @@ server:
   port: 5083
 spring:
   application:
-    name: myabtis
+    name: provider
+  zipkin:
+    base-url: http://localhost:8094
+  sleuth:
+    sampler:
+      probability: 1
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:7080/eureka
+      defaultZone: http://localhost:7082/eureka
 instance:
   lease-renewal-interval-in-seconds: 1
   lease-expiration-duration-in-seconds: 2

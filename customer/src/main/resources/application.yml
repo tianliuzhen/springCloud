@@ -5,8 +5,11 @@ server:
 spring:
   application:
     name: customer
-
-###服务注册到eureka地址
+  zipkin:
+    base-url: http://localhost:8094
+  sleuth:
+    sampler:
+      probability: 1
 eureka:
   client:
     service-url:

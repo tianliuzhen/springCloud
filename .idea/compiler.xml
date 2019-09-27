@@ -20,6 +20,7 @@
         <module name="securityweb" />
         <module name="test" />
         <module name="test2" />
+        <module name="zipkin" />
         <module name="zuul" />
       </profile>
     </annotationProcessing>
@@ -47,6 +48,7 @@
       <module name="securityweb" options="-parameters" />
       <module name="test" options="-parameters" />
       <module name="test2" options="-parameters" />
+      <module name="zipkin" options="-parameters" />
       <module name="zuul" options="-parameters" />
     </option>
   </component>
