@@ -7,7 +7,7 @@
  -->
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
     <property name="LOG_CONTEXT_NAME" value="springboot"/>
-    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径  ${LOG_FILE} 会采用  file 的 path 路径-->
     <property name="LOG_HOME" value="e:/logs/${LOG_CONTEXT_NAME}" />
     <!-- 定义日志上下文的名称 -->
     <contextName>${LOG_CONTEXT_NAME}</contextName>
