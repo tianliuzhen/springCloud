@@ -53,8 +53,8 @@ public class LoginController {
     }
     @RequestMapping("/test")
     @ResponseBody
-    @Cacheable(value="my-redis-cache1",cacheManager = "cacheManager",keyGenerator="authkeyGenerator")
-    public Map test(){
+//    @Cacheable(value="my-redis-cache1",cacheManager = "cacheManager",keyGenerator="authkeyGenerator")
+    public void test(){
         Map map=new HashMap();
         map.put(2,"d");
         map.put(1,"d");
@@ -63,10 +63,12 @@ public class LoginController {
         map2.put(2,"d");
         map2.put(1,"d");
         map2.put(3,map);
-        System.out.println("axios测试");
+        log.info("axios测试");
+
         redisUtil.set("testKey", JSON.toJSONString(map2));
+        throw  new RuntimeException();
 //       redisUtil.set("testKey", JSONObject.toJSONString(map2));
-        return map2;
+
     }
     @GetMapping("/test2")
     @ResponseBody

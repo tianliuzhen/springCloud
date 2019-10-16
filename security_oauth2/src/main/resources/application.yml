@@ -47,8 +47,11 @@ logging:
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 一般这个用于开发环境，正式环境 切换上面
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+#    url: jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     #&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
@@ -73,10 +76,10 @@ spring:
   jpa:
     # Specify the DBMS
     database: mysql
-    show-sql: true
+    show-sql: false
     # Hibernate ddl auto (create, create-drop, update)
     hibernate:
-      ddl-auto: none
+      ddl-auto: none # 第一次建表create  后面用update,要不然每次重启都会新建表
 mybatis:
   configuration:
     map-underscore-to-camel-case: true  #开启驼峰命名,l_name -> lName
