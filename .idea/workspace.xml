@@ -11,7 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/test/java/com/aaa/customer/CustomerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/test/java/com/aaa/customer/CustomerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,7 +49,13 @@
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/springCloud$CustomerApplicationTests_contextLoads.ic" NAME="CustomerApplicationTests.contextLoads Coverage Results" MODIFIED="1571464601521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.aaa.customer.*</FILTER>
+    </SUITE>
     <SUITE FILE_PATH="coverage/springCloud$SecuritywebApplication.ic" NAME="SecuritywebApplication Coverage Results" MODIFIED="1561960294223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myFlattenPackages" value="true" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -62,6 +70,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="D:\logs" />
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$/gradle_project">
@@ -86,55 +97,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1081">
-              <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/provider2/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/provider2/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="45" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="86" column="2" lean-forward="true" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/application-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="529">
+              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -142,17 +108,53 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/logback-spring.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-92">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="713">
+              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/LoginController.java">
+        <entry file="file://$PROJECT_DIR$/customer/src/test/java/com/aaa/customer/CustomerApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1352">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="207">
+              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#333#334#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/controller/HelloWordController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="641">
+              <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/SecuritywebApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="e#450#451#0" expanded="true" />
+                <element signature="e#523#524#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,8 +162,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="445">
+            <state relative-caret-position="642">
               <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/webApi/RemoteApiFallbackFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/config/FeignLogConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -190,7 +210,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>requestTokenBearerInterceptor</find>
       <find>全局</find>
       <find>userDetailsService</find>
       <find>/</find>
@@ -220,6 +239,7 @@
       <find>LOG_HOME</find>
       <find>fileNamePattern</find>
       <find>file.error</find>
+      <find>userService</find>
     </findStrings>
     <replaceStrings>
       <replace>BaseEnum</replace>
@@ -238,8 +258,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/service/MyUserDetailsService.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/customBase/CustomUserInfoTokenServices.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/config/test/MyJar.java" />
         <option value="$PROJECT_DIR$/security_aouth2_client/META-INF/MANIFEST.MF" />
@@ -284,11 +302,13 @@
         <option value="$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/web/LoginController.java" />
         <option value="$PROJECT_DIR$/security_oauth2/pom.xml" />
         <option value="$PROJECT_DIR$/securityweb/src/main/resources/log4jdbc.log4j2.properties" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/log4jdbc.log4j2.properties" />
         <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/logback-spring.xml" />
         <option value="$PROJECT_DIR$/securityweb/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml" />
         <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/log4jdbc.log4j2.properties" />
+        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" />
+        <option value="$PROJECT_DIR$/customer/src/test/java/com/aaa/customer/CustomerApplicationTests.java" />
+        <option value="$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml" />
       </list>
     </option>
   </component>
@@ -333,7 +353,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -428,6 +447,51 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="customer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
@@ -598,6 +662,56 @@
               <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="security_oauth2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -677,7 +791,8 @@
               <item name="securityweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
@@ -685,7 +800,28 @@
               <item name="securityweb" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="securityweb" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
@@ -927,6 +1063,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -942,9 +1079,9 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571211780115" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1571818028134" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/logs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -988,7 +1125,7 @@
         </path>
         <path>
           <item name="Found 37 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-          <item name="securityweb" type="c588b436:RestServiceStructure$ProjectNode" />
+          <item name="security_oauth2" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -1012,20 +1149,7 @@
     </option>
     <option name="contentProportion" value="0.21753247" />
   </component>
-  <component name="RunManager" selected="JUnit.SecurityOauth2ApplicationTests.findUserList">
-    <configuration name="Hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.security_aouth2_client.test.Hello" />
-      <module name="security_aouth2_client" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.security_aouth2_client.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.SecuritywebApplication">
     <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aaa.base_jar.test.hello" />
       <module name="base_jar" />
@@ -1035,6 +1159,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="customer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.customer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.customer" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.customer.CustomerApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1193,8 +1333,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Hello" />
       <item itemvalue="Application.hello" />
+      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
+      <item itemvalue="JUnit.SecuritywebApplicationTests.contextLoads" />
+      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.findUserList" />
+      <item itemvalue="JUnit.CustomerApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.CustomerApplication" />
       <item itemvalue="Spring Boot.EurekaApplication" />
       <item itemvalue="Spring Boot.FeignGzipApplication" />
@@ -1210,17 +1353,14 @@
       <item itemvalue="Spring Boot.TestApplication" />
       <item itemvalue="Spring Boot.ZuulApplication" />
       <item itemvalue="Spring Boot.ZipkinApplication" />
-      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
-      <item itemvalue="JUnit.SecuritywebApplicationTests.contextLoads" />
-      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.findUserList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomerApplicationTests.contextLoads" />
         <item itemvalue="JUnit.SecurityOauth2ApplicationTests.findUserList" />
         <item itemvalue="JUnit.SecuritywebApplicationTests.contextLoads" />
         <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
         <item itemvalue="Application.hello" />
-        <item itemvalue="Application.Hello" />
       </list>
     </recent_temporary>
   </component>
@@ -1304,7 +1444,10 @@
       <workItem from="1571050197809" duration="741000" />
       <workItem from="1571111133701" duration="1972000" />
       <workItem from="1571117573864" duration="3653000" />
-      <workItem from="1571124847392" duration="16409000" />
+      <workItem from="1571124847392" duration="18113000" />
+      <workItem from="1571457868236" duration="692000" />
+      <workItem from="1571464436482" duration="324000" />
+      <workItem from="1571817712748" duration="245000" />
     </task>
     <task id="LOCAL-00001" summary="oauth2添加简易模式和自定义回调地址">
       <created>1565831617446</created>
@@ -1481,28 +1624,17 @@
       <option name="project" value="LOCAL" />
       <updated>1571210751385</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="上次提交的代码 mybatis 也同样适用">
+      <created>1571211906316</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1571211906316</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 10m 47s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 11m 39s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 12m 29s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 14m 10s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 18m 00s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 21m 41s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 23m 33s.xml">
       <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
     </history-entry>
@@ -1515,15 +1647,42 @@
     <history-entry file="SecurityOauth2ApplicationTests_findUserList - 2019.10.16 at 15h 40m 10s.xml">
       <configuration name="SecurityOauth2ApplicationTests.findUserList" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="SecurityOauth2ApplicationTests_findUserList - 2019.10.16 at 15h 43m 39s.xml">
+      <configuration name="SecurityOauth2ApplicationTests.findUserList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="SecurityOauth2ApplicationTests_findUserList - 2019.10.16 at 16h 02m 47s.xml">
+      <configuration name="SecurityOauth2ApplicationTests.findUserList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 12h 05m 07s.xml">
+      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 12h 06m 06s.xml">
+      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 12h 06m 15s.xml">
+      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 13h 57m 09s.xml">
+      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="684768000" />
+    <option name="totallyTimeSpent" value="687733000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.24733475" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1533,21 +1692,21 @@
       <window_info id="Web" order="7" sideWeight="0.3216266" side_tool="true" weight="0.26332623" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4251627" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.1626898" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.4251627" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34924078" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.335141" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32997763" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.30911064" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" weight="0.4251627" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.28199565" />
       <window_info anchor="bottom" id="Problems" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.4186551" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.2516269" />
       <window_info anchor="bottom" id="Tail" order="17" />
       <window_info anchor="bottom" id="Build" order="18" weight="0.18221258" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1560,9 +1719,9 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
-      <window_info anchor="right" id="Coverage" order="10" side_tool="true" />
+      <window_info active="true" anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Gradle" order="11" weight="0.32995737" />
-      <window_info anchor="right" id="RestServices" order="12" visible="true" weight="0.19722815" />
+      <window_info anchor="right" id="RestServices" order="12" weight="0.22867803" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.21375267" />
@@ -1681,7 +1840,8 @@
     <MESSAGE value="整合 spring cloud zipkin （ Sleuth ）服务链路追踪" />
     <MESSAGE value="日志路径问题" />
     <MESSAGE value="Springboot JPA日志输出打印SQL语句和传入的参数" />
-    <option name="LAST_COMMIT_MESSAGE" value="Springboot JPA日志输出打印SQL语句和传入的参数" />
+    <MESSAGE value="上次提交的代码 mybatis 也同样适用" />
+    <option name="LAST_COMMIT_MESSAGE" value="上次提交的代码 mybatis 也同样适用" />
   </component>
   <component name="WindowStateProjectService">
     <state width="177" height="319" key="Git.Branch.Popup" />
@@ -1699,7 +1859,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java</url>
-          <line>128</line>
+          <line>139</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
@@ -1796,20 +1956,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/eureka/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/provider/src/main/java/com/aaa/provider/ProviderApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1850,31 +1996,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/webApi/RemoteApiFallbackFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/config/FeignLogConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/webApi/RemoteApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
           <caret line="18" column="141" selection-start-line="18" selection-start-column="141" selection-end-line="18" selection-end-column="141" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/controller/HelloWordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -1996,24 +2121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/log4jdbc.log4j2.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/SecuritywebApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/SecurityOauth2Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-60">
@@ -2039,24 +2146,85 @@
     <entry file="file://$PROJECT_DIR$/security_oauth2/logs/graceLogs/log_error.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/provider2/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        <state relative-caret-position="207">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml">
+    <entry file="file://$PROJECT_DIR$/provider2/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1081">
-          <caret line="47" lean-forward="true" selection-start-line="47" selection-end-line="47" />
+        <state relative-caret-position="943">
+          <caret line="41" selection-start-line="41" selection-end-line="45" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1219">
+          <caret line="53" column="2" selection-start-line="53" selection-start-column="2" selection-end-line="54" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="45" column="36" selection-start-line="45" selection-start-column="36" selection-end-line="45" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/log4jdbc.log4j2.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="529">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/src/test/java/com/aaa/customer/CustomerApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#333#334#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/webApi/RemoteApiFallbackFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/config/FeignLogConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -2067,38 +2235,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provider2/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/controller/HelloWordController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="23">
+          <caret line="26" column="37" selection-start-line="26" selection-start-column="37" selection-end-line="26" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/provider2/pom.xml">
+    <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="45" selection-end-column="3" />
+        <state relative-caret-position="642">
+          <caret line="33" column="11" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/logback-spring.xml">
+    <entry file="file://$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="641">
+          <caret line="167" column="35" selection-start-line="167" selection-start-column="35" selection-end-line="167" selection-end-column="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/SecuritywebApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="86" column="2" lean-forward="true" selection-start-line="86" selection-start-column="2" selection-end-line="86" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/SecurityOauth2ApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="64" column="39" selection-start-line="64" selection-start-column="39" selection-end-line="64" selection-end-column="39" />
+        <state relative-caret-position="115">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#523#524#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -165,6 +165,8 @@
         <appender-ref ref="file.info" />
         <appender-ref ref="file.debug" />
         <appender-ref ref="file.warn" />
+        <!-- 不去掉会打印两次重复 -->
+        <appender-ref ref="file.all" />
     </root>
 
 </configuration>

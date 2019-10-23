@@ -1,12 +1,14 @@
 package com.aaa.security_oauth2.web;
 
 import com.aaa.security_oauth2.aop.annotation.MyMethodsComponent;
+import com.aaa.security_oauth2.constants.enums.Gender;
 import com.aaa.security_oauth2.domain.baseEntity.UserInfo;
 import com.aaa.security_oauth2.entity.TestDTO;
 import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.entity.User2;
 import com.aaa.security_oauth2.mapper.UserMapper;
 import com.aaa.security_oauth2.service.baseJpa.CustomPrincipal;
+import com.aaa.security_oauth2.service.serviceJpa.UserService;
 import com.aaa.security_oauth2.util.RedisUtil;
 import com.aaa.security_oauth2.util.StrUtils;
 import com.alibaba.fastjson.JSON;
@@ -40,7 +42,8 @@ public class TestWebController {
 
     @Autowired
     private UserMapper userMapper;
-
+    @Autowired
+    private UserService userService;
     @Autowired
     RedisUtil redisUtil;
     @RequestMapping("/directUrl2")
@@ -77,6 +80,14 @@ public class TestWebController {
 //        List<Map> us= userMapper.getUsers();
 //        List<User> us2=userMapper.getUsers2();
         List<User> us= userMapper.getUsers2();
+        User user=new User();
+        //如果是更新 设置主键 id 即可
+//        user.setId(1);
+        user.setName("admin123").
+                setUserName("admin1").setPassword("123456").
+                setGender(Gender.FEMALE).setTel("110");
+//                setCreateTime(TimeUtil.getLocalDateTime(new Date()));
+        userService.saveAndFlush(user);
         return us;
     }
 
