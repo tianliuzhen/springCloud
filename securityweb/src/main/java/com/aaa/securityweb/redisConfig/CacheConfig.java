@@ -252,6 +252,7 @@ public class CacheConfig extends CachingConfigurerSupport {
                 .disableCachingNullValues();
 
         // 设置一个初始化的缓存空间set集合
+        // redis缓存空间实际上就是前缀（：）
         Set<String> cacheNames =  new HashSet<>();
         cacheNames.add("my-redis-cache1");
         cacheNames.add("my-redis-cache2");
