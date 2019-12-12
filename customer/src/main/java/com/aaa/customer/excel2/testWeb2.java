@@ -1,14 +1,20 @@
 package com.aaa.customer.excel2;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
+import cn.afterturn.easypoi.excel.ExcelImportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
+import cn.afterturn.easypoi.excel.entity.ImportParams;
 import cn.afterturn.easypoi.excel.entity.enmus.ExcelType;
+import cn.afterturn.easypoi.excel.entity.result.ExcelImportResult;
 import com.aaa.customer.excel.EasyPoiUtils;
+import com.aaa.customer.excel.FullDataExportDTO;
+import com.aaa.customer.excel.FullDataExportDTOV2;
 import com.alibaba.fastjson.JSONArray;
 import com.google.common.collect.Lists;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,9 +31,69 @@ import java.util.Map;
  */
 @RestController
 public class testWeb2 {
+    /**
+     * 多sheet 测试导入
+     * @param file
+     * @return void
+     */
+    @PostMapping(value = "/importAct2")
+    @ResponseBody
+    public String excelImport(MultipartFile file) throws IOException {
+        //根据file得到Workbook,主要是要根据这个对象获取,传过来的excel有几个sheet页
+        Workbook hssfWorkbook = ExcelUtil.getWorkBook(file);
+        StringBuilder sb=new StringBuilder();
+        try {
+            ImportParams params = new ImportParams();
+            // 循环工作表Sheet
+            for (int numSheet = 0; numSheet < hssfWorkbook.getNumberOfSheets(); numSheet++) {
+                //表头在第几行
+                params.setTitleRows(0);
+                //距离表头中间有几行不要的数据
+                // params.setStartRows(1);
+                //第几个sheet页
+                params.setStartSheetIndex(numSheet);
+                //验证数据
+                params.setNeedVerify(true);
+
+                ExcelImportResult<FullDataExportDTO> result=null;
+                if(numSheet==0){
+                    result = ExcelImportUtil.importExcelMore(file.getInputStream(),
+                            FullDataExportDTO.class, params);
+                    // TODO: 这里对不同的表进行处理 也就是代码逻辑
+
+                }else if(numSheet==1){
+                    result = ExcelImportUtil.importExcelMore(file.getInputStream(),
+                            FullDataExportDTO.class, params);
+                    // TODO: 这里对不同的表进行处理 也就是代码逻辑
+                }
+
+                List list=null;
+                //如果有些数据验证出来有误   为true
+                if(result.isVerfiyFail()){
+                    //不合规定的数据
+                    list=result.getFailList();
+                    //拼凑错误信息,自定义
+                    for(int i=0;i<list.size();i++){
+                        if(list.get(i) instanceof FullDataExportDTO){
+                            ExcelUtil.getWrongInfo(sb, list, i, list.get(i), "orderUserNum", "FullDataExportDTO 填写信息不对");
+                        }
+                        //....
+                    }
+                }
+            }
+            if(sb.length()!=0){
+
+                  return sb.toString();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "导入失败！请检查导入文档的格式是否正确";
+        }
+        return "导入成功！";
+    }
 
     /**
-     * 测试导出
+     * 多sheet 测试导出
      * @param response
      * @return void
      */
@@ -72,6 +138,7 @@ public class testWeb2 {
             List<Map<String, Object>> sheetsList = new ArrayList<>();
             sheetsList.add(deptExportMap);
             sheetsList.add(empExportMap);
+
             // 执行方法
             workBook = ExcelExportUtil.exportExcel(sheetsList, ExcelType.HSSF);
             EasyPoiUtils.download(workBook, response);

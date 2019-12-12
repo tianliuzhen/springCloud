@@ -4,6 +4,8 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
 import cn.afterturn.easypoi.excel.annotation.ExcelTarget;
 import lombok.Data;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -32,6 +34,7 @@ public class EmpUtil {
 
     @Excel(name = "薪酬", width = 30, type = 10, groupName = "工作信息")
     private BigDecimal salary;
+
 
 
 }

@@ -5,6 +5,8 @@ import cn.afterturn.easypoi.excel.annotation.ExcelCollection;
 import cn.afterturn.easypoi.excel.annotation.ExcelTarget;
 import lombok.Data;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import java.util.List;
 
 /**
@@ -26,6 +28,8 @@ public class DeptUtil {
 
     @ExcelCollection(name = "员工信息")
     private List<EmpUtil> emps;
+
+
 
 }
 

@@ -4,7 +4,7 @@ import cn.afterturn.easypoi.excel.annotation.Excel;
 import lombok.Data;
 
 import javax.validation.constraints.Max;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Min;
 
 
 /**
@@ -15,15 +15,14 @@ import javax.validation.constraints.NotNull;
  * @date 2019/12/11
  */
 @Data
-public class FullDataExportDTO {
+public class FullDataExportDTOV2 {
 
     @Excel(name = "日期")
     private String date;
 
 
     @Excel(name = "下单人数")
-    @Max(value = 15,message = "max 最大值不能超过15" )
-    private int orderUserNum;
+    private String orderUserNum;
 
     @Excel(name = "付款人数")
     private String payNum;
@@ -38,7 +37,7 @@ public class FullDataExportDTO {
     private String sumMoneyPaid;
 
     @Excel(name = "优惠总额")
-    @NotNull
     private String discountMoney;
+
 
 }

@@ -6,12 +6,15 @@ import cn.afterturn.easypoi.excel.entity.params.ExcelExportEntity;
 import cn.afterturn.easypoi.excel.entity.result.ExcelImportResult;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -100,7 +103,24 @@ public class EasyPoiUtils {
         download(DateTimeFormatter.ofPattern("yyyyMMddHHmmss").format(LocalDateTime.now()), workbook,response);
     }
 
-
+    /**
+     * 得到Workbook对象 =>  excel 能兼容03和07
+     * HSSF对应97-2003版本的Excel，XSSF则对应2007版本的Excel。
+     * @param file
+     * @return
+     * @throws IOException
+     */
+    public static Workbook getWorkBook(MultipartFile file) throws IOException{
+        InputStream is = file.getInputStream();
+        Workbook hssfWorkbook = null;
+        try {
+            hssfWorkbook = new HSSFWorkbook(is);
+        } catch (Exception ex) {
+            is =file.getInputStream();
+            hssfWorkbook = new XSSFWorkbook(is);
+        }
+        return hssfWorkbook;
+    }
     /**
      * 下载
      * @param workbook
@@ -109,7 +129,7 @@ public class EasyPoiUtils {
      */
     public static void download(String fileName,Workbook workbook, HttpServletResponse response) throws IOException {
 
-
+        // 告诉浏览器用什么软件可以打开此文件
         response.setHeader("content-Type", "application/vnd.ms-excel");
         // 下载文件的默认名称
         response.setHeader("Content-Disposition", "attachment;filename=" + fileName + ".xls");
