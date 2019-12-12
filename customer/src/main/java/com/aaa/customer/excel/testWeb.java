@@ -2,12 +2,11 @@ package com.aaa.customer.excel;
 
 import cn.afterturn.easypoi.excel.ExcelExportUtil;
 import cn.afterturn.easypoi.excel.entity.ExportParams;
+import cn.afterturn.easypoi.excel.entity.result.ExcelImportResult;
 import com.google.common.collect.Lists;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -24,6 +23,12 @@ import java.util.Map;
  */
 @RestController
 public class testWeb {
+
+    /**
+     * 测试导出
+     * @param response
+     * @return void
+     */
     @GetMapping("/exportAct")
     public void exportAct( HttpServletResponse response){
         try {
@@ -48,6 +53,20 @@ public class testWeb {
             e.printStackTrace();
         }
     }
+    /**
+     * 测试导入
+     * @param importFile
+     * @return void
+     */
+    @PostMapping("/importAct")
+    public void importAct( @RequestParam(value="importFile",required=false) MultipartFile importFile){
+        ExcelImportResult<FullDataExportDTO> exportDTOExcelImportResult = EasyPoiUtils.importExcel(importFile, FullDataExportDTO.class);
+        List<FullDataExportDTO> list = exportDTOExcelImportResult.getList();
+        for (FullDataExportDTO fullDataExportDTO : list) {
+            System.out.println(fullDataExportDTO);
+        }
+    }
+
 
     public List<FullData>  addList(){
         List<FullData> list=new ArrayList<>();

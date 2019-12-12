@@ -10,13 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/BeanCopyUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/EasyPoiUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/FullData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/FullDataExportDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/testWeb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/customer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/customer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/testWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/testWeb.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -123,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/testWeb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="152">
+              <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -336,9 +331,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1913" />
-    <option name="width" value="1932" />
-    <option name="height" value="1027" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1266,7 +1262,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576120434389" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576121164554" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com" />
     <property name="last_opened_file_path" value="D:/logs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -1308,10 +1304,10 @@
     <treeState>
       <expand>
         <path>
-          <item name="Found 38 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 39 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
         <path>
-          <item name="Found 38 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 39 services " type="fcff1e1b:RestServiceStructure$RootNode" />
           <item name="customer" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
@@ -1644,7 +1640,7 @@
       <workItem from="1574151458101" duration="10000" />
       <workItem from="1574319498196" duration="158000" />
       <workItem from="1575616000919" duration="1281000" />
-      <workItem from="1576118576804" duration="1625000" />
+      <workItem from="1576118576804" duration="2398000" />
     </task>
     <task id="LOCAL-00001" summary="oauth2添加简易模式和自定义回调地址">
       <created>1565831617446</created>
@@ -1842,7 +1838,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575617290366</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="easy poi  进行 excel 导出">
+      <created>1576120468411</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1576120468411</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1878,7 +1881,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="702278000" />
+    <option name="totallyTimeSpent" value="703051000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1891,6 +1894,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.661442" visible="true" weight="0.27985075" />
       <window_info id="Structure" order="1" sideWeight="0.338558" side_tool="true" weight="0.27665246" />
@@ -1916,7 +1920,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.6453362" />
       <window_info anchor="bottom" id="Problems" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.4262473" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.34815618" />
       <window_info anchor="bottom" id="Tail" order="17" />
       <window_info anchor="bottom" id="Build" order="18" weight="0.18221258" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1931,7 +1935,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
       <window_info active="true" anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Gradle" order="11" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="RestServices" order="12" visible="true" weight="0.12793177" />
+      <window_info anchor="right" id="RestServices" order="12" visible="true" weight="0.12793177" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.21375267" />
@@ -2053,7 +2057,8 @@
     <MESSAGE value="上次提交的代码 mybatis 也同样适用" />
     <MESSAGE value="日志 打印两次问题发现" />
     <MESSAGE value="redis缓存空间实际上就是前缀（：）" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis缓存空间实际上就是前缀（：）" />
+    <MESSAGE value="easy poi  进行 excel 导出" />
+    <option name="LAST_COMMIT_MESSAGE" value="easy poi  进行 excel 导出" />
   </component>
   <component name="WindowStateProjectService">
     <state width="177" height="319" key="Git.Branch.Popup" />
@@ -2515,8 +2520,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/testWeb.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="152">
+          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
         </state>
       </provider>
     </entry>
