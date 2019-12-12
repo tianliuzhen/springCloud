@@ -20,6 +20,6 @@ public class TeacherEntity implements java.io.Serializable {
     /**
      * name
      */
-    @Excel(name = "主讲老师_major,代课老师_absent", orderNum = "1", isImportField = "true_major,true_absent")
+    @Excel(name = "主讲老师_major,代课老师_absent", orderNum = "1",needMerge = true,  isImportField = "true_major,true_absent")
     private String name;
 }

@@ -65,8 +65,12 @@ public class testWeb3 {
         StudentEntity studentEntity = new StudentEntity();
         studentEntity.setId("1");
         studentEntity.setName("tom");
+        StudentEntity studentEntity2 = new StudentEntity();
+        studentEntity2.setId("2");
+        studentEntity2.setName("mike");
         courseEntity.setMathTeacher(mathTeacher);
         studentEntities.add(studentEntity);
+        studentEntities.add(studentEntity2);
         courseEntity.setStudents(studentEntities);
         list.add(courseEntity);
         return list;

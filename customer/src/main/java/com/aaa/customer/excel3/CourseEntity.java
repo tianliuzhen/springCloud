@@ -22,13 +22,13 @@ public class CourseEntity implements java.io.Serializable {
     /** 主键 */
     private String        id;
     /** 课程名称 */
-    @Excel(name = "课程名称", orderNum = "1", width = 25)
+    @Excel(name = "课程名称", orderNum = "1", width = 25,needMerge = true)
     private String        name;
     /**
      * 老师主键
      * 这里的 id 指的是  teacherEntity 的 name 属性
      * */
-    @ExcelEntity(id = "major")
+    @ExcelEntity(id = "absent")
     private TeacherEntity mathTeacher;
 
     @ExcelCollection(name = "学生", orderNum = "4")
