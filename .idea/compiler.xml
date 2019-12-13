@@ -9,6 +9,7 @@
         <module name="baseJar" />
         <module name="customer" />
         <module name="dynamic-data-mybatis" />
+        <module name="dynamic-data-mybatis-druid" />
         <module name="eureka" />
         <module name="feign_gzip" />
         <module name="gateway" />
@@ -36,6 +37,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="customer" options="-parameters" />
       <module name="dynamic-data-mybatis" options="-parameters" />
+      <module name="dynamic-data-mybatis-druid" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="feign_gzip" options="-parameters" />
       <module name="gateway" options="-parameters" />

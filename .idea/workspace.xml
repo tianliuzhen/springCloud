@@ -9,7 +9,25 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
+    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="多数据源 不想使用 xml 的方式这里 可以注释掉">
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/DynamicApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/annotation/DS.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/aop/DynamicDataSourceAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DataSourceContextHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSourceConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/test/java/com/aaa/dynamic/DynamicApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,6 +55,7 @@
     <ignored path="D:\myweb\springCloud\.idea\shelf/" />
     <ignored path="$PROJECT_DIR$/zipkin/target/" />
     <ignored path="$PROJECT_DIR$/dynamic-data-mybatis/target/" />
+    <ignored path="$PROJECT_DIR$/dynamic-data-mybatis-druid/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,70 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1184#1185#0" expanded="true" />
-                <element signature="e#1241#1242#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test2DbSourceConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-46">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test1/Test1Mapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test1/Test1Mapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test2/Test2Mapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test2/Test2Mapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="10" lean-forward="true" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+              <caret line="2" column="69" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -168,8 +125,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+            <state relative-caret-position="874">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -178,22 +135,95 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/mybatis/mybatis-spring/2.0.3/mybatis-spring-2.0.3.jar!/org/mybatis/spring/annotation/MapperScan.class">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+            <state relative-caret-position="55">
+              <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/DynamicApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/DynamicDataMybatisApplication.java">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/annotation/DS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="276">
+              <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DataSourceContextHolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="629">
+              <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
               <folding>
-                <element signature="e#352#353#0" expanded="true" />
+                <element signature="e#420#421#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#511#512#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
+                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#641#642#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="552">
+              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#446#447#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSourceConfiguration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2163#2179#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/aop/DynamicDataSourceAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1845#1846#0" expanded="true" />
+                <element signature="e#1894#1895#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="491">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
@@ -207,16 +237,13 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="FxmlFile" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>@Column(name = &quot;user_name&quot;)</find>
-      <find>//假设返回的用户信息如下;  模拟数据库数据</find>
-      <find>test t=new test();</find>
-      <find>basedir</find>
       <find>1</find>
       <find>my</find>
       <find>UserInfoDetail</find>
@@ -243,6 +270,10 @@
       <find>isExcel2003</find>
       <find>EasyPoiUtils.download(workBook, response);</find>
       <find>exportExcel</find>
+      <find>DynamicDataSource</find>
+      <find>dynamicDataSource</find>
+      <find>slaveDataSource</find>
+      <find>.dynamic</find>
     </findStrings>
     <replaceStrings>
       <replace>BaseEnum</replace>
@@ -274,25 +305,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/provider/pom.xml" />
-        <option value="$PROJECT_DIR$/provider2/pom.xml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/provider2/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/customer/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/security_oauth2/pom.xml" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/resources/log4jdbc.log4j2.properties" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/resources/log4jdbc.log4j2.properties" />
-        <option value="$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/web/TestWebController.java" />
-        <option value="$PROJECT_DIR$/customer/src/test/java/com/aaa/customer/CustomerApplicationTests.java" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/resources/logback-spring.xml" />
-        <option value="$PROJECT_DIR$/gateway/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/gateway/src/main/java/com/aaa/gateway/GatewayApplication.java" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/config/CacheConfig.java" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/web/LoginController.java" />
-        <option value="$PROJECT_DIR$/securityweb/src/main/java/com/aaa/securityweb/redisConfig/CacheConfig.java" />
         <option value="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/util/ObjToMapUtils.java" />
         <option value="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/util/EasyPoiUtils.java" />
         <option value="$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/BeanCopyUtil.java" />
@@ -322,9 +334,28 @@
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test2DbSourceConfig.java" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test2/Test2Mapper.java" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test2/Test2Mapper.xml" />
-        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java" />
-        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DataSourceContextHolder.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/testDynamic.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DynamicDataSource.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/TestDynamic.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/TestMasterDynamic.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/annotation/DS.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/TestSlaveDynamic.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DynamicDataSourceAspect.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DynamicDataSourceConfiguration.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/DynamicDataMybatisApplication.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/annotation/DS.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DataSourceContextHolder.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSource.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSourceConfiguration.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSourceAspect.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/DynamicApplication.java" />
       </list>
     </option>
   </component>
@@ -343,17 +374,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="securityweb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="securityweb" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -401,12 +422,45 @@
               <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="springCloud" type="462c0819:PsiDirectoryNode" />
               <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -415,7 +469,7 @@
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -425,102 +479,45 @@
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aaa" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic_data_mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aaa" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic_data_mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic" type="462c0819:PsiDirectoryNode" />
+              <item name="annotation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aaa" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aaa" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic_data_mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aaa" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic_data_mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="test1" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aaa" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic_data_mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-              <item name="test2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aaa" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic_data_mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamic-data-mybatis-druid" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="springCloud" type="462c0819:PsiDirectoryNode" />
-              <item name="dynamic-data-mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="test1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="springCloud" type="b2602c69:ProjectViewProjectNode" />
@@ -839,7 +836,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576224849490" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576232739020" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com" />
     <property name="last_opened_file_path" value="D:/logs" />
@@ -864,11 +861,11 @@
       <recent name="E:\WorkSpace\springCloud\security_aouth2_client\lib" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aaa.dynamic_data_mybatis.dao" />
       <recent name="com.aaa.dynamic_data_mybatis.dao.test2" />
       <recent name="com.aaa.dynamic_data_mybatis.config" />
       <recent name="com.aaa.customer.excel3" />
       <recent name="com.aaa.customer.excel" />
-      <recent name="com.aaa.customer.excel2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\myweb\springCloud\security_oauth2\src\main\resources" />
@@ -882,10 +879,10 @@
     <treeState>
       <expand>
         <path>
-          <item name="Found 43 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 44 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
         <path>
-          <item name="Found 43 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 44 services " type="fcff1e1b:RestServiceStructure$RootNode" />
           <item name="dynamic-data-mybatis" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
@@ -910,7 +907,7 @@
     </option>
     <option name="contentProportion" value="0.14664502" />
   </component>
-  <component name="RunManager" selected="Spring Boot.DynamicDataMybatisApplication">
+  <component name="RunManager" selected="Spring Boot.DynamicApplication">
     <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aaa.base_jar.test.hello" />
       <module name="base_jar" />
@@ -991,6 +988,13 @@
     <configuration name="CustomerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="customer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.aaa.customer.CustomerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DynamicApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="dynamic-data-mybatis-druid" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aaa.dynamic.DynamicApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -1122,6 +1126,7 @@
       <item itemvalue="Spring Boot.ZipkinApplication" />
       <item itemvalue="Spring Boot.ZuulApplication" />
       <item itemvalue="Spring Boot.DynamicDataMybatisApplication" />
+      <item itemvalue="Spring Boot.DynamicApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -1227,7 +1232,7 @@
       <workItem from="1574319498196" duration="158000" />
       <workItem from="1575616000919" duration="1281000" />
       <workItem from="1576118576804" duration="15970000" />
-      <workItem from="1576222226590" duration="2465000" />
+      <workItem from="1576222226590" duration="10672000" />
     </task>
     <task id="LOCAL-00001" summary="oauth2添加简易模式和自定义回调地址">
       <created>1565831617446</created>
@@ -1481,7 +1486,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576224616608</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="多数据源 不想使用 xml 的方式这里 可以注释掉">
+      <created>1576224953025</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1576224953025</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1517,7 +1529,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="719088000" />
+    <option name="totallyTimeSpent" value="727295000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1532,7 +1544,7 @@
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.661442" visible="true" weight="0.28304905" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.661442" visible="true" weight="0.28304905" />
       <window_info id="Structure" order="1" sideWeight="0.338558" side_tool="true" weight="0.27665246" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1551,12 +1563,12 @@
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.335141" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32997763" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.30911064" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.39479393" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.6453362" />
       <window_info anchor="bottom" id="Problems" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.35140997" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.3546638" />
       <window_info anchor="bottom" id="Tail" order="17" />
       <window_info anchor="bottom" id="Build" order="18" weight="0.18221258" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1571,7 +1583,7 @@
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.32995737" />
       <window_info active="true" anchor="right" id="Coverage" order="10" side_tool="true" visible="true" weight="0.32995737" />
       <window_info anchor="right" id="Gradle" order="11" weight="0.32995737" />
-      <window_info anchor="right" id="RestServices" order="12" visible="true" weight="0.09541578" />
+      <window_info anchor="right" id="RestServices" order="12" weight="0.14925373" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6783734" visible="true" weight="0.21375267" />
@@ -1691,7 +1703,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/securityweb" />
     </ignored-roots>
-    <MESSAGE value="mybatis整合枚举类" />
     <MESSAGE value="枚举类反序列化" />
     <MESSAGE value="基本整合jpa 实现 curd" />
     <MESSAGE value="整合jpa 实现 自动生成时间" />
@@ -1716,7 +1727,8 @@
     <MESSAGE value="@ExcelTarget   @ExcelEntity   @ExcelCollection  @Excel  等等组合注解的用法" />
     <MESSAGE value="导出合并单元格" />
     <MESSAGE value="springBoot 配置 mysql多数据源" />
-    <option name="LAST_COMMIT_MESSAGE" value="springBoot 配置 mysql多数据源" />
+    <MESSAGE value="多数据源 不想使用 xml 的方式这里 可以注释掉" />
+    <option name="LAST_COMMIT_MESSAGE" value="多数据源 不想使用 xml 的方式这里 可以注释掉" />
   </component>
   <component name="WindowStateProjectService">
     <state width="177" height="319" key="Git.Branch.Popup" />
@@ -1849,137 +1861,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/provider2/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/provider2/src/main/java/com/aaa/provider2/Provider2Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/SecurityAouth2ClientApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/util/ObjToMapUtils.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="111" column="45" selection-start-line="111" selection-start-column="45" selection-end-line="111" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel2.java" />
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/net/URLEncoder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="199" column="25" selection-start-line="199" selection-start-column="25" selection-end-line="199" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/io/ByteArrayInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="122" column="11" selection-start-line="122" selection-start-column="11" selection-end-line="122" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/FullData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-517">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/bind/annotation/RestController.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/cn/afterturn/easypoi-base/4.0.0/easypoi-base-4.0.0.jar!/cn/afterturn/easypoi/excel/entity/enmus/ExcelType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/BeanCopyUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_201/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="2119" column="19" selection-start-line="2119" selection-start-column="19" selection-end-line="2119" selection-end-column="19" />
-          <folding>
-            <element signature="e#82616#82617#0" expanded="true" />
-            <element signature="e#82667#82668#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1633">
-          <caret line="71" column="36" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/2.0.1.Final/validation-api-2.0.1.Final.jar!/javax/validation/constraints/Max.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/EasyPoiUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="117" column="32" lean-forward="true" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel/FullDataExportDTOV2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/cn/afterturn/easypoi-base/4.0.0/easypoi-base-4.0.0.jar!/cn/afterturn/easypoi/excel/entity/ImportParams.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="108" column="19" selection-start-line="108" selection-start-column="19" selection-end-line="108" selection-end-column="19" />
-          <folding>
-            <element signature="e#2597#2598#0" expanded="true" />
-            <element signature="e#2651#2652#0" expanded="true" />
-            <element signature="e#2688#2689#0" expanded="true" />
-            <element signature="e#2726#2727#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/cn/afterturn/easypoi-base/4.0.0/easypoi-base-4.0.0.jar!/cn/afterturn/easypoi/excel/entity/result/ExcelImportResult.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="333">
@@ -2150,13 +2031,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-299">
-          <caret line="11" column="25" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig2.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -2171,40 +2045,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/DynamicDataMybatisApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#352#353#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test1/Test1Mapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test2DbSourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-46">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test1/Test1Mapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="29" column="1" lean-forward="true" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test2/Test2Mapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -2212,39 +2052,261 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test2/Test2Mapper.java">
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test1/Test1Mapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+        <state relative-caret-position="393">
+          <caret line="29" column="1" selection-start-line="29" selection-start-column="1" selection-end-line="29" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test1/Test1Mapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="11" />
+        <state relative-caret-position="207">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test2/Test2Mapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="26" column="2" selection-start-line="26" selection-start-column="2" selection-end-line="27" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/annotation/DS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.2.2.RELEASE/spring-boot-autoconfigure-2.2.2.RELEASE.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-tx/5.2.2.RELEASE/spring-tx-5.2.2.RELEASE.jar!/org/springframework/transaction/annotation/EnableTransactionManagement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DynamicDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/dynamic-datasource-spring-boot-starter/2.4.2/dynamic-datasource-spring-boot-starter-2.4.2.jar!/com/baomidou/dynamic/datasource/spring/boot/autoconfigure/DynamicDataSourceAutoConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+        <state relative-caret-position="135">
+          <caret line="33" column="50" selection-start-line="32" selection-start-column="38" selection-end-line="33" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1184#1185#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test2DbSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/TestMasterDynamic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/TestSlaveDynamic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DynamicDataSourceAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DynamicDataSourceConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="29" column="64" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2177#2193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/DynamicDataMybatisApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <folding>
+            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#352#353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/dynamic-datasource-spring-boot-starter/2.4.2/dynamic-datasource-spring-boot-starter-2.4.2.jar!/com/baomidou/dynamic/datasource/spring/boot/autoconfigure/DataSourceProperty.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="44" column="18" selection-start-line="44" selection-start-column="18" selection-end-line="44" selection-end-column="18" />
+          <folding>
+            <element signature="e#1262#1263#0" expanded="true" />
+            <element signature="e#1298#1299#0" expanded="true" />
+            <element signature="e#1333#1334#0" expanded="true" />
+            <element signature="e#1369#1370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config2/DataSourceContextHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="17" column="77" selection-start-line="17" selection-start-column="77" selection-end-line="17" selection-end-column="77" />
+          <folding>
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#567#568#0" expanded="true" />
+            <element signature="e#617#618#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="491">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="69" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/annotation/DS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DataSourceContextHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
+          <folding>
+            <element signature="e#420#421#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#511#512#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
+            <element signature="e#603#604#0" expanded="true" />
+            <element signature="e#641#642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#446#447#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/config/DynamicDataSourceConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2163#2179#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/aop/DynamicDataSourceAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1894#1895#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis-druid/src/main/java/com/aaa/dynamic/DynamicApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

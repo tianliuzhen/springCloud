@@ -26,6 +26,7 @@
         <option value="$PROJECT_DIR$/test2/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin/pom.xml" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/pom.xml" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/pom.xml" />
       </list>
     </option>
   </component>
