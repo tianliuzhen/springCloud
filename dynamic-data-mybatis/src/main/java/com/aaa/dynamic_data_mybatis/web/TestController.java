@@ -27,7 +27,7 @@ public class TestController {
 
     @GetMapping("/test")
     public void test1(){
-        List<Map> list=test1Mapper.getAll();
+        List<Map> list=test1Mapper.getAll2();
         for (Map map : list) {
             System.out.println(map.get("a")+"_"+map.get("b"));
         }

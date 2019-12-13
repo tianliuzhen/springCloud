@@ -38,7 +38,10 @@ public class Test1DbSourceConfig {
     public SqlSessionFactory testSqlSessionFactory(@Qualifier("test1DataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
         bean.setDataSource(dataSource);
-        bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/test1/*.xml"));
+        /**
+         * 不想使用 xml 的方式这里 可以注释掉
+         */
+        //  bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/test1/*.xml"));
         return bean.getObject();
     }
 

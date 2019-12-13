@@ -10,26 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/DynamicDataMybatisApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test2DbSourceConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test1/Test1Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test2/Test2Mapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test1/Test1Mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test2/Test2Mapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dynamic-data-mybatis/src/test/java/com/aaa/dynamic_data_mybatis/DynamicDataMybatisApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -117,21 +97,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+            <state>
+              <caret selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+            <state relative-caret-position="351">
+              <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1040#1041#0" expanded="true" />
-                <element signature="e#1097#1098#0" expanded="true" />
+                <element signature="e#1184#1185#0" expanded="true" />
+                <element signature="e#1241#1242#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,10 +165,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
+            <state relative-caret-position="595">
               <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -337,14 +317,14 @@
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1SourceConfig.java" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DBSourceConfig.java" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/testController.java" />
-        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test1/Test1Mapper.xml" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test1/Test1Mapper.java" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test2DbSourceConfig.java" />
-        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/dao/test2/Test2Mapper.java" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/mapper/test2/Test2Mapper.xml" />
         <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java" />
       </list>
     </option>
   </component>
@@ -859,7 +839,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576224494102" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576224849490" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/security_aouth2_client/src/main/java/com" />
     <property name="last_opened_file_path" value="D:/logs" />
@@ -1247,7 +1227,7 @@
       <workItem from="1574319498196" duration="158000" />
       <workItem from="1575616000919" duration="1281000" />
       <workItem from="1576118576804" duration="15970000" />
-      <workItem from="1576222226590" duration="2206000" />
+      <workItem from="1576222226590" duration="2465000" />
     </task>
     <task id="LOCAL-00001" summary="oauth2添加简易模式和自定义回调地址">
       <created>1565831617446</created>
@@ -1494,7 +1474,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576136907125</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="springBoot 配置 mysql多数据源">
+      <created>1576224616608</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1576224616608</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1530,7 +1517,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="718829000" />
+    <option name="totallyTimeSpent" value="719088000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1569,7 +1556,7 @@
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.6453362" />
       <window_info anchor="bottom" id="Problems" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.24403471" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" weight="0.35140997" />
       <window_info anchor="bottom" id="Tail" order="17" />
       <window_info anchor="bottom" id="Build" order="18" weight="0.18221258" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -1704,7 +1691,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/securityweb" />
     </ignored-roots>
-    <MESSAGE value="2.16基本整合mybatis" />
     <MESSAGE value="mybatis整合枚举类" />
     <MESSAGE value="枚举类反序列化" />
     <MESSAGE value="基本整合jpa 实现 curd" />
@@ -1729,7 +1715,8 @@
     <MESSAGE value=" 多sheet页导入、及导入校验" />
     <MESSAGE value="@ExcelTarget   @ExcelEntity   @ExcelCollection  @Excel  等等组合注解的用法" />
     <MESSAGE value="导出合并单元格" />
-    <option name="LAST_COMMIT_MESSAGE" value="导出合并单元格" />
+    <MESSAGE value="springBoot 配置 mysql多数据源" />
+    <option name="LAST_COMMIT_MESSAGE" value="springBoot 配置 mysql多数据源" />
   </component>
   <component name="WindowStateProjectService">
     <state width="177" height="319" key="Git.Branch.Popup" />
@@ -2201,25 +2188,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1040#1041#0" expanded="true" />
-            <element signature="e#1097#1098#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test2DbSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-46">
@@ -2253,10 +2221,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/web/TestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
+        <state relative-caret-position="595">
           <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamic-data-mybatis/src/main/java/com/aaa/dynamic_data_mybatis/config/Test1DbSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="40" column="7" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1184#1185#0" expanded="true" />
+            <element signature="e#1241#1242#0" expanded="true" />
           </folding>
         </state>
       </provider>
