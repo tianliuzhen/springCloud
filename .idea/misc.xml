@@ -16,7 +16,6 @@
         <option value="$PROJECT_DIR$/provider/pom.xml" />
         <option value="$PROJECT_DIR$/zuul/pom.xml" />
         <option value="$PROJECT_DIR$/hystrix/pom.xml" />
-        <option value="$PROJECT_DIR$/test/pom.xml" />
         <option value="$PROJECT_DIR$/feign_gzip/pom.xml" />
         <option value="$PROJECT_DIR$/rabbitmq/pom.xml" />
         <option value="$PROJECT_DIR$/securityweb/pom.xml" />
@@ -26,7 +25,6 @@
         <option value="$PROJECT_DIR$/security_aouth2_server/pom.xml" />
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/provider2/pom.xml" />
-        <option value="$PROJECT_DIR$/test2/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin/pom.xml" />
       </list>
     </option>

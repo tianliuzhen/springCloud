@@ -6,13 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="test2" />
         <module name="security_oauth2" />
         <module name="dynamic-data-mybatis-druid" />
         <module name="gateway" />
         <module name="security_aouth2_client" />
         <module name="zipkin" />
-        <module name="test" />
         <module name="provider" />
         <module name="feign_gzip" />
         <module name="customer" />
@@ -33,6 +31,8 @@
       <module name="dynamic_data_mybatis" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="security_aouth2_server" target="1.8" />
+      <module name="test" target="1.8" />
+      <module name="test2" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

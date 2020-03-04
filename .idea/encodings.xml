@@ -24,10 +24,6 @@
     <file url="file://$PROJECT_DIR$/security_oauth2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/securityweb" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/securityweb/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test2" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/test2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zipkin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />

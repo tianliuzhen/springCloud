@@ -2,6 +2,7 @@ package com.example.security_aouth2_client.web;
 
 import com.example.security_aouth2_client.customBase.CustomPrincipal;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -38,7 +39,9 @@ public class testController {
         //这里可以 模拟多租户进行操作
         String typeStr = tokenValue.split("_")[0];
         System.out.println(typeStr);
-
+        if (StringUtils.isBlank(typeStr) ||  StringUtils.isBlank(tokenValue)) {
+            throw new IllegalArgumentException("token! 无效");
+        }
 
         log.info("resource: user {}", authentication);
         return authentication;
