@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -20,13 +21,25 @@ import org.springframework.web.bind.annotation.*;
 public class testController {
     /**
      *  测试 客户端 参数和 bear 两种访问形式
+     *  有两种 传token 的值
+     *  1、 url直接绑定参数   url?token=XXXX
+     *  2、直接表单传值
      * @param
      * @return
      */
     @GetMapping("/user") public Authentication getUser(Authentication authentication,
                               @RequestParam("name") String name, @RequestParam("access_token") String access_token)
     {
-        System.out.println(name+":::"+access_token);
+        //System.out.println(name+":::"+access_token);
+        OAuth2AuthenticationDetails auth2AuthenticationDetails= (OAuth2AuthenticationDetails) authentication.getDetails();
+        String tokenValue = auth2AuthenticationDetails.getTokenValue();
+        System.out.println(tokenValue);
+        //这个时候可以做一个操作，截取token前的 自定义字符 demo_
+        //这里可以 模拟多租户进行操作
+        String typeStr = tokenValue.split("_")[0];
+        System.out.println(typeStr);
+
+
         log.info("resource: user {}", authentication);
         return authentication;
     }

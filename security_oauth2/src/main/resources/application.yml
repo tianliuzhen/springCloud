@@ -54,7 +54,7 @@ spring:
     url: jdbc:log4jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     #&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: root
     hikari:
       max-lifetime: 1500000
       minimum-idle: 3

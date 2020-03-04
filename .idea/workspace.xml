@@ -9,16 +9,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="多数据源 不想使用 xml 的方式这里 可以注释掉">
-      <change afterPath="$PROJECT_DIR$/logs/graceLogs/log_error.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/graceLogs/log_info.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/graceLogs/log_warn.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/@mapperScan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/@mapperScan.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/test.xml" afterDir="false" />
+    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/logs/graceLogs/info/log-info-2020-02-26.0.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/graceLogs/warn/log-warn-2020-02-26.0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/graceLogs/log_info.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/graceLogs/log_info.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/graceLogs/log_warn.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/graceLogs/log_warn.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/web/testController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/web/testController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/security_oauth2/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +152,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20917822" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="GrepConsole" />
   </component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -186,11 +185,11 @@
     <treeState>
       <expand>
         <path>
-          <item name="Found 44 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="Found 42 services " type="fcff1e1b:RestServiceStructure$RootNode" />
         </path>
         <path>
-          <item name="Found 44 services " type="fcff1e1b:RestServiceStructure$RootNode" />
-          <item name="dynamic-data-mybatis" type="c588b436:RestServiceStructure$ProjectNode" />
+          <item name="Found 42 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="security_aouth2_client" type="c588b436:RestServiceStructure$ProjectNode" />
         </path>
       </expand>
       <select />
@@ -203,7 +202,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SecurityOauth2Application">
+  <component name="RunManager" selected="Spring Boot.SecurityAouth2ClientApplication">
     <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aaa.base_jar.test.hello" />
       <module name="base_jar" />
@@ -438,8 +437,19 @@
     <option name="viewStates">
       <list>
         <serviceView>
+          <option name="contentProportion" value="0.19125684" />
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -544,7 +554,7 @@
       <workItem from="1582686197306" duration="73000" />
       <workItem from="1582686364886" duration="2487000" />
       <workItem from="1583216369462" duration="154000" />
-      <workItem from="1583292577876" duration="2832000" />
+      <workItem from="1583292577876" duration="4753000" />
     </task>
     <task id="LOCAL-00001" summary="oauth2添加简易模式和自定义回调地址">
       <created>1565831617446</created>
@@ -805,7 +815,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576224953025</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="去除冗余项目">
+      <created>1583297793570</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1583297793570</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -916,7 +933,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/securityweb" />
     </ignored-roots>
-    <MESSAGE value="枚举类反序列化" />
     <MESSAGE value="基本整合jpa 实现 curd" />
     <MESSAGE value="整合jpa 实现 自动生成时间" />
     <MESSAGE value="springSecurity实现@AuthenticationPrincipal CustomPrincipal CustomPrincipal&#10;主要是 新增 如下&#10; user-info-uri: ${auth-server}/users/info # 一个可以获取认证授权的自定义接口，可以在授权服务器，也可以在其他服务器上" />
@@ -941,13 +957,14 @@
     <MESSAGE value="导出合并单元格" />
     <MESSAGE value="springBoot 配置 mysql多数据源" />
     <MESSAGE value="多数据源 不想使用 xml 的方式这里 可以注释掉" />
-    <option name="LAST_COMMIT_MESSAGE" value="多数据源 不想使用 xml 的方式这里 可以注释掉" />
+    <MESSAGE value="去除冗余项目" />
+    <option name="LAST_COMMIT_MESSAGE" value="去除冗余项目" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="8" key="CommitChangelistDialog2" timestamp="1582687762714">
+    <state x="385" y="8" key="CommitChangelistDialog2" timestamp="1583297792597">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="385" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1582687762714" />
+    <state x="385" y="8" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583297792597" />
     <state x="190" y="245" key="FileChooserDialogImpl" timestamp="1582686264730">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -955,10 +972,58 @@
     <state width="177" height="319" key="Git.Branch.Popup" timestamp="1582686204702" />
     <state width="177" height="319" key="Git.Branch.Popup/1920.1080/1920.1080" timestamp="1582686204702" />
     <state width="177" height="319" key="Git.Branch.Popup@1920.1080" timestamp="1582686204702" />
-    <state x="272" y="57" key="SettingsEditor" timestamp="1582686268633">
+    <state width="1183" height="188" key="GridCell.Tab.0.bottom" timestamp="1583299573513">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1582686268633" />
+    <state width="1183" height="188" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583299573513" />
+    <state width="1183" height="188" key="GridCell.Tab.0.center" timestamp="1583299573513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1183" height="188" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583299573513" />
+    <state width="1183" height="188" key="GridCell.Tab.0.left" timestamp="1583299573513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1183" height="188" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583299573513" />
+    <state width="1183" height="188" key="GridCell.Tab.0.right" timestamp="1583299573513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1183" height="188" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583299573513" />
+    <state width="1183" height="188" key="GridCell.Tab.1.bottom" timestamp="1583299573514">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1183" height="188" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583299573514" />
+    <state width="1183" height="188" key="GridCell.Tab.1.center" timestamp="1583299573513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1183" height="188" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583299573513" />
+    <state width="1183" height="188" key="GridCell.Tab.1.left" timestamp="1583299573513">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1183" height="188" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583299573513" />
+    <state width="1183" height="188" key="GridCell.Tab.1.right" timestamp="1583299573514">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1183" height="188" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583299573514" />
+    <state width="1192" height="366" key="GridCell.Tab.2.bottom" timestamp="1583297912739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1192" height="366" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583297912739" />
+    <state width="1192" height="366" key="GridCell.Tab.2.center" timestamp="1583297912739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1192" height="366" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1583297912739" />
+    <state width="1192" height="366" key="GridCell.Tab.2.left" timestamp="1583297912739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1192" height="366" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1583297912739" />
+    <state width="1192" height="366" key="GridCell.Tab.2.right" timestamp="1583297912739">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1192" height="366" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1583297912739" />
+    <state x="272" y="57" key="SettingsEditor" timestamp="1583297910071">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583297910071" />
     <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1582687759256">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -967,6 +1032,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="457" y="167" width="621" height="490" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1583292826259" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583299625742">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583299625742" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
