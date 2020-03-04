@@ -4,6 +4,9 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/securityweb" />
   </component>
+  <component name="JavaScriptSettings">
+    <option name="languageLevel" value="ES6" />
+  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
@@ -25,8 +28,6 @@
         <option value="$PROJECT_DIR$/provider2/pom.xml" />
         <option value="$PROJECT_DIR$/test2/pom.xml" />
         <option value="$PROJECT_DIR$/zipkin/pom.xml" />
-        <option value="$PROJECT_DIR$/dynamic-data-mybatis/pom.xml" />
-        <option value="$PROJECT_DIR$/dynamic-data-mybatis-druid/pom.xml" />
       </list>
     </option>
   </component>

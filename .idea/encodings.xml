@@ -1,24 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8" addBOMForNewFiles="with NO BOM">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/customer" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/dynamic-data-mybatis" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/dynamic-data-mybatis-druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/customer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/feign_gzip" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/feign_gzip/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/hystrix" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrix/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/provider2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/provider2/src/main/resources/application.yml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rabbitmq/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security_aouth2_client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/security_aouth2_client/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/security_oauth2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/security_oauth2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/securityweb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/securityweb/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/test2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zipkin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkin/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zuul/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zuul/src/main/resources/application.yml" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

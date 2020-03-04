@@ -6,29 +6,31 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="baseJar" />
-        <module name="customer" />
-        <module name="dynamic-data-mybatis" />
-        <module name="dynamic-data-mybatis-druid" />
-        <module name="eureka" />
-        <module name="feign_gzip" />
-        <module name="gateway" />
-        <module name="hystrix" />
-        <module name="provider" />
-        <module name="provider2" />
-        <module name="rabbitmq" />
-        <module name="security_aouth2_client" />
-        <module name="security_oauth2" />
-        <module name="securityweb" />
-        <module name="test" />
         <module name="test2" />
+        <module name="security_oauth2" />
+        <module name="dynamic-data-mybatis-druid" />
+        <module name="gateway" />
+        <module name="security_aouth2_client" />
         <module name="zipkin" />
+        <module name="test" />
+        <module name="provider" />
+        <module name="feign_gzip" />
+        <module name="customer" />
+        <module name="hystrix" />
+        <module name="rabbitmq" />
+        <module name="provider2" />
         <module name="zuul" />
+        <module name="dynamic-data-mybatis" />
+        <module name="eureka" />
+        <module name="baseJar" />
+        <module name="securityweb" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="base_jar" target="1.5" />
       <module name="baseJar" target="1.5" />
+      <module name="dynamic" target="1.8" />
+      <module name="dynamic_data_mybatis" target="1.8" />
       <module name="mybatis" target="1.8" />
       <module name="security_aouth2_server" target="1.8" />
     </bytecodeTargetLevel>
@@ -36,8 +38,10 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="customer" options="-parameters" />
+      <module name="dynamic" options="-parameters" />
       <module name="dynamic-data-mybatis" options="-parameters" />
       <module name="dynamic-data-mybatis-druid" options="-parameters" />
+      <module name="dynamic_data_mybatis" options="-parameters" />
       <module name="eureka" options="-parameters" />
       <module name="feign_gzip" options="-parameters" />
       <module name="gateway" options="-parameters" />
