@@ -1,6 +1,6 @@
 package com.aaa.rabbitmq;
 
-import com.aaa.rabbitmq.rabbitMq.MsgProducer;
+import com.aaa.rabbitmq.send.MsgProducer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @SpringBootTest
 @RunWith(SpringRunner.class)
-public class rabbit {
+public class Rabbit {
     @Autowired
     MsgProducer msgProducer;
     @Test

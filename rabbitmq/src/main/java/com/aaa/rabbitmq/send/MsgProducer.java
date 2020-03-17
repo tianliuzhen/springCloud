@@ -1,5 +1,6 @@
-package com.aaa.rabbitmq.rabbitMq;
+package com.aaa.rabbitmq.send;
 
+import com.aaa.rabbitmq.config.RabbitConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -34,6 +35,7 @@ public class MsgProducer implements RabbitTemplate.ConfirmCallback {
     public void sendMsg(String content) {
          CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
          //把消息放入ROUTINGKEY_A对应的队列当中去，对应的是队列A
+        // 这里就像分组一样。依次是 交换机、路由、消息实体、uuid
             rabbitTemplate.convertAndSend(RabbitConfig.EXCHANGE_A, RabbitConfig.ROUTINGKEY_A, content, correlationId);
         }
 

@@ -21,7 +21,7 @@ instance:
 #rabbitmq 配置
 rq:
   rabbitmq:
-    host: localhost
+    host: 47.98.253.2
     port: 5672
     username: guest
     password: guest
