@@ -21,7 +21,7 @@ import java.util.Map;
 
 
 /**
- * description: 该文件说明
+ * description: rabbitmq账号配置
  *
  * @author 田留振(tianliuzhen @ haoxiaec.com)
  * @version 1.0
@@ -54,17 +54,7 @@ public class RabbitConfig {
     @Value("${rq.rabbitmq.password}")
     private String password;
 
-    public static final String EXCHANGE_A = "my-mq-exchange_A";
-    public static final String EXCHANGE_B = "my-mq-exchange_B";
-    public static final String EXCHANGE_C = "my-mq-exchange_C";
 
-    public static final String QUEUE_A = "QUEUE_A";
-    public static final String QUEUE_B = "QUEUE_B";
-    public static final String QUEUE_C = "QUEUE_C";
-
-    public static final String ROUTINGKEY_A = "spring-boot-routingKey_A";
-    public static final String ROUTINGKEY_B = "spring-boot-routingKey_B";
-    public static final String ROUTINGKEY_C = "spring-boot-routingKey_C";
 
     @Bean
     public ConnectionFactory connectionFactory() {
@@ -81,75 +71,7 @@ public class RabbitConfig {
         return template;
     }
 
-/**
-     * 针对消费者配置
-     * 1. 设置交换机类型
-     * 2. 将队列绑定到交换机
-     FanoutExchange: 将消息分发到所有的绑定队列，无routingkey的概念
-     HeadersExchange ：通过添加属性key-value匹配
-     DirectExchange:按照routingkey分发到指定队列
-     TopicExchange:多关键字匹配
-     */
 
-
-    @Bean
-    public DirectExchange defaultExchange() {
-        return new DirectExchange(EXCHANGE_A);
-    }
-/**
-     * 获取队列A
-     * @return
-     */
-/**
-     * 声明队列：队列有五个参数（String name, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments）
-     * name：队列名称
-     * durable：持久性
-     * exclusive：排他性（独立性）
-     * autoDelete：自动删除
-     * arguments：其他相关参数
-     *         arguments（参数配置）
-     * 　　　　x-message-ttl(Time-To-Live)：消息存活时间，单位毫秒
-     * 　　　　x-expires：队列没有访问超时时，自动删除（包含没有消费的消息），单位毫秒。
-     * 　　　　x-max-length：限制队列最大长度（新增后挤出最早的），单位个数。
-     * 　　　　x-max-length-bytes ：限制队列最大容量
-     * 　　　　x-dead-letter-exchange：死信交换机，将删除/过期的数据，放入指定交换机。
-     * 　　　　x-dead-letter-routing-key：死信路由，将删除/过期的数据，放入指定routingKey
-     * 　　　　x-max-priority：队列优先级。
-     * 　　　　x-queue-mode：对列模式，默认lazy（将数据放入磁盘，消费时放入内存）。
-     * 　　　　x-queue-master-locator：镜像队列
-     * @return
-     */
-
-    @Bean
-    public Queue queueA() {
-        //队列持久
-        // 设置队列最大消息数量为5
-        Map<String, Object> args = new HashMap<String, Object>();
-        args.put("x-max-length", 5);
-        //设置队列溢出方式    保留前10条
-        args.put("x-overflow","reject-publish" );
-        return new Queue(QUEUE_A, false,false,false,args);
-        //设置消息过期
-    }
-
-    @Bean
-    public Queue queueB() {
-        //队列持久
-        return new Queue(QUEUE_B, false);
-    }
-    /**
-     * 一个交换机可以绑定多个消息队列，也就是消息通过一个交换机，可以分发到不同的队列当中去
-     * 路由：相当于密钥/第三者，与交换机绑定即可路由消息到指定的队列！
-     */
-    @Bean
-    public Binding binding() {
-        return BindingBuilder.bind(queueA()).to(defaultExchange()).with(RabbitConfig.ROUTINGKEY_A);
-    }
-
- @Bean
- public Binding bindingB(){
-        return BindingBuilder.bind(queueB()).to(defaultExchange()).with(RabbitConfig.ROUTINGKEY_A);
-    }
     /*
     *另外一种消息处理机制的写法如下，在RabbitMQConfig类里面增加bean
     * */

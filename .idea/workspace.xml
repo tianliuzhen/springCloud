@@ -9,37 +9,20 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test2/target/classes/META-INF/test2.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test2/target/test-classes/META-INF/test2.kotlin_module" afterDir="false" />
+    <list default="true" id="cb45d357-4958-4bcd-88eb-1099e270881d" name="Default Changelist" comment="去除冗余项目">
+      <change afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/config/QueueAndExchangeConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/config/RabbitConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/@mapperScan.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/@mapperScan.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/test.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/web/testController.java" beforeDir="false" afterPath="$PROJECT_DIR$/security_aouth2_client/src/main/java/com/example/security_aouth2_client/web/testController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/com/aaa/test/TestApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/com/aaa/test/test/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/com/aaa/test/test/test2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/test/java/com/aaa/test/TestApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/src/main/java/com/aaa/test2/Test2Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test2/src/test/java/com/aaa/test2/Test2ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/config/RabbitConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/config/RabbitConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/receive/MsgReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/receive/MsgReceiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/receive/MsgReceiver2.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/receive/MsgReceiver2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/send/MsgProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/send/MsgProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/test/Receives.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/test/Receives.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/test/Sends.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/main/java/com/aaa/rabbitmq/test/Sends.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rabbitmq/src/test/java/com/aaa/rabbitmq/RabbitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rabbitmq/src/test/java/com/aaa/rabbitmq/RabbitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,14 +91,6 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="4372e0d8863a1d7bdabc87b2819080aa58567275" />
-      </map>
-    </option>
     <excluded-from-favorite>
       <branch-storage>
         <map>
@@ -129,6 +104,14 @@
         </map>
       </branch-storage>
     </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="UPDATE_CHANGES_POLICY" value="SHELVE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -174,32 +157,32 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20917822" />
-    <property name="settings.editor.selected.configurable" value="GrepConsole" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\myweb\springCloud\security_oauth2\src\main\resources" />
+      <recent name="D:\myweb\springCloud\security_oauth2\src\main\resources\sql" />
+      <recent name="E:\WorkSpace\springCloud\test\lib" />
+      <recent name="E:\WorkSpace\springCloud\baseJar\src\main\java" />
+      <recent name="E:\WorkSpace\springCloud\security_aouth2_client\lib" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.security_aouth2_client" />
       <recent name="com.example" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.aaa.rabbitmq.test" />
+      <recent name="com.aaa.dynamic_data_mybatis.dao" />
+      <recent name="com.aaa.dynamic_data_mybatis.dao.test2" />
+      <recent name="com.aaa.dynamic_data_mybatis.config" />
+      <recent name="com.aaa.customer.excel3" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\myweb\springCloud\dynamic-data-mybatis\src\main\resources\mapper\test2" />
       <recent name="D:\myweb\springCloud\dynamic-data-mybatis\src\main\resources\mapper\test1" />
       <recent name="D:\myweb\springCloud\security_oauth2\src\main\resources" />
       <recent name="D:\myweb\springCloud" />
-      <recent name="E:\WorkSpace\springCloud\security_aouth2_client\lib" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.aaa.dynamic_data_mybatis.dao" />
-      <recent name="com.aaa.dynamic_data_mybatis.dao.test2" />
-      <recent name="com.aaa.dynamic_data_mybatis.config" />
-      <recent name="com.aaa.customer.excel3" />
-      <recent name="com.aaa.customer.excel" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\myweb\springCloud\security_oauth2\src\main\resources" />
-      <recent name="D:\myweb\springCloud\security_oauth2\src\main\resources\sql" />
-      <recent name="E:\WorkSpace\springCloud\test\lib" />
-      <recent name="E:\WorkSpace\springCloud\baseJar\src\main\java" />
       <recent name="E:\WorkSpace\springCloud\security_aouth2_client\lib" />
     </key>
   </component>
@@ -224,37 +207,40 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SecurityAouth2ClientApplication">
-    <configuration name="hello" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.aaa.base_jar.test.hello" />
-      <module name="base_jar" />
+  <component name="RunManager" selected="JUnit.RabbitTest.testSend">
+    <configuration name="RabbitTest.testSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rabbitmq" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.aaa.base_jar.test.*" />
+          <option name="PATTERN" value="com.aaa.rabbitmq.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomerApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="customer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.aaa.customer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.aaa.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.aaa.customer.CustomerApplicationTests" />
-      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="PACKAGE_NAME" value="com.aaa.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.rabbitmq.RabbitTest" />
+      <option name="METHOD_NAME" value="testSend" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SecurityOauth2ApplicationTests.findUserList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Rabbit.testSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rabbitmq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.rabbitmq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.rabbitmq.Rabbit" />
+      <option name="METHOD_NAME" value="testSend" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="security_oauth2" />
       <extension name="coverage">
         <pattern>
@@ -263,24 +249,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.aaa.security_oauth2" />
-      <option name="MAIN_CLASS_NAME" value="com.aaa.security_oauth2.SecurityOauth2ApplicationTests" />
-      <option name="METHOD_NAME" value="findUserList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="security_oauth2" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.aaa.security_oauth2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.aaa.security_oauth2" />
-      <option name="MAIN_CLASS_NAME" value="com.aaa.security_oauth2.SecurityOauth2ApplicationTests" />
-      <option name="METHOD_NAME" value="jpaSaveAndFlush" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.security_oauth2.RedisTest" />
+      <option name="METHOD_NAME" value="test1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -297,6 +267,22 @@
       <option name="PACKAGE_NAME" value="com.aaa.securityweb" />
       <option name="MAIN_CLASS_NAME" value="com.aaa.securityweb.SecuritywebApplicationTests" />
       <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="rabbit.testSend" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rabbitmq" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aaa.rabbitmq.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.aaa.rabbitmq" />
+      <option name="MAIN_CLASS_NAME" value="com.aaa.rabbitmq.rabbit" />
+      <option name="METHOD_NAME" value="testSend" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -422,10 +408,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.hello" />
-      <item itemvalue="JUnit.CustomerApplicationTests.contextLoads" />
-      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.findUserList" />
-      <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
       <item itemvalue="JUnit.SecuritywebApplicationTests.contextLoads" />
       <item itemvalue="Spring Boot.CustomerApplication" />
       <item itemvalue="Spring Boot.EurekaApplication" />
@@ -444,14 +426,18 @@
       <item itemvalue="Spring Boot.ZuulApplication" />
       <item itemvalue="Spring Boot.DynamicDataMybatisApplication" />
       <item itemvalue="Spring Boot.DynamicApplication" />
+      <item itemvalue="JUnit.RedisTest.test1" />
+      <item itemvalue="JUnit.rabbit.testSend" />
+      <item itemvalue="JUnit.RabbitTest.testSend" />
+      <item itemvalue="JUnit.Rabbit.testSend" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CustomerApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.SecurityOauth2ApplicationTests.findUserList" />
+        <item itemvalue="JUnit.RabbitTest.testSend" />
+        <item itemvalue="JUnit.Rabbit.testSend" />
+        <item itemvalue="JUnit.rabbit.testSend" />
+        <item itemvalue="JUnit.RedisTest.test1" />
         <item itemvalue="JUnit.SecuritywebApplicationTests.contextLoads" />
-        <item itemvalue="JUnit.SecurityOauth2ApplicationTests.jpaSaveAndFlush" />
-        <item itemvalue="Application.hello" />
       </list>
     </recent_temporary>
   </component>
@@ -465,11 +451,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="Spring Boot" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="Running" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
             </expand>
             <select />
@@ -858,40 +839,15 @@
       <option name="project" value="LOCAL" />
       <updated>1583304118769</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="规范rabbitmq">
+      <created>1584457756681</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1584457756681</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 23m 33s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_jpaSaveAndFlush - 2019.10.16 at 15h 35m 06s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.jpaSaveAndFlush" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecuritywebApplicationTests_contextLoads - 2019.10.16 at 15h 35m 40s.xml">
-      <configuration name="SecuritywebApplicationTests.contextLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_findUserList - 2019.10.16 at 15h 40m 10s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.findUserList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_findUserList - 2019.10.16 at 15h 43m 39s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.findUserList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="SecurityOauth2ApplicationTests_findUserList - 2019.10.16 at 16h 02m 47s.xml">
-      <configuration name="SecurityOauth2ApplicationTests.findUserList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 12h 05m 07s.xml">
-      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 12h 06m 06s.xml">
-      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 12h 06m 15s.xml">
-      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerApplicationTests_contextLoads - 2019.10.19 at 13h 57m 09s.xml">
-      <configuration name="CustomerApplicationTests.contextLoads" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -969,7 +925,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/securityweb" />
     </ignored-roots>
-    <MESSAGE value="整合jpa 实现 自动生成时间" />
     <MESSAGE value="springSecurity实现@AuthenticationPrincipal CustomPrincipal CustomPrincipal&#10;主要是 新增 如下&#10; user-info-uri: ${auth-server}/users/info # 一个可以获取认证授权的自定义接口，可以在授权服务器，也可以在其他服务器上" />
     <MESSAGE value="登录写入数据库" />
     <MESSAGE value="单独的把单个文件打成jar 进行测试" />
@@ -994,13 +949,18 @@
     <MESSAGE value="多数据源 不想使用 xml 的方式这里 可以注释掉" />
     <MESSAGE value=" security_oauth2_client,自定义操作token（多租户解决登录问题）&#10; //这个时候可以做一个操作，截取token前的 自定义字符 demo_&#10; //这里可以 模拟多租户进行操作" />
     <MESSAGE value="去除冗余项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="去除冗余项目" />
+    <MESSAGE value="规范rabbitmq" />
+    <option name="LAST_COMMIT_MESSAGE" value="规范rabbitmq" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="385" y="0" key="CommitChangelistDialog2" timestamp="1583304117525">
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1584457573349">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="385" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1583304117525" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1584457573349" />
+    <state x="385" y="0" key="CommitChangelistDialog2" timestamp="1584457755446">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="385" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1584457755446" />
     <state x="190" y="245" key="FileChooserDialogImpl" timestamp="1582686264730">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -1008,38 +968,38 @@
     <state width="177" height="319" key="Git.Branch.Popup" timestamp="1582686204702" />
     <state width="177" height="319" key="Git.Branch.Popup/1920.1080/1920.1080" timestamp="1582686204702" />
     <state width="177" height="319" key="Git.Branch.Popup@1920.1080" timestamp="1582686204702" />
-    <state width="1183" height="290" key="GridCell.Tab.0.bottom" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.0.bottom" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
-    <state width="1183" height="290" key="GridCell.Tab.0.center" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
+    <state width="1493" height="135" key="GridCell.Tab.0.center" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
-    <state width="1183" height="290" key="GridCell.Tab.0.left" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
+    <state width="1493" height="135" key="GridCell.Tab.0.left" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
-    <state width="1183" height="290" key="GridCell.Tab.0.right" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
+    <state width="1493" height="135" key="GridCell.Tab.0.right" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
-    <state width="1183" height="290" key="GridCell.Tab.1.bottom" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
+    <state width="1493" height="135" key="GridCell.Tab.1.bottom" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
-    <state width="1183" height="290" key="GridCell.Tab.1.center" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
+    <state width="1493" height="135" key="GridCell.Tab.1.center" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
-    <state width="1183" height="290" key="GridCell.Tab.1.left" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
+    <state width="1493" height="135" key="GridCell.Tab.1.left" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
-    <state width="1183" height="290" key="GridCell.Tab.1.right" timestamp="1583304139221">
+    <state width="1493" height="135" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
+    <state width="1493" height="135" key="GridCell.Tab.1.right" timestamp="1584460988422">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1183" height="290" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1583304139221" />
+    <state width="1493" height="135" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1584460988422" />
     <state width="1192" height="366" key="GridCell.Tab.2.bottom" timestamp="1583297912739">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -1056,22 +1016,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1192" height="366" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1583297912739" />
-    <state x="272" y="57" key="SettingsEditor" timestamp="1583297910071">
+    <state x="272" y="57" key="SettingsEditor" timestamp="1584460380367">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1583297910071" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1583304163192">
+    <state x="272" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1584460380367" />
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1584458857115">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1583304163192" />
-    <state x="457" y="167" width="621" height="490" key="find.popup" timestamp="1583303572415">
+    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1584458857115" />
+    <state x="457" y="167" width="621" height="490" key="find.popup" timestamp="1584461025869">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="457" y="167" width="621" height="490" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1583303572415" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1583299625742">
+    <state x="457" y="167" width="621" height="490" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1584461025869" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1584460433621">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1583299625742" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1584460433621" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1120,6 +1080,16 @@
           <url>file://$PROJECT_DIR$/customer/src/main/java/com/aaa/customer/excel2/testWeb2.java</url>
           <line>75</line>
           <option name="timeStamp" value="85" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security_oauth2/src/test/java/com/aaa/security_oauth2/RedisTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="86" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/security_oauth2/src/main/java/com/aaa/security_oauth2/aop/AnnotationAop.java</url>
+          <line>47</line>
+          <option name="timeStamp" value="87" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
