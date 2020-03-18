@@ -8,3 +8,20 @@ management:
     web:
       exposure:
         include: "*"
+####  我的github配置和此处一样，这里只是作为参考作用。
+data:
+  env: NaN
+  user:
+    username: NaN
+    password: NaN
+spring:
+  #rabbitmq 设置
+  rabbitmq:
+    host: 47.98.253.2
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    bus:
+      trace:
+        enabled: true

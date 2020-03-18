@@ -1,5 +1,6 @@
 server:
   port: 8302
+
 spring:
   #rabbitmq 设置
   rabbitmq:
@@ -7,24 +8,19 @@ spring:
     port: 5672
     username: guest
     password: guest
-
----
-spring:
-  profiles: dev
-  application:
-    name: springcloud-config
   cloud:
-    config:
-      uri: http://localhost:3301
-      label: master
-      profile: dev
-# 开启消息跟踪
     bus:
-     trace:
-      enabled: true
-
+      trace:
+        enabled: true
 management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: bus-refresh
+####  我的github配置和此处一样，这里只是作为参考作用。
+data:
+  env: NaN
+  user:
+    username: NaN
+    password: NaN
+## 开启消息跟踪

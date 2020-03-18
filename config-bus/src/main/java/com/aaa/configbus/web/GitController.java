@@ -1,8 +1,5 @@
-package com.aaa.configclient.web;
+package com.aaa.configbus.web;
 
-import com.aaa.configclient.config.GitAutoRefreshConfig;
-import com.aaa.configclient.config.GitConfig;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,36 +17,24 @@ import java.util.Map;
  * @date 2020/3/18
  */
 @RestController
-/**
- * 它提供了一个刷新机制，但是需要我们主动触发。
- * 那就是 @RefreshScope 注解并结合 actuator ，
- * 注意要引入 spring-boot-starter-actuator 包。
- */
 @RefreshScope
 public class GitController {
 
+    @Value("${data.env}")
+    private String env;
 
-    /**
-     * 这种配置刷新**********不会生效
-     */
-    @Autowired
-    private GitConfig gitConfig;
+    @Value("${data.user.username}")
+    private String username;
 
-    /**
-     * 这种配置刷新***********会生效 ***** 推荐使用
-     */
-    @Autowired
-    private GitAutoRefreshConfig gitAutoRefreshConfig;
+    @Value("${data.user.password}")
+    private String password;
 
     @GetMapping(value = "show")
     public Object show() {
-        return gitConfig;
+        return password;
     }
 
-    @GetMapping(value = "autoShow")
-    public Object autoShow() {
-        return gitAutoRefreshConfig;
-    }
+
     /**
      * 触发 gitlab 更新yml文件
      */
@@ -57,5 +42,10 @@ public class GitController {
     public void actuatorRefresh(@RequestBody Map map) {
     }
 
-
+    /**
+     * 触发 gitlab 更新yml文件
+     */
+    @PostMapping(value = "/actuator/bus-refresh")
+    public void busRefresh(@RequestBody Map map) {
+    }
 }

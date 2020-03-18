@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  profiles: dev
+  application:
+    name: config-single-client
+  cloud:
+    config:
+      uri: http://localhost:3301
+      label: master
+      profile: dev
