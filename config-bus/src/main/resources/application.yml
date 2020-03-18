@@ -1,0 +1,30 @@
+server:
+  port: 8302
+spring:
+  #rabbitmq 设置
+  rabbitmq:
+    host: 47.98.253.2
+    port: 5672
+    username: guest
+    password: guest
+
+---
+spring:
+  profiles: dev
+  application:
+    name: springcloud-config
+  cloud:
+    config:
+      uri: http://localhost:3301
+      label: master
+      profile: dev
+# 开启消息跟踪
+    bus:
+     trace:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Data
+@ConfigurationProperties(prefix = "data")
 public class GitAutoRefreshConfig {
 
     public static class UserInfo {

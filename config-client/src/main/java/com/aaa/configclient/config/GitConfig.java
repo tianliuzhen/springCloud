@@ -14,7 +14,6 @@ import org.springframework.stereotype.Component;
  */
 @Data
 @Component
-@ConfigurationProperties(prefix = "data")
 public class GitConfig {
 
     @Value("${data.env}")
