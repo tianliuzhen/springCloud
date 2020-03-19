@@ -1,2 +1,22 @@
 server:
   port: 3301
+spring:
+  application:
+    name: config-eureka-server  # 云 config服务器 配置名称，用于config客户端连接
+  cloud:
+    config:
+      server:
+        git:
+          #配置文件所在仓库
+          uri: https://github.com/tianliuzhen/cloud-configs.git
+          username: tianliuzhen
+          password: t13673437687
+          default-label: master #配置文件分支
+          search-paths: config  #配置文件所在根目录
+
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://localhost:7082/eureka/

@@ -19,13 +19,13 @@ import java.util.Map;
  * @version 1.0
  * @date 2020/3/18
  */
-@RestController
 /**
- * 它提供了一个刷新机制，但是需要我们主动触发。
+ * @RefreshScope它提供了一个刷新机制，但是需要我们主动触发。
  * 那就是 @RefreshScope 注解并结合 actuator ，
  * 注意要引入 spring-boot-starter-actuator 包。
  */
 @RefreshScope
+@RestController
 public class GitController {
 
 
@@ -57,5 +57,11 @@ public class GitController {
     public void actuatorRefresh(@RequestBody Map map) {
     }
 
+    /**
+     * 触发 gitlab 更新yml文件
+     */
+    @PostMapping(value = "/actuator/bus-refresh")
+    public void busRefresh(@RequestBody Map map) {
+    }
 
 }

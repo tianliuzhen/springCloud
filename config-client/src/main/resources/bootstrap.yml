@@ -1,3 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      register-with-eureka: true
+      fetch-registry: true
+      defaultZone: http://localhost:7082/eureka/
+
+
 spring:
   profiles:
     active: dev
@@ -6,21 +14,24 @@ spring:
 spring:
   profiles: prod
   application:
-    name: config-single-client
+    name: config-eureka
   cloud:
-    config:
-      uri: http://localhost:3301
-      label: master
-      profile: prod
+    discovery:
+      enabled: true  # 开启
+      service-id: config-single-server # 指定配置中心服务端的server-id
 
 
 ---
 spring:
   profiles: dev
+  #这里的名字不是乱写的，要和 github远程仓库的名字想对应
+  #
   application:
-    name: config-single-client
+    name: config-eureka
   cloud:
     config:
-      uri: http://localhost:3301
-      label: master
-      profile: dev
+      discovery:
+        #这个参数必须要加，默认是false，不然会拒绝连接
+        enabled: true
+        service-id: config-eureka-server
+
