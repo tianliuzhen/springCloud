@@ -7,5 +7,7 @@ encrypt:
   key-store:
     location: classpath:/config-server.jks
     alias: config-server
+    #这个密码是 使用  keytool -genkeypair -alias config-server -keyalg RSA -keystore config-server.jks  生成开始的密码
     password: tianlz
+    #这个指令是 使用以上指令 最后生成的确认的指令
     secret: 12345678
