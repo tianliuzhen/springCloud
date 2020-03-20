@@ -1,3 +1,11 @@
 #对称加解密 key
+#encrypt:
+#  key: salt
+
+#非对称加解密
 encrypt:
-  key: salt
+  key-store:
+    location: classpath:/config-server.jks
+    alias: config-server
+    password: tianlz
+    secret: 12345678
