@@ -1,0 +1,3 @@
+#对称加解密 key
+encrypt:
+  key: salt
