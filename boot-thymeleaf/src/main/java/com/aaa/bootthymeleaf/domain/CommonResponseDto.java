@@ -1,4 +1,4 @@
-package com.aaa.bootthymeleaf.web;
+package com.aaa.bootthymeleaf.domain;
 
 /**
  * description: 描述
