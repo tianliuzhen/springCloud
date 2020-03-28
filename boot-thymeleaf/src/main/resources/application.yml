@@ -1,0 +1,18 @@
+server:
+  port: 8012
+
+spring:
+  # 设置静态资源或者动态资源访问地址,可以随便起名字，但是同时只能有一个存在
+
+  #静态资源
+  resources:
+    static-locations: classpath:/resources/
+  #动态资源
+    # 设置thymeleaf路径默认为src/main/resources/templates/web/
+    # 切记要带 最后要带 /
+  thymeleaf:
+    prefix: classpath:/templates/web/
+    suffix: .html
+    cache: false
+  mvc:
+    static-path-pattern: /**

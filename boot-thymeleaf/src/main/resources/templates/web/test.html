@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<script src="../js/jquery.min.js"></script>
+<!-- 静态页面可以直接访问
+默认的地址是 src/main/resources/static，所以可以引用。而不用 使用 ../ 跳出
+-->
+<script src="/static/js/jquery.min.js"></script>
 <body>
 <button type="button" onclick="test()">提交</button>
 </body>
