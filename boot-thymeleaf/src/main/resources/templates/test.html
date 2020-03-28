@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="../js/jquery.min.js"></script>
+<body>
+<button type="button" onclick="test()">提交</button>
+</body>
+
+<script>
+    //删除教练数据
+    function test(){
+        var adata = {
+            "id" : 1,
+            "name" : "老王"
+        };
+        var data = JSON.stringify(adata);
+        $.ajax({
+            type : "POST",
+            dataType: "json",//通过GET方式上传请求
+            contentType : "application/json",//上传内容格式为json结构
+            data : data,                                 //上传的参数
+            async: false ,
+            url : "test",     //请求的url。与后端@Request Mapping注解中的值一致。
+            success : function(data) {          //请求成功的回调函数
+                if (data.code === 0){
+                    alert("成功:"+JSON.stringify(data));
+                    window.location.href = "success";
+                }
+            },
+            error : function(e) {           //请求失败的回调函数
+                console.log(e);
+            }
+        });
+    };
+</script>
+</html>
