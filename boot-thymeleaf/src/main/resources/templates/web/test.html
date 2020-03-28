@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -7,7 +7,11 @@
 <!-- 静态页面可以直接访问
 默认的地址是 src/main/resources/static，所以可以引用。而不用 使用 ../ 跳出
 -->
-<script src="/static/js/jquery.min.js"></script>
+<script th:src="@{/static/js/jquery.min.js}"></script>
+<!--
+../ 跳到上级再回到  /resources/static
+<script th:src="@{../resources/static/js/jquery.min.js}"></script>
+也是可以的 -->
 <body>
 <button type="button" onclick="test()">提交</button>
 </body>
