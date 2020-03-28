@@ -19,7 +19,7 @@ public class HtmlController {
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public String test(){
-
+        // 这里的路径指的是   resources/templates/test.html
         return "test";
     }
 

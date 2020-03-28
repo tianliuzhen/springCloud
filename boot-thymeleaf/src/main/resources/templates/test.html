@@ -23,7 +23,7 @@
             contentType : "application/json",//上传内容格式为json结构
             data : data,                                 //上传的参数
             async: false ,
-            url : "test",     //请求的url。与后端@Request Mapping注解中的值一致。
+            url : "/test",     //请求的url。与后端@Request Mapping注解中的值一致。
             success : function(data) {          //请求成功的回调函数
                 if (data.code === 0){
                     alert("成功:"+JSON.stringify(data));
