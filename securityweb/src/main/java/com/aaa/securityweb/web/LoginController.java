@@ -9,6 +9,7 @@ import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.http.HttpRequest;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,6 +33,10 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     RedisUtil redisUtil;
+    @RequestMapping("/")
+    public String index(){
+        return "success";
+    }
     @RequestMapping("/login")
     public String userLogin(){
         return "login";
@@ -41,7 +47,8 @@ public class LoginController {
         return "登录失败";
     }
     @RequestMapping("/success")
-    public String loginForm(){
+    public String loginForm(HttpServletRequest request){
+        request.setAttribute("f","android");
         return "success";
     }
 

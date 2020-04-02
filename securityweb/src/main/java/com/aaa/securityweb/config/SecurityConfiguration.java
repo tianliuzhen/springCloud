@@ -49,7 +49,7 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter  implem
     private AuthenticationFailureHandler myAuthenticationFailHander;
 
     //注入我们自己的AuthenticationProvider
-    
+
     @Autowired
     private MyUserDetailsService myUserDetailsService;
     @Resource
@@ -84,7 +84,8 @@ public class SecurityConfiguration  extends WebSecurityConfigurerAdapter  implem
                 //表单里面  name="remember-me"   写死该默认字段
                 .rememberMeParameter("remember-me").userDetailsService(myUserDetailsService)
                 .tokenRepository(persistentTokenRepository())
-                .tokenValiditySeconds(60)
+                //设置记住我的时间为7天
+                .tokenValiditySeconds(60 * 60 * 24 * 7)
                 .and()
                 .csrf().disable();
                 //当我们登陆时勾选自动登录时，会自动在 Cookie 中保存一个名为 remember-me 的cookie，默认有效期为2周，其值是一个加密字符串：
