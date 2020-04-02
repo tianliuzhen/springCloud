@@ -43,20 +43,20 @@ INSERT INTO `my` VALUES (1, '1', NULL, NULL, NULL, NULL, NULL, '', '');
 -- Table structure for oauth_client_details
 -- ----------------------------
 DROP TABLE IF EXISTS `oauth_client_details`;
-CREATE TABLE `oauth_client_details`  (
-  `client_id` varchar(48) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
-  `resource_ids` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `client_secret` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `scope` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `authorized_grant_types` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `web_server_redirect_uri` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `authorities` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `access_token_validity` int(11) NULL DEFAULT NULL,
-  `refresh_token_validity` int(11) NULL DEFAULT NULL,
-  `additional_information` varchar(4096) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  `autoapprove` varchar(256) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+CREATE TABLE `oauth_client_details` (
+  `client_id` varchar(48) NOT NULL COMMENT '客户端Id',
+  `resource_ids` varchar(256) DEFAULT NULL COMMENT '资源Id用于标识',
+  `client_secret` varchar(256) DEFAULT NULL COMMENT '客户端Id对应密钥',
+  `scope` varchar(256) DEFAULT NULL COMMENT '作用域',
+  `authorized_grant_types` varchar(256) DEFAULT NULL COMMENT '允许的四种搜权类型',
+  `web_server_redirect_uri` varchar(256) DEFAULT NULL COMMENT '允许回调的url（eg：【授权码模式-code】 获取code的回调地址）',
+  `authorities` varchar(256) DEFAULT NULL COMMENT '认证类型',
+  `access_token_validity` int(11) DEFAULT NULL COMMENT 'token有效期',
+  `refresh_token_validity` int(11) DEFAULT NULL COMMENT '刷新获取token的有效期',
+  `additional_information` varchar(4096) DEFAULT NULL,
+  `autoapprove` varchar(256) DEFAULT NULL,
   PRIMARY KEY (`client_id`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of oauth_client_details
