@@ -1,10 +1,14 @@
 package com.aaa.security_oauth2.web;
 
 import com.aaa.security_oauth2.domain.baseEntity.UserInfo;
+import com.aaa.security_oauth2.mapper.UserMapper;
+import com.aaa.security_oauth2.service.MyUserDetailsService;
 import com.aaa.security_oauth2.util.StrUtils;
 import com.alibaba.fastjson.JSON;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.MediaType;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -13,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -28,6 +33,12 @@ public class LoginController {
 
     @Value("${site.oauth.website}")
     private String website="http://localhost:1080";
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Autowired
+    private MyUserDetailsService myUserDetailsService;
 
     /**
      * 登录跳转
@@ -83,11 +94,11 @@ public class LoginController {
     public String  directUrl(){
          return "redirect:/https://www.hao123.com/";
     }
-    
+
     /**
      *
-     * @param 
-     * @return 
+     * @param
+     * @return
      */
     /**
      * 用户授权信息
@@ -109,12 +120,15 @@ public class LoginController {
         // TODO: 2019/8/27  模拟数据
         // 此时应根据 key 从数据库 查询用户信息
         // 此时模拟即可
-        UserInfo user=new UserInfo();
-        user.setId(1);
-        user.setUsername("admin");
-        user.setPassword("123456");
-        map.put("principal", user);
+//        UserInfo user=new UserInfo();
+//        user.setId(1);
+//        user.setUsername("admin");
+//        user.setPassword("123456");
+        // 此时应根据 key 从数据库 查询用户信息
+        map.put("principal", myUserDetailsService.getUserInfoByRedis(key,true));
         System.out.println(principal.toString());
         return map;
     }
+
+
 }

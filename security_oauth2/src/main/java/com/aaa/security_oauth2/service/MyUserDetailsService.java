@@ -5,6 +5,8 @@ import com.aaa.security_oauth2.domain.baseEntity.UserInfoDetail;
 import com.aaa.security_oauth2.entity.User;
 import com.aaa.security_oauth2.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -13,10 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Base64;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * description: 该文件说明
@@ -65,6 +64,19 @@ public class MyUserDetailsService implements UserDetailsService {
         applicationToken = "Basic " + Base64.getEncoder().encodeToString(
                 applicationToken.getBytes(StandardCharsets.UTF_8)).trim();
         System.out.println(applicationToken);
+    }
+
+    /**
+     * isPut = true =》  从缓存中读取
+     * isPut = false =》 刷新这条缓存
+     * @param key
+     * @param isPut
+     * @return
+     */
+    @Cacheable(value="my-redis-cache1",condition ="#isPut" ,cacheManager = "cacheManager",keyGenerator="firstParamGenerator")
+    @CachePut(value="my-redis-cache1",condition ="!#isPut" ,cacheManager = "cacheManager",keyGenerator="firstParamGenerator")
+    public UserInfo getUserInfoByRedis( String key,boolean isPut) {
+        return userMapper.getUsersByUserName(key);
     }
 
 }

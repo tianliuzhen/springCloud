@@ -56,7 +56,7 @@ public class CacheConfig extends CachingConfigurerSupport {
             @Override
             public Object generate(Object target, Method method, Object... params) {
                 StringBuilder sb = new StringBuilder();
-                sb.append("security-web:");
+                sb.append("ouath2-web:");
                 sb.append(target.getClass().getName());
                 sb.append(":");
                 sb.append(method.getName());
@@ -64,6 +64,7 @@ public class CacheConfig extends CachingConfigurerSupport {
                     sb.append(":");
                     sb.append(params[0]);
                 }
+                System.out.println(sb.toString());
                 return sb.toString();
             }
         };
@@ -80,7 +81,7 @@ public class CacheConfig extends CachingConfigurerSupport {
             @Override
             public Object generate(Object target, Method method, Object... params) {
                 StringBuilder sb = new StringBuilder();
-                sb.append("security-web:");
+                sb.append("ouath2-web:");
                 sb.append(target.getClass().getName());
                 sb.append(":");
                 sb.append(method.getName());
@@ -90,31 +91,7 @@ public class CacheConfig extends CachingConfigurerSupport {
 
     }
 
-    /***
-     * 定义缓存数据 key 生成策略的bean
-     *包名+类名+方法名（前面为一个文件夹）+第一个参数（这个也为一个文件夹）+ 第二个参数
-     ***/
-    @Bean
-    public KeyGenerator userInfoGenerator(){
-        return new KeyGenerator() {
-            @Override
-            public Object generate(Object target, Method method, Object... params) {
-                StringBuilder sb = new StringBuilder();
-                sb.append("security-web:");
-                sb.append(target.getClass().getName());
-                sb.append(":");
-                sb.append(method.getName());
-                sb.append(":");
-                sb.append(params[0]);
-                if(params.length > 1){
-                    sb.append(":");
-                    sb.append(params[1]);
-                }
-                return sb.toString();
-            }
-        };
 
-    }
 
     /***
      * 定义缓存数据 key 生成策略的bean
@@ -126,7 +103,7 @@ public class CacheConfig extends CachingConfigurerSupport {
             @Override
             public Object generate(Object target, Method method, Object... params) {
                 StringBuilder sb = new StringBuilder();
-                sb.append("security-web:");
+                sb.append("ouath2-web:");
                 sb.append(target.getClass().getName());
                 sb.append(":");
                 sb.append(method.getName());
@@ -149,7 +126,7 @@ public class CacheConfig extends CachingConfigurerSupport {
             @Override
             public Object generate(Object target, Method method, Object... params) {
                 StringBuilder sb = new StringBuilder();
-                sb.append("security-web:");
+                sb.append("ouath2-web:");
                 sb.append(target.getClass().getName());
                 sb.append(method.getName());
                 return sb.toString();
@@ -180,41 +157,6 @@ public class CacheConfig extends CachingConfigurerSupport {
         return template;
     }
 
-/**
- * 将java对象转换为json字符串,利用json与java对象之间可以相互转换的方式进行存值和取值
- * 利用序列化和反序列化的方式
- * 存储java对象我们可以通过对象的序列化与反序列化完成存储于取出,这样就可以使用redis存储java对象了
- * @param
- * @return
- */
-/*
-    @Bean
-    public CacheManager cacheManager(RedisConnectionFactory factory) {
-        // 生成一个默认配置，通过config对象即可对缓存进行自定义配置
-        RedisCacheConfiguration config = RedisCacheConfiguration.defaultCacheConfig();
-        // 设置缓存的默认过期时间，也是使用Duration设置
-        config = config.entryTtl(Duration.ofMinutes(1))
-                .disableCachingNullValues();     // 不缓存空值
-
-        // 设置一个初始化的缓存空间set集合
-        Set<String> cacheNames =  new HashSet<>();
-        cacheNames.add("my-redis-cache1");
-        cacheNames.add("my-redis-cache2");
-
-        // 对每个缓存空间应用不同的配置
-        Map<String, RedisCacheConfiguration> configMap = new HashMap<>();
-        configMap.put("my-redis-cache1", config);
-        configMap.put("my-redis-cache2", config.entryTtl(Duration.ofSeconds(120)));
-
-        // 使用自定义的缓存配置初始化一个cacheManager
-        RedisCacheManager cacheManager = RedisCacheManager.builder(factory)
-                // 注意这两句的调用顺序，一定要先调用该方法设置初始化的缓存名，再初始化相关的配置
-                .initialCacheNames(cacheNames)
-                .withInitialCacheConfigurations(configMap)
-                .build();
-        return cacheManager;
-    }
-*/
 
 /**
  * 将java对象转换为json字符串

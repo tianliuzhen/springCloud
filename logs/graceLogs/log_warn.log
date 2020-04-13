@@ -80,3 +80,441 @@ Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (usi
 	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:115)
 	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:78)
 	... 39 common frames omitted
+2020-04-13 09:56:11.045 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 09:56:13.736 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 09:56:20.567 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 09:56:22.345 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 09:56:22.347 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 09:56:22.736 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 15:33:50.734 WARN  org.springframework.security.oauth2.provider.endpoint.TokenEndpoint Line:185 - Handling error: InvalidGrantException, 用户名不存在
+2020-04-13 15:33:50.817 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver Line:198 - Resolved [error="invalid_grant", error_description="用户名不存在"]
+2020-04-13 15:35:39.226 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 15:35:42.628 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 15:35:51.337 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 15:35:54.122 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 15:35:54.124 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 15:35:54.613 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 15:39:29.226 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 15:39:29.226 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 15:41:26.224 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver Line:198 - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 13]
+2020-04-13 15:41:37.648 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver Line:198 - Resolved [org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 13]
+2020-04-13 15:49:57.014 WARN  com.zaxxer.hikari.pool.HikariPool Line:766 - SpringBootHikariCP - Thread starvation or clock leap detected (housekeeper delta=55s805ms381µs600ns).
+2020-04-13 16:00:18.511 WARN  com.zaxxer.hikari.pool.HikariPool Line:766 - SpringBootHikariCP - Thread starvation or clock leap detected (housekeeper delta=1m45s13ms559µs700ns).
+2020-04-13 16:11:16.658 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586765476658, current=DOWN, previous=UP]
+2020-04-13 16:11:21.161 WARN  com.netflix.discovery.TimedSupervisorTask Line:88  - task supervisor shutting down, can't accept the task
+2020-04-13 16:11:38.099 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 16:11:41.768 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:11:51.564 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 16:11:54.271 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 16:11:54.272 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:11:54.717 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 16:44:36.795 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586767476795, current=DOWN, previous=UP]
+2020-04-13 16:45:05.813 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 16:45:08.689 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:45:16.035 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 16:45:17.889 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 16:45:17.891 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:45:18.273 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 16:45:51.466 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 16:45:54.411 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:46:01.034 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 16:46:03.178 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 16:46:03.179 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:46:03.634 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 16:48:37.842 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586767717842, current=DOWN, previous=UP]
+2020-04-13 16:48:42.030 WARN  com.netflix.discovery.TimedSupervisorTask Line:88  - task supervisor shutting down, can't accept the task
+2020-04-13 16:49:00.057 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 16:49:03.059 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:49:10.335 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 16:49:12.474 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 16:49:12.475 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:49:13.023 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 16:50:40.761 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586767840761, current=DOWN, previous=UP]
+2020-04-13 16:51:05.168 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 16:51:08.134 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:51:14.770 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 16:51:16.859 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 16:51:16.860 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:51:17.306 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 16:55:54.805 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586768154805, current=DOWN, previous=UP]
+2020-04-13 16:56:15.892 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 16:56:18.914 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:56:25.953 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 16:56:28.069 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 16:56:28.070 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 16:56:28.520 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 16:58:57.053 WARN  com.zaxxer.hikari.pool.HikariPool Line:766 - SpringBootHikariCP - Thread starvation or clock leap detected (housekeeper delta=1m33s611ms543µs700ns).
+2020-04-13 16:58:57.070 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 16:58:57.072 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 16:58:57.077 WARN  com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient Line:130 - Request execution failed with message: java.net.SocketException: Software caused connection abort: recv failed
+2020-04-13 17:00:10.310 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586768410310, current=DOWN, previous=UP]
+2020-04-13 17:00:34.344 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:00:37.367 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:00:45.543 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:00:48.268 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:00:48.269 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:00:48.761 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:01:01.235 WARN  org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver Line:419 - Failure in @ExceptionHandler public org.springframework.http.ResponseEntity<org.springframework.security.oauth2.common.exceptions.OAuth2Exception> org.springframework.security.oauth2.provider.endpoint.TokenEndpoint.handleException(java.lang.Exception) throws java.lang.Exception
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:299)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:262)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at org.springframework.security.web.util.OnCommittedResponseWrapper$SaveContextServletOutputStream.flush(OnCommittedResponseWrapper.java:514)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1100)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:915)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:287)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:103)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:225)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:82)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:122)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:408)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:61)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:140)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:79)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1298)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1110)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:88)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.oauth2.provider.client.ClientCredentialsTokenEndpointFilter.successfulAuthentication(ClientCredentialsTokenEndpointFilter.java:131)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:240)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:114)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:104)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.write0(Native Method)
+	at sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:51)
+	at sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:93)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:65)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:471)
+	at org.apache.tomcat.util.net.NioChannel.write(NioChannel.java:140)
+	at org.apache.tomcat.util.net.NioBlockingSelector.write(NioBlockingSelector.java:101)
+	at org.apache.tomcat.util.net.NioSelectorPool.write(NioSelectorPool.java:152)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1261)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:793)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:746)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:736)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:564)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:217)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1150)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:394)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:295)
+	... 110 common frames omitted
+2020-04-13 17:02:34.282 WARN  com.zaxxer.hikari.pool.HikariPool Line:766 - SpringBootHikariCP - Thread starvation or clock leap detected (housekeeper delta=1m20s791ms395µs500ns).
+2020-04-13 17:02:34.493 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586768554493, current=DOWN, previous=UP]
+2020-04-13 17:02:59.070 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:03:02.106 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:03:09.177 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:03:11.587 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:03:11.588 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:03:12.058 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:04:38.119 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586768678119, current=DOWN, previous=UP]
+2020-04-13 17:04:59.358 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:05:02.333 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:05:10.720 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:05:13.766 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:05:13.767 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:05:14.236 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:06:42.003 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586768802003, current=DOWN, previous=UP]
+2020-04-13 17:07:03.463 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:07:06.459 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:07:13.193 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:07:15.363 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:07:15.364 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:07:15.828 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:09:16.278 WARN  com.zaxxer.hikari.pool.HikariPool Line:766 - SpringBootHikariCP - Thread starvation or clock leap detected (housekeeper delta=1m34s712ms427µs700ns).
+2020-04-13 17:09:16.295 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 17:09:16.299 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 17:11:39.069 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586769099069, current=DOWN, previous=UP]
+2020-04-13 17:13:51.441 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:13:54.517 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:14:02.695 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:14:04.603 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:14:04.604 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:14:04.978 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:19:18.518 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:19:21.692 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:19:28.270 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:19:30.366 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:19:30.367 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:19:30.817 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:27:44.980 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586770064980, current=DOWN, previous=UP]
+2020-04-13 17:28:12.889 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:28:16.976 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:28:23.340 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:28:24.638 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:28:24.639 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:28:24.873 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:32:55.085 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586770375085, current=DOWN, previous=UP]
+2020-04-13 17:33:17.954 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:33:20.586 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:33:26.499 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:33:28.192 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:33:28.194 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:33:28.580 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:37:02.140 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:37:05.155 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:37:08.745 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:37:09.816 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:37:09.817 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:37:10.052 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:48:28.913 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586771308913, current=DOWN, previous=UP]
+2020-04-13 17:48:50.954 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:48:54.085 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:49:00.647 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:49:01.836 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:49:01.837 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:49:02.074 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:55:39.864 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586771739864, current=DOWN, previous=UP]
+2020-04-13 17:56:06.459 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:56:09.438 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:56:16.983 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 17:56:18.879 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 17:56:18.881 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 17:56:19.277 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 17:59:55.905 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 17:59:59.138 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:00:05.844 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:00:07.954 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:00:07.955 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:00:08.478 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:04:03.775 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586772243775, current=DOWN, previous=UP]
+2020-04-13 18:04:24.120 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:04:26.742 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:04:32.663 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:04:34.309 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:04:34.311 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:04:34.692 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:09:55.649 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:09:58.618 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:10:05.413 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:10:07.510 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:10:07.511 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:10:08.024 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:13:05.011 WARN  com.zaxxer.hikari.pool.HikariPool Line:766 - SpringBootHikariCP - Thread starvation or clock leap detected (housekeeper delta=56s362ms971µs100ns).
+2020-04-13 18:13:14.308 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 18:13:14.307 WARN  com.netflix.discovery.TimedSupervisorTask Line:71  - task supervisor timed out
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(FutureTask.java:205)
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:266)
+	at java.util.concurrent.FutureTask.run(FutureTask.java)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+2020-04-13 18:13:14.853 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586772794853, current=DOWN, previous=UP]
+2020-04-13 18:13:38.391 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:13:41.335 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:13:47.971 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:13:50.099 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:13:50.101 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:13:50.541 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:17:36.747 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586773056747, current=DOWN, previous=UP]
+2020-04-13 18:17:59.306 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:18:02.246 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:18:08.782 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:18:10.826 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:18:10.828 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:18:11.271 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:20:56.279 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586773256279, current=DOWN, previous=UP]
+2020-04-13 18:21:18.604 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:21:21.255 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:21:27.097 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:21:28.750 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:21:28.750 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:21:29.123 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:24:28.886 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:24:31.913 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:24:38.503 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:24:40.556 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:24:40.557 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:24:41.011 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:26:06.346 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586773566346, current=DOWN, previous=UP]
+2020-04-13 18:26:29.198 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:26:32.117 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:26:39.018 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:26:41.096 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:26:41.098 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:26:41.544 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:30:08.973 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586773808973, current=DOWN, previous=UP]
+2020-04-13 18:30:29.866 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:30:32.798 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:30:39.592 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:30:41.632 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:30:41.634 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:30:42.083 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-13 18:33:19.687 WARN  com.netflix.discovery.DiscoveryClient Line:1303 - Saw local status change event StatusChangeEvent [timestamp=1586773999687, current=DOWN, previous=UP]
+2020-04-13 18:33:41.186 WARN  org.springframework.boot.actuate.endpoint.EndpointId Line:131 - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2020-04-13 18:33:44.107 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:33:50.177 WARN  org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter Line:302 - Unable to create an RSA verifier from verifierKey (ignoreable if using MAC)
+2020-04-13 18:33:51.838 WARN  org.springframework.cloud.netflix.archaius.ArchaiusAutoConfiguration Line:120 - No spring.application.name found, defaulting to 'application'
+2020-04-13 18:33:51.840 WARN  com.netflix.config.sources.URLConfigurationSource Line:121 - No URLs will be polled as dynamic configuration sources.
+2020-04-13 18:33:52.255 WARN  org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration Line:225 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
