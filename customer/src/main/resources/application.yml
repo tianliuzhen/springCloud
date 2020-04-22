@@ -6,10 +6,25 @@ spring:
   application:
     name: customer
   zipkin:
-    base-url: http://localhost:8094
+#    base-url: http://localhost:8094
+    sender:
+      type: rabbit
   sleuth:
     sampler:
       probability: 1
+  rabbitmq:
+    host: 47.98.253.2
+    port: 5672
+    username: guest
+    password: guest
+    listener: # 这里配置了重试策略
+      direct:
+        retry:
+          enabled: true
+      simple:
+        retry:
+          enabled: true
+
 eureka:
   client:
     service-url:
@@ -60,3 +75,4 @@ instance:
   logging:
    level:
     com.aaa.customer.webApi.RemoteApi: debug
+

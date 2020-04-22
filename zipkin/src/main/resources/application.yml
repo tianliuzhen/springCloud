@@ -18,3 +18,10 @@ spring:
 #in class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class] and overriding is disabled.Action:
   main:
     allow-bean-definition-overriding: true
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: 47.98.253.2:5672
+      password: guest
+      queue: zipkin
+      username: guest

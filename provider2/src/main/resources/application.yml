@@ -4,14 +4,28 @@ spring:
   application:
     name: provider
   zipkin:
-    base-url: http://localhost:8094
+    #base-url: http://localhost:8094
+    sender:
+      type: rabbit
   sleuth:
     sampler:
       probability: 1
+  rabbitmq:
+    host: 47.98.253.2
+    port: 5672
+    username: guest
+    password: guest
+    listener:
+      direct:
+        retry:
+          enabled: true
+      simple:
+        retry:
+          enabled: true
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7082/eureka
-instance:
-  lease-renewal-interval-in-seconds: 1
-  lease-expiration-duration-in-seconds: 2
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
