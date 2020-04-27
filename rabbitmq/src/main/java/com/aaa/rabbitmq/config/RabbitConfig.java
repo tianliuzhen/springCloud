@@ -65,9 +65,10 @@ public class RabbitConfig {
     }
     @Bean
     @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
-    //必须是prototype类型
+    //因为要设置回调类，所以应是prototype类型，如果是singleton类型，则回调类为最后一次设置
     public RabbitTemplate rabbitTemplate() {
         RabbitTemplate template = new RabbitTemplate(connectionFactory());
+        // template.setChannelTransacted(true); // 这行代码加上会报错
         return template;
     }
 

@@ -5,6 +5,9 @@ server:
 spring:
   application:
     name: rabbit
+  # 支持发布确认
+  rabbitmq:
+    publisher-confirms: false
 
 ###服务注册到eureka地址
 eureka:
@@ -25,3 +28,4 @@ rq:
     port: 5672
     username: guest
     password: guest
+
