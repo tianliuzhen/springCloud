@@ -1,5 +1,6 @@
 package com.aaa.rabbitmq.web;
 
+import com.aaa.rabbitmq.send.MsgProducer;
 import com.aaa.rabbitmq.testTransaction.TransactionSender2;
 import com.aaa.rabbitmq.testannotation.Sends;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +20,13 @@ public class TestController {
     Sends sends;
     @Autowired
     private TransactionSender2 transactionSender;
+    @Autowired
+    private MsgProducer msgProducer;
+    @GetMapping("/msgProducer")
+    public void msgProducer() {
 
+        msgProducer.sendMsg("消息实体");
+    }
     @GetMapping("/sends")
     public void sends() {
 

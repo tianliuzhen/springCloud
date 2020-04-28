@@ -10,17 +10,21 @@ package com.aaa.rabbitmq.testTransaction;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.UUID;
 
+import com.aaa.rabbitmq.config.RabbitConstants;
 import org.springframework.amqp.core.AmqpTemplate;
+import org.springframework.amqp.rabbit.connection.CorrelationData;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Component
-public class TransactionSender2 {
+public class TransactionSender2 implements RabbitTemplate.ConfirmCallback {
 
     @Autowired
-    private AmqpTemplate rabbitTemplate;
+    private RabbitTemplate rabbitTemplate;
 
     @Transactional(rollbackFor = Exception.class)
     public void send(String msg) {
@@ -32,9 +36,24 @@ public class TransactionSender2 {
          **/
         System.out.println("TransactionSender2 : " + sendMsg);
         // 模拟异常
-        int a = 1 / 0;
-        this.rabbitTemplate.convertAndSend("transition", sendMsg);
+//        int a = 1 / 0;
+        rabbitTemplate.setConfirmCallback(this);
+        CorrelationData correlationData = new CorrelationData();
+        rabbitTemplate.convertAndSend("transition",  sendMsg.getBytes(),correlationData);
 
     }
 
+    @Override
+    public void confirm(CorrelationData correlationData, boolean ack, String cause) {
+        System.out.println("CallBackConfirm UUID: " + correlationData.getId());
+        if(ack) {
+            System.out.println("CallBackConfirm 消息消费成功！");
+        }else {
+            System.out.println("CallBackConfirm 消息消费失败！");
+        }
+
+        if(cause!=null) {
+            System.out.println("CallBackConfirm Cause: " + cause);
+        }
+    }
 }
