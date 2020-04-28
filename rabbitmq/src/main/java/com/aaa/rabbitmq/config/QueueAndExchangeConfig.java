@@ -32,7 +32,7 @@ public class QueueAndExchangeConfig {
      */
     @Bean
     public DirectExchange defaultExchange() {
-        return new DirectExchange(RabbitConstants.EXCHANGE_A);
+        return new DirectExchange(RabbitConstants.EXCHANGE_A,true,false);
     }
     /**
      * 声明队列：队列有五个参数（String name, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments）

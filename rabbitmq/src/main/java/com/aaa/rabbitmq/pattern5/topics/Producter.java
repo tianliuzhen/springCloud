@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 import com.aaa.rabbitmq.pattern5.ConnectionUtil;
+import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 
@@ -26,6 +27,7 @@ public class Producter {
         channel.exchangeDeclare(EXCHANGE_NAME, "topic");
 
         String message = "发布了一条中国新闻消息";
+        AMQP.BasicProperties basicProperties = new AMQP.BasicProperties();
         channel.basicPublish(EXCHANGE_NAME, "china.news", null, message.getBytes());
 
         message = "发布了一条中国天气消息";
