@@ -23,6 +23,8 @@ public class ConnectionUtil {
         connectionFactory.setUsername("guest");
         //密码
         connectionFactory.setPassword("guest");
+        //设置虚拟主机
+        connectionFactory.setVirtualHost("/");
         //通过连接工厂获取连接
         Connection connection = connectionFactory.newConnection();
         //返回连接

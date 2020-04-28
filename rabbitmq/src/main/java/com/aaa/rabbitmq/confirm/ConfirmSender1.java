@@ -22,7 +22,7 @@ import java.util.concurrent.TimeoutException;
  */
 public class ConfirmSender1 {
 
-    private final static String QUEUE_NAME = "confirm";
+    private final static String QUEUE_NAME = "confirm1";
 
     public static void main(String[] args) throws IOException, TimeoutException, InterruptedException {
         /**
@@ -44,7 +44,7 @@ public class ConfirmSender1 {
         Channel channel = connection.createChannel();
 
         // 指定一个队列
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(QUEUE_NAME, true, false, false, null);
         // 发送的消息
         String message = "This is a confirm message！";
 
