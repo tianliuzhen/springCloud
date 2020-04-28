@@ -15,6 +15,7 @@ public class RabbitConstants {
     public static final String QUEUE_A = "QUEUE_A";
     public static final String QUEUE_B = "QUEUE_B";
     public static final String QUEUE_C = "QUEUE_C";
+    public static final String QUEUE_TRANSITION = "transition";
 
     public static final String ROUTINGKEY_A = "spring-boot-routingKey_A";
     public static final String ROUTINGKEY_B = "spring-boot-routingKey_B";

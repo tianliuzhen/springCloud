@@ -68,13 +68,19 @@ public class QueueAndExchangeConfig {
     @Bean
     public Queue queueB() {
         //队列持久
-        return new Queue(RabbitConstants.QUEUE_B, false);
+        return new Queue(RabbitConstants.QUEUE_B, true);
     }
 
     @Bean
     public Queue queueC() {
         //队列持久
         return new Queue(RabbitConstants.QUEUE_C, false);
+    }
+
+    @Bean
+    public Queue transition() {
+        //队列持久
+        return new Queue(RabbitConstants.QUEUE_TRANSITION, false);
     }
     /**
      * 一个交换机可以绑定多个消息队列，也就是消息通过一个交换机，可以分发到不同的队列当中去

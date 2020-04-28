@@ -31,7 +31,6 @@ public class TestController {
     public void sends() {
 
         sends.sendOrder();
-        int a = 1 / 0;
     }
     /**
      * 事务消息发送测试
