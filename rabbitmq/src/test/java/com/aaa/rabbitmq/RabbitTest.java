@@ -1,5 +1,6 @@
 package com.aaa.rabbitmq;
 
+import com.aaa.rabbitmq.testTransaction.TransactionSender2;
 import com.aaa.rabbitmq.testannotation.Sends;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,8 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class RabbitTest {
     @Autowired
     Sends sends;
+    @Autowired
+    TransactionSender2 transactionSender2;
     @Test
     public  void  testSend(){
 //        sends.send();
@@ -28,5 +31,9 @@ public class RabbitTest {
         //消息发送到交换机，交换机通过路由key 发送到对应的队列。
         //因此computerOrder队列得到了消息，进而receiveComputer()接收到了消息。
         sends.sendOrder();
+    }
+    @Test
+    public  void  testSendV2(){
+        transactionSender2.send("新事物");
     }
 }
