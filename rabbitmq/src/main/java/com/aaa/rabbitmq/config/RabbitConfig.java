@@ -63,8 +63,9 @@ public class RabbitConfig {
         connectionFactory.setVirtualHost("/");
         // 消息发送到交换机确认机制，是否确认回调
         connectionFactory.setPublisherConfirms(true);
-        // 消息发送到交换机确认机制，是否返回回调
+        // 支持消息发送失败返回队列
         connectionFactory.setPublisherReturns(true);
+
         return connectionFactory;
     }
 
@@ -84,6 +85,8 @@ public class RabbitConfig {
     public RabbitTemplate rabbitTemplate() {
         RabbitTemplate template = new RabbitTemplate(connectionFactory());
         // template.setChannelTransacted(true); // 这行代码加上会报错
+        // 设置为 true 后 消费者在消息没有被路由到合适队列情况下会被return监听，而不会自动删除\
+        template.setMandatory(true);
         return template;
     }
 

@@ -29,10 +29,18 @@ public class TransactionReceiver2 {
         String messageText = new String(message.getBody());
         try {
             if(validate(messageText)){
-                log.info("[receiver] confirm");
-                //确认消息接收
-                // 如果不加下面这句话是自动确认，采用手动应答模式, 手动确认应答更为安全稳定
-                channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
+                try {
+                    log.info("[receiver] confirm");
+                    //确认消息接收
+                    // 如果不加下面这句话是自动确认，采用手动应答模式, 手动确认应答更为安全稳定
+                    channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
+                    int i=1/0;
+                } catch (Exception e) {
+                    //最后一个参数requeue一般都会为true，此次没调用到数据，把这个消息返回到队列中再消费，
+                    // 如果代码中出现了int i=1/0,那么还是会造成死循环。
+                    // 给Queue绑定死信队列，使用nack（requque为false）确认消息消费失败
+                    channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, false);
+                }
             }else{
                 log.info("[receiver] reject");
                 //拒绝消息接收
