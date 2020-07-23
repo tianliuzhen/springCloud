@@ -31,8 +31,8 @@ public class TransactionReceiver2 {
             if(validate(messageText)){
                 log.info("[receiver] confirm");
                 //确认消息接收
-                // channel.basicReject(message.getMessageProperties().getDeliveryTag(), false);
-                // channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
+                // 如果不加下面这句话是自动确认，采用手动应答模式, 手动确认应答更为安全稳定
+                channel.basicAck(message.getMessageProperties().getDeliveryTag(),false);
             }else{
                 log.info("[receiver] reject");
                 //拒绝消息接收
