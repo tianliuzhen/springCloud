@@ -1,4 +1,4 @@
-package com.aaa.rabbitmq.testTransaction;
+package com.aaa.rabbitmq.bootConfirm;
 
 /**
  * description: 生产确认
@@ -13,19 +13,24 @@ import java.util.Date;
 
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
-@Component
-public class TransactionSender2 implements RabbitTemplate.ConfirmCallback {
+import javax.annotation.PostConstruct;
 
+@Component
+public class BootSender implements RabbitTemplate.ConfirmCallback {
+
+    @Autowired
     private RabbitTemplate rabbitTemplate;
 
     /**
+     *  @PostConstruct 是在bean实例化之后，初始化之前
      * 需要通过生产者的构造器去注入RabbitTemplate，并设置他 回调确认对象为 当前对象。
      */
-    public TransactionSender2(RabbitTemplate rabbitTemplate) {
-        this.rabbitTemplate = rabbitTemplate;
+    @PostConstruct
+    public void init(){
         this.rabbitTemplate.setConfirmCallback(this);
     }
 

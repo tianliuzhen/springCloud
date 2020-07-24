@@ -1,8 +1,8 @@
 package com.aaa.rabbitmq.web;
 
+import com.aaa.rabbitmq.bootConfirm.BootSender;
 import com.aaa.rabbitmq.send.MsgProducer;
-import com.aaa.rabbitmq.testTransaction.TransactionSender2;
-import com.aaa.rabbitmq.testannotation.Sends;
+import com.aaa.rabbitmq.testAnnotation.Sends;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +19,7 @@ public class TestController {
     @Autowired
     Sends sends;
     @Autowired
-    private TransactionSender2 transactionSender;
+    private BootSender bootSender;
     @Autowired
     private MsgProducer msgProducer;
     @GetMapping("/msgProducer")
@@ -37,7 +37,7 @@ public class TestController {
      */
     @GetMapping("/transition")
     public void transition() {
-        transactionSender.send("Transition:  ");
+        bootSender.send("Transition:  ");
     }
 
 }

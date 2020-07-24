@@ -1,4 +1,4 @@
-package com.aaa.rabbitmq.testannotation;
+package com.aaa.rabbitmq.testAnnotation;
 
 import com.aaa.rabbitmq.config.RabbitConstants;
 import lombok.extern.slf4j.Slf4j;

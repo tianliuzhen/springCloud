@@ -1,7 +1,7 @@
 package com.aaa.rabbitmq;
 
-import com.aaa.rabbitmq.testTransaction.TransactionSender2;
-import com.aaa.rabbitmq.testannotation.Sends;
+import com.aaa.rabbitmq.bootConfirm.BootSender;
+import com.aaa.rabbitmq.testAnnotation.Sends;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ public class RabbitTest {
     @Autowired
     Sends sends;
     @Autowired
-    TransactionSender2 transactionSender2;
+    BootSender bootSender;
     @Test
     public  void  testSend(){
 //        sends.send();
@@ -34,6 +34,6 @@ public class RabbitTest {
     }
     @Test
     public  void  testSendV2(){
-        transactionSender2.send("新事物");
+        bootSender.send("新事物");
     }
 }

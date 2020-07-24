@@ -7,6 +7,15 @@ spring:
     name: rabbit
   # 支持发布确认
   rabbitmq:
+    #主机连接信息
+    host: 47.98.253.2
+    port: 5672
+    username: guest
+    password: guest
+    publisher-confirms: true #消息发送到交换机确认机制，是否确认回调
+    publisher-returns: true  #支持消息发送失败返回队列
+
+    #配置监听
     listener:
       simple:
         acknowledge-mode: manual #设置消费端手动 ack   none不确认  auto自动确认  manual手动确认
@@ -21,6 +30,7 @@ spring:
         default-requeue-rejected: true
         #在单个请求中处理的消息个数，他应该大于等于事务数量(unack的最大数量)
         prefetch: 2
+
 
 ###服务注册到eureka地址
 eureka:

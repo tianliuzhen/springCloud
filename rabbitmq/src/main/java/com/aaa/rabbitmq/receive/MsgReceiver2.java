@@ -1,6 +1,5 @@
 package com.aaa.rabbitmq.receive;
 
-import com.aaa.rabbitmq.config.RabbitConfig;
 import com.aaa.rabbitmq.config.RabbitConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;

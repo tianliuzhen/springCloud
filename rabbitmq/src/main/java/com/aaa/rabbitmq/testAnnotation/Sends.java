@@ -1,4 +1,4 @@
-package com.aaa.rabbitmq.testannotation;
+package com.aaa.rabbitmq.testAnnotation;
 
 import com.aaa.rabbitmq.config.RabbitConstants;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;

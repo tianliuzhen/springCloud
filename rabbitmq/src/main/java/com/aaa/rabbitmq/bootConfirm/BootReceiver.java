@@ -1,4 +1,4 @@
-package com.aaa.rabbitmq.testTransaction;
+package com.aaa.rabbitmq.bootConfirm;
 
 /**
  * description: 消费确认
@@ -19,7 +19,7 @@ import com.rabbitmq.client.Channel;
 
 @Component
 @Slf4j
-public class TransactionReceiver2 {
+public class BootReceiver {
     @RabbitListener(queues = "transition")
     public void process(Message message, Channel channel) throws IOException {
         // 限流处理：消息体大小不限制，每次限制消费一条，只作用于该Consumer层，不作用于Channel
