@@ -1,6 +1,6 @@
 package com.aaa.rabbitmq;
 
-import com.aaa.rabbitmq.bootConfirm.BootSender;
+import com.aaa.rabbitmq.confirmBoot.MqService;
 import com.aaa.rabbitmq.testAnnotation.Sends;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -21,7 +21,7 @@ public class RabbitTest {
     @Autowired
     Sends sends;
     @Autowired
-    BootSender bootSender;
+    MqService mqService;
     @Test
     public  void  testSend(){
 //        sends.send();
@@ -33,7 +33,7 @@ public class RabbitTest {
         sends.sendOrder();
     }
     @Test
-    public  void  testSendV2(){
-        bootSender.send("新事物");
+    public  void  mqService(){
+        mqService.sendToMq();
     }
 }

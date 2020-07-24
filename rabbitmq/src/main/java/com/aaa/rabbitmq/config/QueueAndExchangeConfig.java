@@ -34,6 +34,12 @@ public class QueueAndExchangeConfig {
     public DirectExchange defaultExchange() {
         return new DirectExchange(RabbitConstants.EXCHANGE_A,true,false);
     }
+
+    @Bean
+    public DirectExchange confirmExchange() {
+        return new DirectExchange(RabbitConstants.EXCHANGE_CONFIRM,true,false);
+    }
+
     /**
      * 声明队列：队列有五个参数（String name, boolean durable, boolean exclusive, boolean autoDelete, Map<String, Object> arguments）
      * name：队列名称
@@ -82,6 +88,12 @@ public class QueueAndExchangeConfig {
         //队列持久
         return new Queue(RabbitConstants.QUEUE_TRANSITION, false);
     }
+    @Bean
+    public Queue queueConfirm() {
+        //队列持久
+        return new Queue(RabbitConstants.QUEUE_CONFIRM, false);
+    }
+
     /**
      * 一个交换机可以绑定多个消息队列，也就是消息通过一个交换机，可以分发到不同的队列当中去
      * 路由：相当于密钥/第三者，与交换机绑定即可路由消息到指定的队列！
@@ -94,5 +106,10 @@ public class QueueAndExchangeConfig {
     @Bean
     public Binding bindingB(){
         return BindingBuilder.bind(queueB()).to(defaultExchange()).with(RabbitConstants.ROUTINGKEY_A);
+    }
+
+    @Bean
+    public Binding bindingC(){
+        return BindingBuilder.bind(queueConfirm()).to(confirmExchange()).with(RabbitConstants.EXCHANGE_B);
     }
 }

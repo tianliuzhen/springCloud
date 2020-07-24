@@ -1,6 +1,5 @@
 package com.aaa.rabbitmq.web;
 
-import com.aaa.rabbitmq.bootConfirm.BootSender;
 import com.aaa.rabbitmq.send.MsgProducer;
 import com.aaa.rabbitmq.testAnnotation.Sends;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +18,6 @@ public class TestController {
     @Autowired
     Sends sends;
     @Autowired
-    private BootSender bootSender;
-    @Autowired
     private MsgProducer msgProducer;
     @GetMapping("/msgProducer")
     public void msgProducer() {
@@ -31,13 +28,6 @@ public class TestController {
     public void sends() {
 
         sends.sendOrder();
-    }
-    /**
-     * 事务消息发送测试
-     */
-    @GetMapping("/transition")
-    public void transition() {
-        bootSender.send("Transition:  ");
     }
 
 }
