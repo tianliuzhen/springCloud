@@ -46,7 +46,14 @@ public class ConfirmAsySend {
         // 声明队列
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
         // 定义一个交换机，
-        channel.exchangeDeclare(EXCHANGE_NAME,"direct");
+        /**
+         * 注意：这里定义的交互机
+         *        必须是  Direct Exchange（直连交换机）或者 Topic Exchange（通配符交换机）
+         *        如果是  Fanout Exchange（广播式交换机）否则检测 到是否 消息从交换机发送到 队列，
+         *        因为 它属于广播式 直接推到 跟他绑定的队列上
+         *
+         */
+        channel.exchangeDeclare(EXCHANGE_NAME,"fanout");
         //绑定队列    参数介绍：队列名称、目标交换机、绑定路由的key
         channel.queueBind(QUEUE_NAME,EXCHANGE_NAME, ROUTE_KEY);
         // 开启确认机制
