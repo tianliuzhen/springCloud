@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.Resource;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author liuzhen.tian
@@ -22,6 +24,8 @@ public class RetryCache {
     @Resource
     private MessageSender messageSender;
     private static Map<String, MessageWithTime> map = new ConcurrentHashMap<>();
+
+    private static  ExecutorService executorService = Executors.newFixedThreadPool(100);
 
     @NoArgsConstructor
     @AllArgsConstructor
@@ -46,8 +50,9 @@ public class RetryCache {
      */
 
     public void startRetry() {
-            // 当map有未发出去的消息一直去尝试
-            while (map.size()>0) {
+
+        executorService.submit(()->{
+            while (map.size() > 0) {
                 for (String key : map.keySet()) {
                     MessageWithTime messageWithTime = map.get(key);
                     // 处理方法1
@@ -58,6 +63,7 @@ public class RetryCache {
 
                 }
             }
+        });
         }
 
     private void handlerV2(String key, MessageWithTime messageWithTime) {
@@ -65,10 +71,11 @@ public class RetryCache {
             Object ans = new RetryTemplate() {
                 @Override
                 protected Object doBiz() {
-                    DetailRes detailRes = messageSender.sendMsg(messageWithTime.getMessage());
+                    DetailRes detailRes = messageSender.sendMsg(messageWithTime.getMessage(),key,2);
                     if (detailRes.isSuccess()) {
                         del(key);
                     }
+                    // int i = 1 / 0;
                     return null;
                 }
             }.setRetryTime(3).setSleepTime(1000).execute();

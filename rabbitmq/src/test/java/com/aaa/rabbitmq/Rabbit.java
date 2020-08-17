@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -30,8 +31,8 @@ public class Rabbit {
     public  void  testSend() throws InterruptedException {
 
         ExecutorService executorService = Executors.newFixedThreadPool(100);
-        for (int i = 0; i < 10; i++) {
-            executorService.execute(new testRunAble("我是线程————"+i));
+        for (int i = 0; i < 1; i++) {
+            executorService.execute(new testRunAble(""+i));
             Thread.sleep(100);
         }
         executorService.shutdown();
@@ -46,7 +47,7 @@ public class Rabbit {
 
         @Override
         public void run() {
-            msgRetryProducer.sendMsg("helloWord__"+name);
+            msgRetryProducer.sendMsg("helloWord__我是线程————"+name, name+"",1);
         }
     }
 

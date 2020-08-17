@@ -27,13 +27,14 @@ public class MsgRetryProducer implements MessageSender {
     private RabbitTemplate rabbitTemplate;
 
     @Override
-    public DetailRes  sendMsg(Object content) {
+    public DetailRes  sendMsg(Object message,String id,int type) {
 
         try {
-
-            String id = UUID.randomUUID().toString();
-            RetryCache.add(id, content);
-            rabbitTemplate.convertAndSend(RabbitConstants.EXCHANGE_A, RabbitConstants.ROUTINGKEY_A, content, new CorrelationData(id));
+            //首次发送消息放入map缓存中
+            if (type==1) {
+                RetryCache.add(id, message);
+            }
+            rabbitTemplate.convertAndSend(RabbitConstants.EXCHANGE_A, RabbitConstants.ROUTINGKEY_A, message, new CorrelationData(id));
         } catch (AmqpException e) {
             return new DetailRes(false, "");
         }

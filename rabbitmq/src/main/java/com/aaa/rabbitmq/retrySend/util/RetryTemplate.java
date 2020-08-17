@@ -58,12 +58,11 @@ public abstract class RetryTemplate {
     public Object execute() {
         for (int i = 0; i < retryTime; i++) {
             try {
+                log.info("第{}次尝试，共{}次机会", new Object[]{i + 1, retryTime});
                 return doBiz();
             } catch (Exception e) {
                 Thread.sleep(sleepTime);
                 e.printStackTrace();
-
-
             }
         }
         return null;
@@ -75,4 +74,5 @@ public abstract class RetryTemplate {
         }
         return executorService.submit((Callable) () -> execute());
     }
+
 }
