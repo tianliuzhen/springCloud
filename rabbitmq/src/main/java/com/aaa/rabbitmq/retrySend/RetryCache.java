@@ -9,9 +9,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
  * @author liuzhen.tian
@@ -25,7 +23,11 @@ public class RetryCache {
     private MessageSender messageSender;
     private static Map<String, MessageWithTime> map = new ConcurrentHashMap<>();
 
-    private static  ExecutorService executorService = Executors.newFixedThreadPool(100);
+
+    private static  ExecutorService executorService = new ThreadPoolExecutor(2, 2,
+            0, TimeUnit.SECONDS,
+            new ArrayBlockingQueue<>(512),
+            new ThreadPoolExecutor.DiscardPolicy());
 
     @NoArgsConstructor
     @AllArgsConstructor
