@@ -1,11 +1,14 @@
 package com.aaa.rabbitmq;
 
-import com.aaa.rabbitmq.send.MsgProducer;
+import com.aaa.rabbitmq.testMq.send.MsgProducer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * description: 测试rabbitMq
@@ -22,12 +25,13 @@ public class Rabbit {
     @Test
     public  void  testSend() throws InterruptedException {
 
-        for (int i = 0; i < 20; i++) {
-            testRunAble t5=new testRunAble("我是线程————"+i);
-            Thread t15= new Thread(t5);
-            t15.start();
+        ExecutorService executorService = Executors.newFixedThreadPool(100);
+
+        for (int i = 0; i < 10; i++) {
+            executorService.execute(new testRunAble("我是线程————"+i));
             Thread.sleep(100);
         }
+
     }
     public  class testRunAble implements  Runnable {
         private String name;

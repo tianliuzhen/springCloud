@@ -30,7 +30,6 @@ public class ConfirmAsyRevc {
 
         // 声明队列
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
-
         // 接受数据，并监听
         channel.basicConsume(QUEUE_NAME, new DefaultConsumer(channel) {
             @Override
@@ -38,7 +37,7 @@ public class ConfirmAsyRevc {
                     throws IOException {
                 log.info("confirm Revc：" + new String(body, "utf-8"));
                 //手动确认消费，删除队列里面数据
-                channel.basicAck(envelope.getDeliveryTag(),false);
+                // channel.basicAck(envelope.getDeliveryTag(),false);
             }
         });
     }

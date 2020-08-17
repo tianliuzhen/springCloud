@@ -1,7 +1,9 @@
-package com.aaa.rabbitmq.receive;
+package com.aaa.rabbitmq.testMq.receive;
 
 import com.aaa.rabbitmq.config.RabbitConstants;
+import com.rabbitmq.client.Channel;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -19,6 +21,6 @@ import org.springframework.stereotype.Component;
 public class MsgReceiver {
     @RabbitHandler
     public void process(String content) {
-        log.info("处理器 ——one --- 接收处理队列A当中的消息： " + content);
+        log.info("处理器 ——two --- 接收处理队列A当中的消息： " + content);
     }
 }

@@ -1,4 +1,4 @@
-package com.aaa.rabbitmq.receive;
+package com.aaa.rabbitmq.testMq.receive;
 
 import com.aaa.rabbitmq.config.RabbitConstants;
 import lombok.extern.slf4j.Slf4j;

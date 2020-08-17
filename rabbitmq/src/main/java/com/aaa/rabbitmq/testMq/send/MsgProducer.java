@@ -1,7 +1,9 @@
-package com.aaa.rabbitmq.send;
+package com.aaa.rabbitmq.testMq.send;
 
 import com.aaa.rabbitmq.config.RabbitConstants;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.core.Message;
+import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,18 +20,14 @@ import java.util.UUID;
  */
 @Slf4j
 @Component
-public class MsgProducer implements RabbitTemplate.ConfirmCallback {
+public class MsgProducer {
 
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
     public void sendMsg(String content) {
-         CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
-
-        //rabbitTemplate如果为单例的话，那回调就是最后设置的内容
-        rabbitTemplate.setConfirmCallback(this);
-
+        CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
         //模拟异常
 //        if (true) {
 //            throw new RuntimeException("自定义异常");
@@ -41,23 +39,5 @@ public class MsgProducer implements RabbitTemplate.ConfirmCallback {
         }
 
 
-    /**
-     * 回调
-     */
-    @Override
-    public void confirm(CorrelationData correlationData, boolean ack, String cause) {
-        System.out.println("CallBackConfirm UUID: " + correlationData.getId());
-
-        if(ack) {
-            System.out.println("CallBackConfirm 消息消费成功！");
-        }else {
-            System.out.println("CallBackConfirm 消息消费失败！");
-        }
-
-        if(cause!=null) {
-            System.out.println("CallBackConfirm Cause: " + cause);
-        }
-
-    }
 
 }

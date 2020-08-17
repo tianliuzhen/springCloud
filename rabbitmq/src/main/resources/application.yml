@@ -12,6 +12,7 @@ spring:
     port: 5672
     username: guest
     password: guest
+    # publisher-confirm-type: correlated #  （新版本写法作用与 publisher-confirms: true  一致）
     publisher-confirms: true #消息发送到交换机确认机制，是否确认回调
     publisher-returns: true  #支持消息发送失败返回队列
 
