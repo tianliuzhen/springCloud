@@ -9,6 +9,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.UUID;
 
 /**
@@ -26,7 +27,18 @@ public class MsgProducer {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
+
     public void sendMsg(String content) {
+        /**
+         *
+         * CorrelationData对象的作用是作为消息的附加信息传递，通常我们用它来保存消息的自定义id
+         * 在Message中的headers
+         *                 headers={amqp_receivedDeliveryMode=PERSISTENT, amqp_receivedRoutingKey=javaboy.mail.routing.key, amqp_receivedExchange=javaboy.mail.exchange, spring_returned_message_correlation=8170350b-3b4d-4f20-89fc-f9e72bf754cb
+         * 获取msgId
+         * String msgId = (String) headers.get("spring_returned_message_correlation");
+         */
+
+
         CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
         //模拟异常
 //        if (true) {

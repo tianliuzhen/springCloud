@@ -1,5 +1,7 @@
 package com.aaa.rabbitmq.confirmBoot;
 
+import com.aaa.rabbitmq.retrySend.RetryCache;
+import com.aaa.rabbitmq.retrySend.mq.MsgRetryProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
@@ -20,6 +22,8 @@ public class MsgConfirmAndReturn implements RabbitTemplate.ConfirmCallback,Rabbi
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
+    @Autowired
+    private RetryCache retryCache;
 
     /**
      *  @PostConstruct 是在bean实例化之后，初始化之前
@@ -36,11 +40,17 @@ public class MsgConfirmAndReturn implements RabbitTemplate.ConfirmCallback,Rabbi
         //此方法监听消息确认结果（消息是否发到交换机）
         if (b) {
             log.info("~~~~~~~~~~~~~消息发送到交换机【成功】");
+            RetryCache.del(correlationData.getId());
         }else {
+            log.info("send message failed: " + s + correlationData.toString());
+            // 这里根据 correlationData 来区别出 不同的消息，进而进行不同的操作。
+            retryCache.startRetry();
             log.error("~~~~~~~~~~~~~消息发送到交换机【失败】");
         }
 
     }
+
+
 
     @Override
     public void returnedMessage(Message message, int i, String s, String s1, String s2) {

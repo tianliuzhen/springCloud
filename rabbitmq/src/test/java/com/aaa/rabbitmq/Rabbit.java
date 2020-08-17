@@ -1,5 +1,6 @@
 package com.aaa.rabbitmq;
 
+import com.aaa.rabbitmq.retrySend.mq.MsgRetryProducer;
 import com.aaa.rabbitmq.testMq.send.MsgProducer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,15 +23,18 @@ import java.util.concurrent.Executors;
 public class Rabbit {
     @Autowired
     MsgProducer msgProducer;
+
+    @Autowired
+    MsgRetryProducer msgRetryProducer;
     @Test
     public  void  testSend() throws InterruptedException {
 
         ExecutorService executorService = Executors.newFixedThreadPool(100);
-
         for (int i = 0; i < 10; i++) {
             executorService.execute(new testRunAble("我是线程————"+i));
             Thread.sleep(100);
         }
+        executorService.shutdown();
 
     }
     public  class testRunAble implements  Runnable {
@@ -42,7 +46,7 @@ public class Rabbit {
 
         @Override
         public void run() {
-            msgProducer.sendMsg("helloWord__"+name);
+            msgRetryProducer.sendMsg("helloWord__"+name);
         }
     }
 

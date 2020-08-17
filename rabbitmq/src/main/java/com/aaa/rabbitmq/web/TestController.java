@@ -1,7 +1,7 @@
 package com.aaa.rabbitmq.web;
 
-import com.aaa.rabbitmq.testMq.send.MsgProducer;
 import com.aaa.rabbitmq.testAnnotation.Sends;
+import com.aaa.rabbitmq.testMq.send.MsgProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
