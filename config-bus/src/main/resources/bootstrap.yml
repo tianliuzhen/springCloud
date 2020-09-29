@@ -5,7 +5,7 @@ spring:
 spring:
   profiles: dev
   application:
-    name: config-single-client
+    name: config-eureka
   cloud:
     config:
       uri: http://localhost:3301

@@ -1,5 +1,6 @@
 server:
   port: 3302
+#   management 是关于 actuator 相关的，自动刷新配置的时候需要使用。
 management:
   endpoint:
     shutdown:
@@ -21,6 +22,7 @@ spring:
     port: 5672
     username: guest
     password: guest
+  #开启消息跟踪
   cloud:
     bus:
       trace:

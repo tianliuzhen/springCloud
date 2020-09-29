@@ -25,7 +25,6 @@ spring:
 spring:
   profiles: dev
   #这里的名字不是乱写的，要和 github远程仓库的名字想对应
-  #
   application:
     name: config-eureka
   cloud:
@@ -34,4 +33,6 @@ spring:
         #这个参数必须要加，默认是false，不然会拒绝连接
         enabled: true
         service-id: config-eureka-server
+      label: master  #指定仓库分支（可以不写）  ，默认在 config-server 已经设置application.yml  【default-label: master】
+      profile: dev   #指定版本（可以不写）      ， 本例中建立了dev 和 prod两个版本 ，默认跟随   profiles: dev，
 

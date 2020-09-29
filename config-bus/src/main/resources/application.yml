@@ -8,15 +8,19 @@ spring:
     port: 5672
     username: guest
     password: guest
+  #开启消息跟踪
   cloud:
     bus:
       trace:
         enabled: true
 management:
+  endpoint:
+    shutdown:
+      enabled: false
   endpoints:
     web:
       exposure:
-        include: bus-refresh
+        include: "*"
 ####  我的github配置和此处一样，这里只是作为参考作用。
 data:
   env: NaN
