@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletRequest;
 import java.io.*;
-import java.util.UUID;
+import java.util.*;
 
 @Controller
 public class  FileController {
@@ -24,6 +24,14 @@ public class  FileController {
         return "fileUpload";
     }
 
+    @GetMapping(value = "/fileMany")
+    public String fileUploadMany() {
+        return "fileUploadMany";
+    }
+
+    /**
+     * 单文件上传
+     */
     @PostMapping(value = "/fileUpload")
     public String fileUpload(@RequestParam(value = "file") MultipartFile file, Model model, HttpServletRequest request) {
         if (file.isEmpty()) {
@@ -47,6 +55,40 @@ public class  FileController {
         return "fileUpload";
     }
 
+    /**
+     * 多文件上传
+     */
+    @PostMapping(value = "/fileUploadMany")
+    @ResponseBody
+    public List fileUploadMany(@RequestParam("uploadFiles")  MultipartFile[] multipartFile) {
+        if (multipartFile.length ==0) {
+            System.out.println("文件为空");
+        }
+        List<Map<String,Object>> root=new ArrayList<>();
+        for (MultipartFile file : multipartFile) {
+            Map<String,Object> result=new HashMap();//一个文件上传的结果
+            String fileName = file.getOriginalFilename();  // 文件名
+            String suffixName = fileName.substring(fileName.lastIndexOf("."));  // 后缀名
+            String filePath = "D://temp-rainy//"; // 上传后的路径
+            fileName = UUID.randomUUID() + suffixName; // 新文件名
+            File dest = new File(filePath + fileName);
+            //判断文件父目录是否存在
+            if (!dest.getParentFile().exists()) {
+                dest.getParentFile().mkdirs();
+            }
+            try {
+                //保存文件
+                file.transferTo(dest);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            String filename = "/temp-rainy/" + fileName;
+
+            result.put("relativePath", filename);
+            root.add(result);
+        }
+        return root;
+    }
 
 }
 
