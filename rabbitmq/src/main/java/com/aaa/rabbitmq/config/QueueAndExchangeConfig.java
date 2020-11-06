@@ -1,15 +1,13 @@
 package com.aaa.rabbitmq.config;
 
-import org.springframework.amqp.core.Binding;
-import org.springframework.amqp.core.BindingBuilder;
-import org.springframework.amqp.core.DirectExchange;
-import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
+
 
 /**
  * description: 交换机和队列配置
@@ -19,7 +17,6 @@ import java.util.Map;
  * @date 2020/3/17
  */
 @Configuration
-@Component
 public class QueueAndExchangeConfig {
     /**
      * 针对消费者配置
@@ -59,6 +56,7 @@ public class QueueAndExchangeConfig {
      * 　　　　x-queue-master-locator：镜像队列
      * @return
      */
+
     @Bean
     public Queue queueA() {
         //队列持久
@@ -67,31 +65,38 @@ public class QueueAndExchangeConfig {
         args.put("x-max-length", 5);
         //设置队列溢出方式    保留前10条
         args.put("x-overflow","reject-publish" );
+
         return new Queue(RabbitConstants.QUEUE_A, false,false,false,args);
         //设置消息过期
     }
 
     @Bean
     public Queue queueB() {
-        //队列持久
-        return new Queue(RabbitConstants.QUEUE_B, true);
+        //队列持久 方式一
+        //   new Queue(RabbitConstants.QUEUE_B, true);
+        //队列持久 方式二
+        Map<String, Object> args = new HashMap<String , Object>();
+        args.put("x-message-ttl" , 30*1000);//设置队列里消息的ttl的时间30s
+        return QueueBuilder.durable(RabbitConstants.QUEUE_B).withArguments(args).build();
     }
 
     @Bean
     public Queue queueC() {
-        //队列持久
-        return new Queue(RabbitConstants.QUEUE_C, false);
+        Map<String, Object> args = new HashMap<>(2);
+        // DLX  x-dead-letter-exchange    这里声明当前队列绑定的死信交换机
+        args.put("x-dead-letter-exchange", RabbitConstants.EXCHANGE_DEAD_LETTER);
+        // DLK  x-dead-letter-routing-key  这里声明当前队列的死信路由key
+        args.put("x-dead-letter-routing-key", RabbitConstants.ROUTINGKEY_DEAD_LETTER);
+        return QueueBuilder.durable(RabbitConstants.QUEUE_C).withArguments(args).build();
     }
 
     @Bean
     public Queue transition() {
-        //队列持久
         return new Queue(RabbitConstants.QUEUE_TRANSITION, false);
     }
     @Bean
     public Queue queueConfirm() {
-        //队列持久
-        return new Queue(RabbitConstants.QUEUE_CONFIRM, false);
+        return QueueBuilder.durable(RabbitConstants.QUEUE_CONFIRM).build();
     }
 
     /**
@@ -109,7 +114,14 @@ public class QueueAndExchangeConfig {
     }
 
     @Bean
-    public Binding bindingC(){
-        return BindingBuilder.bind(queueConfirm()).to(confirmExchange()).with(RabbitConstants.EXCHANGE_B);
+    public Binding bindingQueueConfirm(){
+        return BindingBuilder.bind(queueConfirm()).to(confirmExchange()).with(RabbitConstants.ROUTINGKEY_CONFIRM);
     }
+
+    @Bean
+    public Binding bindingC(){
+        return BindingBuilder.bind(queueC()).to(defaultExchange()).with(RabbitConstants.ROUTINGKEY_C);
+    }
+
+
 }

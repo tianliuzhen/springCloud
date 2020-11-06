@@ -8,6 +8,8 @@ package com.aaa.rabbitmq.pattern5.work2;
  * @date 2020/4/28
  */
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
 import com.aaa.rabbitmq.pattern5.ConnectionUtil;
@@ -26,7 +28,9 @@ public class Consumer1 {
     public static void main(String[] args) throws IOException, TimeoutException{
         Connection connection = ConnectionUtil.getConnection();
         Channel channel = connection.createChannel();
-        channel.queueDeclare(QUEUE_NAME, true, false, false, null);
+        Map<String, Object> arg = new HashMap<String , Object>();
+        arg.put("x-message-ttl" , 30*1000);//设置队列里消息的ttl的时间30s
+        channel.queueDeclare(QUEUE_NAME, true, false, false, arg);
 
         //同一时刻服务器只发送1条消息给消费者（能者多劳，消费消息快的，会消费更多的消息）
         //保证在接收端一个消息没有处理完时不会接收另一个消息，即消费者端发送了ack后才会接收下一个消息。

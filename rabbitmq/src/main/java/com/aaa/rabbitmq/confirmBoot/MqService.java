@@ -17,7 +17,7 @@ public class MqService {
     private RabbitTemplate rabbitTemplate;
 
     public void sendToMq(){
-        rabbitTemplate.convertAndSend(RabbitConstants.EXCHANGE_CONFIRM, RabbitConstants.EXCHANGE_B,
+        rabbitTemplate.convertAndSend(RabbitConstants.EXCHANGE_CONFIRM,
                 "springBoot 发消息");
     }
 }

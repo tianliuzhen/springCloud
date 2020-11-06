@@ -46,7 +46,7 @@ public class MqReceiver {
                     *  给Queue绑定死信队列，使用nack（requque为false）确认消息消费失败
                     *  个人建议这里还是，通过数据库记录，没必要再次放在队列，重复消费浪费资源
                     */
-                    // channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, false);
+                    channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, false);
                 }
             }else{
                 log.info("[receiver] reject");

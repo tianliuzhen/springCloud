@@ -2,14 +2,14 @@ server:
   port: 8012
 
 spring:
-  # ÉèÖÃ¾²Ì¬×ÊÔ´»òÕß¶¯Ì¬×ÊÔ´·ÃÎÊµØÖ·,¿ÉÒÔËæ±ãÆğÃû×Ö£¬µ«ÊÇÍ¬Ê±Ö»ÄÜÓĞÒ»¸ö´æÔÚ
+  # è®¾ç½®é™æ€èµ„æºæˆ–è€…åŠ¨æ€èµ„æºè®¿é—®åœ°å€,å¯ä»¥éšä¾¿èµ·åå­—ï¼Œä½†æ˜¯åŒæ—¶åªèƒ½æœ‰ä¸€ä¸ªå­˜åœ¨
 
-  #¾²Ì¬×ÊÔ´
+  #é™æ€èµ„æº
   resources:
     static-locations: classpath:/resources/
-  #¶¯Ì¬×ÊÔ´
-    # ÉèÖÃthymeleafÂ·¾¶Ä¬ÈÏÎªsrc/main/resources/templates/web/
-    # ÇĞ¼ÇÒª´ø ×îºóÒª´ø /
+  #åŠ¨æ€èµ„æº
+    # è®¾ç½®thymeleafè·¯å¾„é»˜è®¤ä¸ºsrc/main/resources/templates/web/
+    # åˆ‡è®°è¦å¸¦ æœ€åè¦å¸¦ /
   thymeleaf:
     prefix: classpath:/templates/web/
     suffix: .html
