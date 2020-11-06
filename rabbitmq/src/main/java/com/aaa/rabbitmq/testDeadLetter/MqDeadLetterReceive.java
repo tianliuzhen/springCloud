@@ -28,4 +28,14 @@ public class MqDeadLetterReceive {
         }
 
     }
+    @RabbitListener(queues = RabbitConstants.QUEUE_B_DEAD_LETTER)
+    public void processB(Message message, Channel channel) throws IOException {
+        log.info("MqReceiver  : " + new String(message.getBody()));
+        String messageText = new String(message.getBody());
+        if("deadLetter".equalsIgnoreCase(messageText)){
+            // 第三个参数为true的话，会一直，重新投递，一般设置false
+            // channel.basicNack(message.getMessageProperties().getDeliveryTag(),false,true);
+        }
+
+    }
 }
