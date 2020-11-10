@@ -20,11 +20,11 @@ public class Receives  {
      * 这种形式是   队列必须要存在
      * @param msg
      */
-    @RabbitListener(queues = RabbitConstants.QUEUE_C)
-    @RabbitHandler
-    public void receive(String msg){
-        log.warn("mqReceive = {}" , msg );
-    }
+    // @RabbitListener(queues = RabbitConstants.QUEUE_C)
+    // @RabbitHandler
+    // public void receive(String msg){
+    //     log.warn("mqReceive = {}" , msg );
+    // }
 
     /**
      * 2. 通过注解自动创建 myQueue 队列

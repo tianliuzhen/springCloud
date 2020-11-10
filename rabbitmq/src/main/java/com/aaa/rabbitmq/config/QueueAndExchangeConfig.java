@@ -3,7 +3,6 @@ package com.aaa.rabbitmq.config;
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -122,6 +121,8 @@ public class QueueAndExchangeConfig {
     public Binding bindingC(){
         return BindingBuilder.bind(queueC()).to(defaultExchange()).with(RabbitConstants.ROUTINGKEY_C);
     }
+
+
 
 
 }
