@@ -31,10 +31,24 @@ eureka:
     service-url:
       defaultZone: http://localhost:7082/eureka
 
+### Feign 配置
 feign:
-  hystrix:
+  httpclient:
+    # 是否开启 Http Client
+    enabled: false
+  #    # 最大连接数，默认：200
+  #    max-connections: 200
+  #    # 最大路由，默认：50
+  #    max-connections-per-route: 50
+  #    # 连接超时，默认：2000/毫秒
+  #    connection-timeout: 2000
+  #    # 生存时间，默认：900L
+  #    time-to-live: 900
+  #    # 响应超时的时间单位，默认：TimeUnit.SECONDS
+  ##    timeToLiveUnit: SECONDS
+  okhttp:
     enabled: true
-# 设置超时时间为20s：
+  # 设置超时时间为20s：
 #  hystrix:
 #    command:
 #      default:
