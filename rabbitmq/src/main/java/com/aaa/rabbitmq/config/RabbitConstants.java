@@ -9,7 +9,7 @@ package com.aaa.rabbitmq.config;
  */
 public class RabbitConstants {
     public static final String EXCHANGE_A = "my-mq-exchange-A";
-    public static final String EXCHANGE_B = "my-mq-exchange-B";
+    public static final String EXCHANGE_DELAY = "my-mq-exchange-delay";
     public static final String EXCHANGE_C = "my-mq-exchange-C";
     public static final String EXCHANGE_CONFIRM = "my-mq-exchange-confirm";
     // 死信交换机
@@ -22,6 +22,7 @@ public class RabbitConstants {
     public static final String QUEUE_C = "queue-c";
     public static final String QUEUE_TRANSITION = "queue-transition";
     public static final String QUEUE_CONFIRM = "queue-confirm";
+    public static final String QUEUE_DELAY = "queue-delay";
     // 死信队列
     public static final String QUEUE_A_DEAD_LETTER= "queue-a-dead-letter-A";
     public static final String QUEUE_B_DEAD_LETTER = "queue-a-dead-letter-B";
@@ -32,6 +33,7 @@ public class RabbitConstants {
     public static final String ROUTINGKEY_B = "routingKey-b";
     public static final String ROUTINGKEY_C = "routingKey-c";
     public static final String ROUTINGKEY_CONFIRM = "routingKey-confirm-C";
+    public static final String ROUTINGKEY_DELAY = "routingKey-confirm-delay";
 
     // 死信路由key
     public static final String ROUTINGKEY_DEAD_LETTER = "routingKey-dead-letter";

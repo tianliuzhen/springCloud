@@ -1,5 +1,6 @@
 package com.aaa.rabbitmq.confirmBoot;
 
+import com.aaa.rabbitmq.config.RabbitConstants;
 import com.aaa.rabbitmq.retrySend.RetryCache;
 import com.aaa.rabbitmq.retrySend.mq.MsgRetryProducer;
 import lombok.extern.slf4j.Slf4j;
@@ -53,9 +54,22 @@ public class MsgConfirmAndReturn implements RabbitTemplate.ConfirmCallback,Rabbi
 
 
     @Override
-    public void returnedMessage(Message message, int i, String s, String s1, String s2) {
-        //此方法用于return监听（当交换机分发消息到队列跑【失败】执行）
-        log.error("~~~~~~~~~~~~~交换机发送消息到队列【失败】");
+    public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
+
+
+       /**
+        *  请注意!如果你使用了延迟队列插件，那么一定会调用该callback方法，
+        *  因为数据并没有提交上去，而是提交在交换器中，过期时间到了才提交上去，并非是bug！
+        *  你可以用if进行判断交换机名称来捕捉该报错
+      */
+        if (exchange.equals(RabbitConstants.EXCHANGE_DELAY)) {
+        //    这里是延时队列,因为有延迟所以,会直接返回,这里跳过延迟交换机
+        }else {
+            //此方法用于return监听（当交换机分发消息到队列跑【失败】执行）
+            log.error("~~~~~~~~~~~~~交换机发送消息到队列【失败】");
+            log.info("消息被服务器退回。msg:{}, replyCode:{}. replyText:{}, exchange:{}, routingKey :{}",
+                    new String(message.getBody()), replyCode, replyText, exchange, routingKey);
+        }
 
 
     }
