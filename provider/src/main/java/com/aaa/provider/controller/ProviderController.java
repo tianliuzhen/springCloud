@@ -32,10 +32,13 @@ public class ProviderController {
         return map;
     }
     @PostMapping("/query2")
-    public Map queryByFeign2(@RequestBody  Map map)      {
+    public Map queryByFeign2(@RequestBody  Map map) throws InterruptedException {
+
         System.out.println("消费者的map参数："+map);
         Map map2=new HashMap();
         map2.put("se",getXml());
+        // 模拟异常
+        // int a = 1 / 0;
         return map2;
     }
     public void exception(){

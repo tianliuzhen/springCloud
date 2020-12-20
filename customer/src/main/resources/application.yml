@@ -33,6 +33,8 @@ eureka:
 
 ### Feign 配置
 feign:
+  hystrix:
+    enabled: true
   httpclient:
     # 是否开启 Http Client
     enabled: false
