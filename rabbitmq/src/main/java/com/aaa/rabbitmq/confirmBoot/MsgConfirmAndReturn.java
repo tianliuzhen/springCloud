@@ -3,6 +3,7 @@ package com.aaa.rabbitmq.confirmBoot;
 import com.aaa.rabbitmq.config.RabbitConstants;
 import com.aaa.rabbitmq.retrySend.RetryCache;
 import com.aaa.rabbitmq.retrySend.mq.MsgRetryProducer;
+import com.sun.xml.internal.bind.v2.TODO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
@@ -45,6 +46,7 @@ public class MsgConfirmAndReturn implements RabbitTemplate.ConfirmCallback,Rabbi
         }else {
             log.info("send message failed: " + s + correlationData.toString());
             // 这里根据 correlationData 来区别出 不同的消息，进而进行不同的操作。
+            // TODO:  可做邮件提醒，日志记录，落地到库，人为或者定时任务去重新投递
             retryCache.startRetry();
             log.error("~~~~~~~~~~~~~消息发送到交换机【失败】");
         }
@@ -63,7 +65,7 @@ public class MsgConfirmAndReturn implements RabbitTemplate.ConfirmCallback,Rabbi
         *  你可以用if进行判断交换机名称来捕捉该报错
       */
         if (exchange.equals(RabbitConstants.EXCHANGE_DELAY)) {
-        //    这里是延时队列,因为有延迟所以,会直接返回,这里跳过延迟交换机
+            // todo 这里是延时队列,因为有延迟所以,会直接返回,这里跳过延迟交换机
         }else {
             //此方法用于return监听（当交换机分发消息到队列跑【失败】执行）
             log.error("~~~~~~~~~~~~~交换机发送消息到队列【失败】");
