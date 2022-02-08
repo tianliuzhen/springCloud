@@ -1,14 +1,12 @@
 package com.aaa.rabbitmq;
 
 import com.aaa.rabbitmq.retrySend.mq.MsgRetryProducer;
-import com.aaa.rabbitmq.testMq.send.MsgProducer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -22,23 +20,23 @@ import java.util.concurrent.Executors;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class Rabbit {
-    @Autowired
-    MsgProducer msgProducer;
 
     @Autowired
     MsgRetryProducer msgRetryProducer;
+
     @Test
-    public  void  testSend() throws InterruptedException {
+    public void testSend() throws InterruptedException {
 
         ExecutorService executorService = Executors.newFixedThreadPool(100);
         for (int i = 0; i < 1; i++) {
-            executorService.execute(new testRunAble(""+i));
+            executorService.execute(new testRunAble("" + i));
             Thread.sleep(100);
         }
         executorService.shutdown();
 
     }
-    public  class testRunAble implements  Runnable {
+
+    public class testRunAble implements Runnable {
         private String name;
 
         public testRunAble(String name) {
@@ -47,7 +45,7 @@ public class Rabbit {
 
         @Override
         public void run() {
-            msgRetryProducer.sendMsg("helloWord__我是线程————"+name, name+"",1);
+            msgRetryProducer.sendMsg("helloWord__我是线程————" + name, name + "", 1);
         }
     }
 

@@ -8,7 +8,7 @@ spring:
   # 支持发布确认
   rabbitmq:
     #主机连接信息
-    host: 47.98.253.2
+    host: 150.158.171.220
     port: 5672
     username: guest
     password: guest

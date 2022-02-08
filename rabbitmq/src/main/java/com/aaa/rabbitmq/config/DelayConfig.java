@@ -22,7 +22,8 @@ public class DelayConfig {
     public DirectExchange delayExchange() {
         DirectExchange directExchange = new DirectExchange(RabbitConstants.EXCHANGE_DELAY, true, false);
         //默认是不开启的
-        directExchange.setDelayed(true);
+        // TODO: 2022/2/8 如果没有安装 延时队列插件， directExchange.setDelayed(true); 会导致报错
+        // directExchange.setDelayed(true);
         //另外一种开启方式
         /**
          * Map<String, Object> pros = new HashMap<>();

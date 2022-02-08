@@ -109,7 +109,7 @@ public class QueueAndExchangeConfig {
 
     @Bean
     public Binding bindingB(){
-        return BindingBuilder.bind(queueB()).to(defaultExchange()).with(RabbitConstants.ROUTINGKEY_A);
+        return BindingBuilder.bind(queueB()).to(defaultExchange()).with(RabbitConstants.ROUTINGKEY_B);
     }
 
     @Bean

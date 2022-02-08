@@ -21,7 +21,7 @@ import java.util.UUID;
  */
 @Slf4j
 @Component
-public class MsgProducer {
+public class MsgQueueAProducer {
 
 
     @Autowired

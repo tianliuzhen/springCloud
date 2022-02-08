@@ -2,10 +2,8 @@ package com.aaa.rabbitmq.web;
 
 import com.aaa.rabbitmq.config.RabbitConstants;
 import com.aaa.rabbitmq.testAnnotation.Sends;
-import com.aaa.rabbitmq.testMq.send.MsgProducer;
-import org.springframework.amqp.AmqpException;
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.core.MessagePostProcessor;
+import com.aaa.rabbitmq.testMq.send.MsgQueueAProducer;
+import com.aaa.rabbitmq.testMq.send2.MsgQueueBProducer;
 import org.springframework.amqp.rabbit.connection.CorrelationData;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,17 +26,29 @@ public class TestController {
     @Autowired
     Sends sends;
     @Autowired
-    private MsgProducer msgProducer;
+    private MsgQueueAProducer msgQueueAProducer;
+    @Autowired
+    private MsgQueueBProducer msgQueueBProducer;
+
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
 
-
-    @GetMapping("/msgProducer")
-    public void msgProducer() {
-
-        msgProducer.sendMsg("消息实体");
+    @GetMapping("/msgQueueAProducer")
+    public void msgQueueAProducer() {
+        for (int i = 0; i < 10; i++) {
+            msgQueueAProducer.sendMsg("消息QueueA实体" + i);
+        }
     }
+
+
+    @GetMapping("/msgQueueBProducer")
+    public void msgQueueBProducer() {
+        for (int i = 0; i < 10; i++) {
+            msgQueueBProducer.sendMsg("消息QueueB实体" + i);
+        }
+    }
+
     @GetMapping("/sends")
     public void sends() {
         sends.sendOrder();
@@ -50,7 +60,7 @@ public class TestController {
         rabbitTemplate.convertAndSend(
                 RabbitConstants.EXCHANGE_A,
                 RabbitConstants.ROUTINGKEY_C,
-                "deadLetter",correlationId);
+                "deadLetter", correlationId);
     }
 
     /**
@@ -61,7 +71,7 @@ public class TestController {
     public void sendsDelayMsg() {
         CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        System.out.println("消息发送时间:"+sdf.format(new Date()));
+        System.out.println("消息发送时间:" + sdf.format(new Date()));
         rabbitTemplate.convertAndSend(
                 RabbitConstants.EXCHANGE_DELAY,
                 RabbitConstants.ROUTINGKEY_DELAY, "i am delay msg",

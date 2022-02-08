@@ -44,6 +44,12 @@ public class MsgConfirmAndReturn implements RabbitTemplate.ConfirmCallback,Rabbi
             log.info("~~~~~~~~~~~~~消息发送到交换机【成功】");
             RetryCache.del(correlationData.getId());
         }else {
+            /**
+             * 失败场景：
+             *  1、mq broker服务器宕机
+             *  2、队列消息满了
+             *  ...
+             */
             log.info("send message failed: " + s + correlationData.toString());
             // 这里根据 correlationData 来区别出 不同的消息，进而进行不同的操作。
             // TODO:  可做邮件提醒，日志记录，落地到库，人为或者定时任务去重新投递
