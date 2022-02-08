@@ -64,8 +64,7 @@ public class TestController {
     }
 
     /**
-     * mq 延时消息发送，
-     * 一般可用于场景是，取消订单
+     * mq 延时消息发送：插件实现
      */
     @GetMapping("/sendsDelayMsg")
     public void sendsDelayMsg() {
@@ -76,8 +75,29 @@ public class TestController {
                 RabbitConstants.EXCHANGE_DELAY,
                 RabbitConstants.ROUTINGKEY_DELAY, "i am delay msg",
                 message -> {
+                    // 方法一
                     // message.getMessageProperties().setHeader("x-delay",3000);
+                    // 方法二
                     message.getMessageProperties().setDelay(1000 * 3);
+                    return message;
+                },
+                correlationId);
+    }
+
+    /**
+     * mq 延时消息发送: DLX和TTL 实现
+     */
+    @GetMapping("/sendsDelayMsg2")
+    public void sendsDelayMsg2() {
+        CorrelationData correlationId = new CorrelationData(UUID.randomUUID().toString());
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println("消息发送时间:" + sdf.format(new Date()));
+        rabbitTemplate.convertAndSend(
+                RabbitConstants.EXCHANGE_A,
+                RabbitConstants.ROUTINGKEY_C, "deadLetter",
+                message -> {
+                    // 吐槽一下，这里为啥是string 不是整型
+                    message.getMessageProperties().setExpiration(1000 * 8 + "");
                     return message;
                 },
                 correlationId);

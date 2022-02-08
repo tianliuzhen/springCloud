@@ -20,15 +20,19 @@ public class DelayConfig {
      */
     @Bean
     public DirectExchange delayExchange() {
-        DirectExchange directExchange = new DirectExchange(RabbitConstants.EXCHANGE_DELAY, true, false);
         //默认是不开启的
-        // TODO: 2022/2/8 如果没有安装 延时队列插件， directExchange.setDelayed(true); 会导致报错
+        DirectExchange directExchange = new DirectExchange(RabbitConstants.EXCHANGE_DELAY, true, false);
+
+        // 开启方式：1
+        // fixme TODO: 2022/2/8 如果没有安装 延时队列插件， directExchange.setDelayed(true); 会导致报错
         // directExchange.setDelayed(true);
-        //另外一种开启方式
+
+        // 开启方式：2，另外一种开启方式
         /**
-         * Map<String, Object> pros = new HashMap<>();
+         * Map<String, Object> arguments = new HashMap<>();
          *         //设置交换机支持延迟消息推送
-         *         pros.put("x-delayed-message", "direct");
+         *         arguments.put("x-delayed-message", "direct");
+         *  new DirectExchange(RabbitConstants.EXCHANGE_DELAY, true, false,arguments);
          */
         return directExchange;
     }
