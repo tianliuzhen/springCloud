@@ -36,7 +36,7 @@ public class TestController {
 
     @GetMapping("/msgQueueAProducer")
     public void msgQueueAProducer() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 2; i++) {
             msgQueueAProducer.sendMsg("消息QueueA实体" + i);
         }
     }
@@ -44,7 +44,7 @@ public class TestController {
 
     @GetMapping("/msgQueueBProducer")
     public void msgQueueBProducer() {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 6; i++) {
             msgQueueBProducer.sendMsg("消息QueueB实体" + i);
         }
     }

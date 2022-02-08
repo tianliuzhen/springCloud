@@ -18,6 +18,6 @@ import org.springframework.stereotype.Component;
 public class MsgQueueAReceiver2 {
     @RabbitHandler
     public void process(String content) {
-        log.info("处理器 ——two --- 接收处理队列A当中的消息： " + content);
+        log.info("处理器 —— two --- 接收处理队列A当中的消息： " + content);
     }
 }
