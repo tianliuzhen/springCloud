@@ -7,16 +7,12 @@ package com.aaa.rabbitmq.pattern5.work2;
  * @version 1.0
  * @date 2020/4/28
  */
-import java.io.IOException;
-import java.util.concurrent.TimeoutException;
-
 import com.aaa.rabbitmq.pattern5.ConnectionUtil;
 import com.rabbitmq.client.AMQP.BasicProperties;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.Consumer;
-import com.rabbitmq.client.DefaultConsumer;
-import com.rabbitmq.client.Envelope;
+import com.rabbitmq.client.*;
+
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 /*
  * 消费者2
  */
@@ -29,7 +25,7 @@ public class Consumer2 {
         channel.queueDeclare(QUEUE_NAME, true, false, false, null);
 
         //同一时刻服务器只发送1条消息给消费者（能者多劳，消费消息快的，会消费更多的消息）
-        channel.basicQos(1);
+        // channel.basicQos(1);
 
         //声明队列的消费者
         Consumer consumer2 = new DefaultConsumer(channel){
@@ -41,7 +37,7 @@ public class Consumer2 {
                 System.out.println("customer2 消费消息："+message);
                 channel.basicAck(envelope.getDeliveryTag(), false);
                 try {
-                    Thread.sleep(100);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -7,18 +7,14 @@ package com.aaa.rabbitmq.pattern5.work2;
  * @version 1.0
  * @date 2020/4/28
  */
+import com.aaa.rabbitmq.pattern5.ConnectionUtil;
+import com.rabbitmq.client.AMQP.BasicProperties;
+import com.rabbitmq.client.*;
+
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
-
-import com.aaa.rabbitmq.pattern5.ConnectionUtil;
-import com.rabbitmq.client.AMQP.BasicProperties;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.Consumer;
-import com.rabbitmq.client.DefaultConsumer;
-import com.rabbitmq.client.Envelope;
 /*
  * 消费者1
  */
@@ -30,7 +26,8 @@ public class Consumer1 {
         Channel channel = connection.createChannel();
         Map<String, Object> arg = new HashMap<String , Object>();
         arg.put("x-message-ttl" , 30*1000);//设置队列里消息的ttl的时间30s
-        channel.queueDeclare(QUEUE_NAME, true, false, false, arg);
+        // channel.queueDeclare(QUEUE_NAME, true, false, false, arg);
+        channel.queueDeclare(QUEUE_NAME, true, false, false,null);
 
         //同一时刻服务器只发送1条消息给消费者（能者多劳，消费消息快的，会消费更多的消息）
         //保证在接收端一个消息没有处理完时不会接收另一个消息，即消费者端发送了ack后才会接收下一个消息。
@@ -48,7 +45,7 @@ public class Consumer1 {
                 //手动返回结果
                 channel.basicAck(envelope.getDeliveryTag(), false);
                 try {
-                    Thread.sleep(50);
+                    Thread.sleep(20);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

@@ -7,16 +7,17 @@ package com.aaa.rabbitmq.pattern5;
  * @version 1.0
  * @date 2020/4/28
  */
-import java.io.IOException;
-import java.util.concurrent.TimeoutException;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+
+import java.io.IOException;
+import java.util.concurrent.TimeoutException;
 public class ConnectionUtil {
     public static Connection getConnection() throws IOException, TimeoutException {
         //定义连接池
         ConnectionFactory connectionFactory = new ConnectionFactory();
         //连接地址
-        connectionFactory.setHost("47.98.253.2");
+        connectionFactory.setHost("150.158.171.220");
         //连接端口
         connectionFactory.setPort(5672);
         //用户名
