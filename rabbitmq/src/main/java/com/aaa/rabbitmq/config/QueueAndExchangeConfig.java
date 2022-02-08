@@ -87,8 +87,8 @@ public class QueueAndExchangeConfig {
         args.put("x-dead-letter-exchange", RabbitConstants.EXCHANGE_DEAD_LETTER);
         // DLK  x-dead-letter-routing-key  这里声明当前队列的死信路由key
         args.put("x-dead-letter-routing-key", RabbitConstants.ROUTINGKEY_DEAD_LETTER);
-        // TTL  x-message-ttl 设置队列里消息的ttl的时间3s（注意：如果同时设置队列和队列中消息的TTL，则TTL值以两者中较小的值为准。而队列中的消息存在队列中的时间，一旦超过TTL过期时间则成为Dead Letter（死信）。）
-        args.put("x-message-ttl", 1000 * 3);
+        // TTL  x-message-ttl 设置队列里消息的ttl的时间10s（注意：如果同时设置队列和队列中消息的TTL，则TTL值以两者中较小的值为准。而队列中的消息存在队列中的时间，一旦超过TTL过期时间则成为Dead Letter（死信）。）
+        args.put("x-message-ttl", 1000 * 10);
         return QueueBuilder.durable(RabbitConstants.QUEUE_C).withArguments(args).build();
     }
 

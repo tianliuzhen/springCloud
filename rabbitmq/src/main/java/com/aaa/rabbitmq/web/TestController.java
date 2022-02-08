@@ -97,7 +97,7 @@ public class TestController {
                 RabbitConstants.ROUTINGKEY_C, "deadLetter",
                 message -> {
                     // 吐槽一下，这里为啥是string 不是整型
-                    message.getMessageProperties().setExpiration(1000 * 8 + "");
+                    message.getMessageProperties().setExpiration(1000 * 2 + "");
                     return message;
                 },
                 correlationId);
