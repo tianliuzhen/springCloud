@@ -1,6 +1,5 @@
 package com.aaa.rabbitmq.testAnnotation;
 
-import com.aaa.rabbitmq.config.RabbitConstants;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.*;
 import org.springframework.stereotype.Component;
@@ -14,7 +13,7 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component
-public class Receives  {
+public class Receives {
     /**
      * 1. 需要手动在39...50:15672/ 下的RabbitMQ management 界面下创建一个队列 myQueue
      * 这种形式是   队列必须要存在
@@ -28,29 +27,33 @@ public class Receives  {
 
     /**
      * 2. 通过注解自动创建 myQueue 队列
+     *
      * @param msg
      */
     @RabbitListener(queuesToDeclare = @Queue("myQueue2"))
     @RabbitHandler
-    public void receive2(String msg){
-        log.warn("mqReceive = {}" , msg );
+    public void receive2(String msg) {
+        log.warn("mqReceive = {}", msg);
     }
 
     /**
      * 3. 自动创建，queue 和 exchange 绑定
+     *
      * @param msg
      * @return void
      */
     @RabbitListener(bindings = @QueueBinding(value = @Queue("myQueue3"),
             exchange = @Exchange("myExchange")
     ))
-    public void receive3(String msg){
-        log.warn("mqReceive = {}" , msg );
+    public void receive3(String msg) {
+        log.warn("mqReceive = {}", msg);
     }
 
 
     /**-------------------------- 模拟消息分组 -----------------------------------*/
     /**
+     * todo：这种方案会导致多消费者，消费同一批数据
+     * <p>
      * 数码供应商服务  接收消息
      * 消息发到交换机，交换机根据不同的key 发送到不同的队列
      */
@@ -59,10 +62,13 @@ public class Receives  {
             key = "computer",
             value = @Queue("computerOrder")
     ))
-    public void receiveComputer(String msg){
-        log.warn(" receiveComputer service = {}" , msg );
+    public void receiveComputer(String msg) {
+        log.warn(" receiveComputer service = {}", msg);
     }
+
     /**
+     * todo：这种方案会导致多消费者，消费同一批数据
+     * <p>
      * 水果供应商服务  接收消息
      */
     @RabbitListener(bindings = @QueueBinding(
@@ -70,8 +76,8 @@ public class Receives  {
             key = "fruit",
             exchange = @Exchange("myOrder")
     ))
-    public void receiveFruit(String msg){
-        log.warn(" receiveFruit service = {}" , msg );
+    public void receiveFruit(String msg) {
+        log.warn(" receiveFruit service = {}", msg);
     }
 
 }
