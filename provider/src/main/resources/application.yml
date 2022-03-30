@@ -23,13 +23,15 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:7082/eureka
-
   # 检测与续约时间
-instance:
-  #   Eureka客户端向服务端发送心跳的时间间隔，单位为秒
-  lease-renewal-interval-in-seconds: 1
-  #   服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则踢出
-  lease-expiration-duration-in-seconds: 2
+  instance:
+  #  Eureka客户端向服务端发送心跳的时间间隔，单位为秒
+    lease-renewal-interval-in-seconds: 1
+  # 服务端在收到最后一次心跳之后等待的时间上限，单位为秒，超过则踢出
+    lease-expiration-duration-in-seconds: 2
+  # 设置注册到eureka的名字，格式：ip:服务:端口号
+    instance-id: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
+    prefer-ip-address: true
 
 
 mybatis:
