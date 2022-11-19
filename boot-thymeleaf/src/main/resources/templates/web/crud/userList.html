@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <style type="text/css">
+        table {
+            width: 400px;
+            text-align: center;
+        }
+
+        .top {
+            width: 700px;
+            height: 50px;
+            background-color: #FE6219;
+            color: white;
+            /* 设置字体大小 */
+            font-size: 20px;
+            /* 设置字间距 */
+            letter-spacing: 3px;
+            /* 设置行高与盒子高度一致，实现垂直居中 */
+            line-height: 50px;
+            /* 设置水平居中 */
+            text-align: center;
+        }
+
+        /* 设置表格 */
+        table {
+            /* 表格的宽度与top一样 */
+            width: 700px;
+
+            /* 设置表格边框 */
+            border: 1px solid white;
+
+        }
+
+        /* 设置表头 */
+        th {
+
+            width: 170px;
+            height: 45px;
+
+            background-color: #FED68F;
+
+            border: 0px;
+
+            /* 合并相邻的边框 */
+            border-collapse: collapse;
+
+            /* 字体居中对齐 */
+            text-align: center;
+
+        }
+
+        /* 单独设置表头中的“影片名” */
+        .ying-pian {
+
+            width: 300px;
+
+        }
+
+        /* 设置表格中每一个单元格 */
+        td {
+
+            width: 170px;
+            height: 45px;
+
+            /* 设置无边框 */
+            border: 0px;
+
+            /* 字体水平居中 */
+            text-align: center;
+
+        }
+
+        /* 设置排名为奇数的一行表格 */
+        .odd {
+            background-color: #FFF4E4;
+        }
+
+        /* 设置排名为偶数的一行表格 */
+        .even {
+            background-color: #FED68F;
+        }
+
+        #delAll {
+            background-color: #FE6219; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        .insertJc {
+            background-color: #FE6219; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        #deleteJc {
+            background-color: red; /* Green */
+            border: none;
+            color: white;
+            padding: 10px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<a href="/toAddUser" class="insertJc">添加用户</a><br/>
+<table border="1" cellpadding="0" cellspacing="0">
+    <tr>
+        <th>教材编号</th>
+        <th>教材</th>
+        <th>教材版本</th>
+        <th>教材作者</th>
+        <th>学校</th>
+        <th>创建时间</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="user,status:${userList}" class="odd">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.jc}"></td>
+        <td th:text="${user.jcVersion}"></td>
+        <td th:text="${user.jcCreator}"></td>
+        <td th:text="${user.school}"></td>
+        <td th:text="${#dates.format(user.jcCreateTime,'yyyy-MM-dd HH:mm:ss')}"></td>
+        <td>
+            <a id="deleteJc" th:href="'/deleteUser?id='+${user.id}">删除</a>
+            <a class="insertJc" th:href="'/toEditUser?id='+${user.id}">修改</a>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

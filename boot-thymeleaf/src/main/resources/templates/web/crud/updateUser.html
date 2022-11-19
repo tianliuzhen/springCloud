@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+</head>
+<body>
+
+<form method="post" action="/updateUser">
+    <input type="text" hidden="hidden" name="id" th:value="${user.id}"/>
+
+    教材: <input type="text" name="jc" th:value="${user.jc}"/><br/>
+    教材版本: <input type="text" name="jcVersion" th:value="${user.jcVersion}"/><br/>
+    教材创建人: <input type="text" name="jcCreator" th:value="${user.jcCreator}"/><br/>
+    创建时间: <input type="text" name="jcCreateTime" th:value="${user.jcCreateTime}"/><br/>
+    学校: <input type="text" name="school" th:value="${user.school}"/><br/>
+    <input type="submit" value="更改教材"/>
+</form>
+
+</body>
+</html>
