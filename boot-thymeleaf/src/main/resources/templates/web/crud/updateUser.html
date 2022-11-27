@@ -3,19 +3,36 @@
 <head>
     <meta charset="utf-8"/>
     <title></title>
+    <style>
+        #insertJc {
+            background-color: #FE6219; /* Green */
+            border: none;
+            color: white;
+            padding: 4px 4px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
 </head>
-<body>
+<body style="text-align: center">
 
-<form method="post" action="/updateUser">
-    <input type="text" hidden="hidden" name="id" th:value="${user.id}"/>
+<div style="width: 300px;height: 600px; position: relative;">
+    <div style="text-align: right">
+        <form method="post" action="/updateUser">
+            <input type="text" hidden="hidden" name="id" th:value="${user.id}"/>
 
-    教材: <input type="text" name="jc" th:value="${user.jc}"/><br/>
-    教材版本: <input type="text" name="jcVersion" th:value="${user.jcVersion}"/><br/>
-    教材创建人: <input type="text" name="jcCreator" th:value="${user.jcCreator}"/><br/>
-    创建时间: <input type="text" name="jcCreateTime" th:value="${user.jcCreateTime}"/><br/>
-    学校: <input type="text" name="school" th:value="${user.school}"/><br/>
-    <input type="submit" value="更改教材"/>
-</form>
+            教材: <input type="text" name="jc" th:value="${user.jc}"/><br/>
+            教材版本: <input type="text" name="jcVersion" th:value="${user.jcVersion}"/><br/>
+            教材创建人: <input type="text" name="jcCreator" th:value="${user.jcCreator}"/><br/>
+            创建时间: <input type="text" name="jcCreateTime" th:value="${#dates.format(user.jcCreateTime,'yyyy-MM-dd HH:mm:ss')}"/><br/>
+            学校: <input type="text" name="school" th:value="${user.school}"/><br/>
+            <input id="insertJc" type="submit" value="更改教材"/>
+        </form>
+    </div>
+
+</div>
 
 </body>
 </html>
