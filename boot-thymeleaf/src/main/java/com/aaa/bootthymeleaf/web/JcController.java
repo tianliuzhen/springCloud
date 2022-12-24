@@ -1,7 +1,7 @@
 package com.aaa.bootthymeleaf.web;
 
-import com.aaa.bootthymeleaf.domain.User;
-import com.aaa.bootthymeleaf.service.IUserService;
+import com.aaa.bootthymeleaf.domain.JcModel;
+import com.aaa.bootthymeleaf.service.JcService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,18 +14,18 @@ import java.util.List;
  * @version 1.0 UserController.java  2022/11/19 19:16
  */
 @Controller
-public class UserController {
+public class JcController {
 
     @Autowired
-    private IUserService userService;
+    private JcService jcService;
 
     /**
-     * 跳转到userList的页面
+     * 跳转到List的页面
      * @return
      */
-    @RequestMapping("/toUserList")
+    @RequestMapping("/toJcList")
     public String toUserList(Model model) throws Exception {
-        List<User> userList = userService.findUserAll();
+        List<JcModel> userList = jcService.findUserAll();
         model.addAttribute("userList",userList);
         return "crud/userList";
     }
@@ -35,9 +35,9 @@ public class UserController {
      * 删除用户
      * @return
      */
-    @RequestMapping("/deleteUser")
+    @RequestMapping("/jcUser")
     public String deleteUser(Integer id){
-        userService.deleteUserById(id);
+        jcService.deleteUserById(id);
         return "redirect:/toUserList";
     }
 
@@ -45,18 +45,18 @@ public class UserController {
      * 跳转到添加数据的页面
      * @return
      */
-    @RequestMapping("/toAddUser")
+    @RequestMapping("/toAddJc")
     public String toAddUser(){
-        return "/crud/addUser";
+        return "/crud/addJc";
     }
 
     /**
      * 跳转到更新页面
      * @return
      */
-    @RequestMapping("/toEditUser")
+    @RequestMapping("/toEditJc")
     public String toUpdateUser(Integer id,Model model) throws Exception {
-        User user=userService.findUserById(id);
+        JcModel user=jcService.findUserById(id);
         model.addAttribute("user",user);
         return "/crud/updateUser";
     }
@@ -67,9 +67,9 @@ public class UserController {
      * @param user
      * @return
      */
-    @RequestMapping("/addUser")
-    public String addUser(User user) throws Exception{
-        userService.addUser(user);
+    @RequestMapping("/addJc")
+    public String addUser(JcModel user) throws Exception{
+        jcService.addUser(user);
         return "redirect:/toUserList";
     }
 
@@ -79,10 +79,10 @@ public class UserController {
      * @param user
      * @return
      */
-    @RequestMapping("/updateUser")
-    public String updateUser(User user) throws Exception {
-        userService.updateUserById(user);
-        return "redirect:/toUserList";
+    @RequestMapping("/updateJc")
+    public String updateUser(JcModel user) throws Exception {
+        jcService.updateUserById(user);
+        return "redirect:/toUpdateJc";
     }
 
 }

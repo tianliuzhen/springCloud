@@ -1,6 +1,6 @@
 package com.aaa.bootthymeleaf.mapper;
 
-import com.aaa.bootthymeleaf.domain.User;
+import com.aaa.bootthymeleaf.domain.JcModel;
 import org.springframework.stereotype.Repository;
 import tk.mybatis.mapper.common.Mapper;
 
@@ -10,5 +10,5 @@ import tk.mybatis.mapper.common.Mapper;
  */
 
 @Repository
-public interface UserMapper extends Mapper<User> {
+public interface UserMapper extends Mapper<JcModel> {
 }

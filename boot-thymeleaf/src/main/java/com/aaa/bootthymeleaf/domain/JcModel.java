@@ -17,7 +17,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "jc")
-public class User {
+public class JcModel {
     @Id
     private Integer id;
 

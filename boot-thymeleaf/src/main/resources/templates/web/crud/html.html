@@ -1,0 +1,543 @@
+<html data-dpr="1" style="font-size: 54px;">
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <meta id="pageContext" contextname="/jcloud-web">
+    <link rel="stylesheet" href="/jcloud-web/component/static/css/base.css?0.0.1">
+    <link rel="stylesheet" href="/jcloud-web/component/static/css/swiper.min.css?0.0.1">
+    <link rel="stylesheet" href="/jcloud-web/component/static/css/mui.min.css?0.0.1">
+    <link rel="stylesheet" href="/jcloud-web/component/static/css/mui.extends.css?0.0.1">
+    <!--[if lt IE 9]>
+    <script r='m'>document.createElement("section")</script><![endif]-->
+    <script src="/jcloud-web/component/static/scripts/comm/jquery.min.js?0.0.1&amp;D9PVtGL=2d6b7b"></script>
+    <script src="/jcloud-web/component/static/scripts/comm/swiper.jquery.min.js?0.0.1&amp;D9PVtGL=2d6b7b"></script>
+    <script src="/jcloud-web/component/static/scripts/comm/centers.js?0.0.1&amp;D9PVtGL=2d6b7b"></script>
+    <script src="/jcloud-web/component/static/scripts/comm/mui.min.js?0.0.1&amp;D9PVtGL=2d6b7b"></script>
+    <link rel="shortcut icon" href="/jcloud-web/static/images/favicon.ico">
+    <title>照片补传</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="/jcloud-web/static/css/my-mui.css">
+    <script src="/jcloud-web/static/scripts/comm/photoUtils.js?0.0.1&amp;D9PVtGL=2d6b7b"></script>
+    <script src="/jcloud-web/static/scripts/comm/vconsole.min.js?0.0.1&amp;D9PVtGL=2d6b7b"></script>
+    <style>
+        html, body, .mui-bar-nav ~ .mui-content {
+            height: 100%
+        }
+
+        .wrap {
+            background-color: #efeff4;
+        }
+
+        .header-bg {
+            background: url(/jcloud-web/static/images/b-bg3.png) no-repeat;
+            background-size: 100% 100%;
+            height: 1.333333rem;
+        }
+
+        .old-height {
+            height: 5.333333rem;
+        }
+
+        .photo-content {
+            /*margin: 0 0.48rem;*/
+            margin-top: -0.96rem;
+            background-color: #ffffff;
+            /*padding: 0.293333rem;*/
+            border-radius: 0.133333rem;
+            box-shadow: -2px 0px 2px 1px #f3f3f3, 0px -2px 2px 1px #f3f3f3, 2px 0px 2px 1px #f3f3f3, 0px 2px 2px 1px #f3f3f3
+        }
+
+        .photo-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .photo-desc {
+            width: 62%;
+            margin-top: 1rem;
+            font-size: 0.3rem;
+        }
+
+        .title {
+            font-size: 0.35rem;
+            font-weight: 700;
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        .photo-item {
+            width: 3rem;
+            height: 2.14rem;
+            margin: 1rem auto 1rem;
+            position: relative;
+            box-shadow: -2px 0px 2px 1px #f3f3f3, 0px -2px 2px 1px #f3f3f3, 2px 0px 2px 1px #f3f3f3, 0px 2px 2px 1px #f3f3f3;
+        }
+
+        .photo-common {
+            background: url(/jcloud-web/static/images/common.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .photo-front {
+            background: url(/jcloud-web/static/images/front.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .photo-back {
+            background: url(/jcloud-web/static/images/reverse.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .photo-scene {
+            background: url(/jcloud-web/static/images/scene.png) no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .area {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;
+        }
+
+        .cred-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            padding: 2px;
+        }
+
+        .agin {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            color: red;
+            top: 40%;
+        }
+
+        .my-btn-row {
+            padding: 0.4rem;
+            width: 100%;
+        }
+
+        .my-btn-item {
+            padding: 0.266666rem 0;
+            background-color: #ce4e47;
+            color: #FFFFFF;
+        }
+
+        .btn-disabled {
+            background-color: #dcdcdc;
+            color: #575757;
+        }
+
+        .relName, .noPhoto {
+            height: 5.333333rem;
+            line-height: 5.333333rem;
+            font-size: 18px;
+            text-align: center;
+        }
+    </style>
+    <style>@charset "utf-8";
+    html {
+        color: #000;
+        background: #fff;
+        overflow-y: scroll;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%
+    }
+
+    html * {
+        outline: 0;
+        -webkit-text-size-adjust: none;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    html, body {
+        font-family: sans-serif
+    }
+
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        margin: 0;
+        padding: 0
+    }
+
+    input, select, textarea {
+        font-size: 100%
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0
+    }
+
+    fieldset, img {
+        border: 0
+    }
+
+    abbr, acronym {
+        border: 0;
+        font-variant: normal
+    }
+
+    del {
+        text-decoration: line-through
+    }
+
+    address, caption, cite, code, dfn, em, th, var {
+        font-style: normal;
+        font-weight: 500
+    }
+
+    ol, ul {
+        list-style: none
+    }
+
+    caption, th {
+        text-align: left
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 100%;
+        font-weight: 500
+    }
+
+    q:before, q:after {
+        content: ''
+    }
+
+    sub, sup {
+        font-size: 75%;
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline
+    }
+
+    sup {
+        top: -.5em
+    }
+
+    sub {
+        bottom: -.25em
+    }
+
+    a:hover {
+        text-decoration: underline
+    }
+
+    ins, a {
+        text-decoration: none
+    }</style>
+</head>
+
+<body class="mbody" style="font-size: 12px;">
+<header class="mui-bar mui-bar-nav my-bar-nav">
+    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left my-action-back" datas-ts="=R[e{="></a>
+    <h1 class="mui-title">照片补传</h1>
+</header>
+<div class="mui-content">
+    <div class="wrap">
+        <div class="header-bg">
+        </div>
+        <div class="photo-content old-height">
+            <div class="photo-list"></div>
+            <div class="relName hide">
+                实名审核通过，不需要补传照片!
+            </div>
+            <div class="noPhoto">链接已失效！</div>
+        </div>
+        <div class="my-btn-row">
+            <button id="btnNext" type="button" disabled="disabled"
+                    class="mui-btn mui-btn-block my-btn-item btn-disabled">下一步
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="/jcloud-web/static/scripts/comm/flexible.js?D9PVtGL=2d6b7b"></script>
+<script type="text/javascript">
+
+
+    mui.init({
+        swipeBack: true //启用右滑关闭功能
+    });
+    var exTradeId,
+        tradeId,
+        urlSeq,
+        tradeInmode;
+    var staff_id = '';
+    var depart_id = '';
+    var vConsole = null;
+    $(function () {
+        $('.photo-content').addClass('old-height')
+        exTradeId = getUrlParam('exTradeId')
+        tradeInmode = getUrlParam('tradeInmode')
+        urlSeq = getUrlParam('urlSeq')
+        tradeId = getUrlParam('tradeId')
+        var conf = getUrlParam('console')
+        if (console == "1") {
+            vConsole = new VConsole();
+        }
+        mui.ajax($.centers.ctx + '/retransmitPhoto/queryPhotoInfo', {
+            data: {
+                exTradeId: exTradeId,
+                tradeInmode: tradeInmode,
+                tradeId: tradeId,
+                urlSeq: urlSeq
+            },
+            dataType: 'json', //服务器返回json格式数据
+            type: 'post', //HTTP请求类型
+            timeout: 10000, //超时时间设置为10秒；
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            success: function (data) {
+                if (data.respCode == '1') {
+                    $('.photo-content').removeClass('old-height')
+                    var respData = data.data
+                    var photoNoPass = respData.photoNoPass
+                    var realName = respData.real_name
+                    depart_id = respData.depart_id ? respData.depart_id : ''
+                    staff_id = respData.staff_id ? respData.staff_id : ''
+                    if (realName == '1') {
+                        $('.relName').removeClass('hide')
+                        return
+                    }
+                    if (photoNoPass.length == 0) {
+                        $('.noPhoto').removeClass('hide')
+                        return
+                    } else {
+                        $.each(photoNoPass, function (i, n) {
+                            var html1;
+                            var type = n.photo_type
+                            var desc = n.photo_desc.replace(/(\r\n|↵)/g, '<br/>')
+                            if (type == "1" || type == '6' || type == '121' || type == '131' || type == '141') {//身份证正面
+                                html1 = '<div class="photo-item photo-item' + i + ' photo-need photo-front"></div>' +
+                                    '<div class="photo-desc"><h5 class="title">' + n.photo_name + '</h5>' + desc + '</div>';
+                            } else if (type == "2" || type == '7' || type == '122' || type == '132' || type == '142') {//身份证反面
+                                html1 = '<div class="photo-item photo-item' + i + ' photo-need photo-back"></div>' +
+                                    '<div class="photo-desc"><h5 class="title">' + n.photo_name + '</h5>' + desc + '</div>';
+                            } else if (type == '10' || type == '111' || type == '112' || type == '113') {
+                                html1 = '<div class="photo-item photo-item' + i + ' photo-need photo-scene"></div>' +
+                                    '<div class="photo-desc"><h5 class="title">' + n.photo_name + '</h5>' + desc + '</div>';
+                            } else {
+                                html1 = '<div class="photo-item photo-item' + i + ' photo-need photo-common"></div>' +
+                                    '<div class="photo-desc"><h5 class="title">' + n.photo_name + '</h5>' + desc + '</div>';
+                            }
+                            var html2 = '<img class="cred-img" photo_type="' + n.photo_type + '" alt=""  />' +
+                                '<input type="file" accept="image/*" class="area">' +
+                                '<div class="agin hide">点击重拍</div>';
+                            $('.photo-list').append(html1);
+                            $(".photo-list .photo-item" + i).append(html2);
+
+                        })
+
+                    }
+                } else {
+                    $('.noPhoto').html(data.respDesc).removeClass('hide')
+                }
+            },
+            error: function (xhr, type, errorThrown) {
+                //异常处理；
+                console.log(type);
+            }
+        });
+    })
+    var formData = new FormData(),
+        idCard,
+        idCardVerify = {
+            init: function () {
+                this.cardClick(); // 正面点击事件开始
+                this.submitFn(); //下一步按钮点击事件
+            },
+            cardClick: function () {
+                var that = this;
+                $(document).on("change", ".area", function (e) {
+                    var img = $(this).prev(".cred-img")
+                    var layerB = $(this).next(".agin")
+                    console.log("img---1111111")
+                    that.readURL(this, img, layerB);
+                    idCard = e.target.files[0];
+                    var photoType = img.attr("photo_type")
+                    console.log("img---" + photoType)
+                    var minSize, photoSize, photoWidth, photoHeight, nx;
+
+                    if (photoType == "1" || photoType == "2" || photoType == "3" || photoType == "10") {
+                        minSize = 20 * 1024;
+                        photoSize = 200 * 1024;
+                        photoWidth = 600;
+                        photoHeight = 1000;
+                        nx = 0.5
+                    } else {
+                        minSize = 1024 * 1024
+                        photoSize = 2048 * 1024;
+                        photoWidth = 1200;
+                        photoHeight = 2000;
+                        nx = 0.95
+                    }
+                    var photoCompress = new PhotoCompress(minSize, photoSize, photoWidth, photoHeight, nx);
+                    photoCompress.compress(idCard, function (f) {
+                        var fileReader = new FileReader();
+                        fileReader.onload = function () {
+                            var image = new Image()
+                            image.onload = () => {
+                                // 对 image 进行的操作
+                                var imageUrl = idCardVerify.compressImage(image)
+                                idCard = imageUrl
+                                $(img).attr({
+                                    src: imageUrl
+                                });
+                            }
+                            image.src = fileReader.result
+                        }
+                        fileReader.readAsDataURL(f)
+                    });
+
+                })
+            },
+            readURL: function (input, img, layerB) { //读取上传图片
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $(input).css("z-index", "3");
+                        $(img).attr("src", e.target.result).removeClass("hide")
+                        $(layerB).removeClass("hide");
+                        if ($('.photo-need').find($('.agin.hide')).length == 0) {
+                            $("#btnNext").removeClass("btn-disabled").removeAttr("disabled");
+                        }
+                    }
+                    reader.readAsDataURL(input.files[0]);
+                }
+            },
+            getNowTime: function () {
+                var date = new Date();
+                this.year = date.getFullYear();
+                this.month = (date.getMonth() + 1) < 10 ? "0" + (date.getMonth() + 1) : (date.getMonth() + 1);
+                this.date = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+                this.hour = date.getHours() < 10 ? "0" + date.getHours() : date.getHours();
+                this.minute = date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+                // this.second = date.getSeconds() < 10 ? "0" + date.getSeconds() : date.getSeconds();
+                var currentTime = this.year + '/' + this.month + '/' + this.date + '/' + this.hour + '/' + this.minute;
+                return currentTime;
+            },
+            compressImage: function (image) { //压缩图片
+                var that = this;
+                var canvas = document.createElement('canvas')
+                var ctx = canvas.getContext('2d')
+                // 将 canvas 宽高设为原图的 1/10，即将原图宽高压缩 10 倍
+                canvas.width = image.width
+                canvas.height = image.height
+
+                ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+                ctx.drawImage(image, 0, 0, image.width, image.height, 0, 0, canvas.width, canvas.height)
+                // 绘制图片
+                ctx.font = "20px Microsoft YaHei";
+                ctx.globalAlpha = 0.25;
+                ctx.fillStyle = '#ebebeb'
+                // 设置垂直对齐方式
+                // 测试输出文字宽度
+                var text = "仅限办理北京联通业务 " + idCardVerify.getNowTime() + " " + depart_id + " " + staff_id
+                let width = ctx.measureText(text).width
+
+                // 围绕图片中心设置旋转
+                ctx.rotate((-45 * Math.PI) / 180)
+
+                // 循环设置水印
+                for (let x = -1 * canvas.width; x < (canvas.width + canvas.height) * 2; x += 80) {
+                    for (
+                        let y = -1 * canvas.height - x * width * 0.5;
+                        y < (canvas.width + canvas.height) * 2;
+                        y += width + 24
+                    ) {
+                        ctx.fillText(text, y, x)
+                    }
+                }
+                ctx.restore()
+
+                // 将 canvas 导出为 base64 URL 并返回
+                return canvas.toDataURL('image/jpeg')
+            },
+            base64Url2Blob: function (url) {
+                // 将base64url通过 , 分割为含有两个元素的数组
+                var temp = url.split(',')
+                // 将图片的base64编码数据解码
+                var bytes = window.atob(temp[1])
+                // 匹配图片的 mime
+                var mime = temp[0].match(/:(.*?);/)[1]
+                // 创建一个类型化数组，该数组的长度与解码后的图片数据长度相同
+                var ia = new Uint8Array(bytes.length)
+                // 变量图片数据的每一位，并将每一位的 Unicode 编码存入类型化数组
+                for (var i = 0; i < bytes.length; i++) {
+                    ia[i] = bytes.charCodeAt(i)
+                }
+                // 通过类型化数组创建一个 Blob 对象
+                return new Blob([ia], {
+                    type: mime
+                })
+            },
+            submitFn: function () {
+                var that = this;
+                $(document).on("click", "#btnNext", function (e) {
+                    $(this).attr("disabled", "disabled").addClass("btn-disabled")
+                    var photos = $('.photo-need').find($('.cred-img'))
+                    var photoArr = []
+                    $.each(photos, function (i, n) {
+                        var cardImg = $(n).attr('src').substring($(n).attr('src').indexOf(',') + 1)
+                        photoArr.push({
+                            photo_type: $(n).attr('photo_type'),
+                            photo: cardImg
+                        })
+                    });
+                    mui.ajax($.centers.ctx + '/retransmitPhoto/retransmitPhoto', {
+                        data: {
+                            custPhotoInfo: photoArr,
+                            exTradeId: exTradeId,
+                            tradeId: tradeId,
+                            urlSeq: urlSeq,
+                            tradeInmode: tradeInmode
+                        },
+                        dataType: 'json', //服务器返回json格式数据
+                        type: 'post', //HTTP请求类型
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        success: function (data) {
+                            if (data.respCode == '1') {
+                                mui.openWindow({
+                                    url: $.centers.ctx + '/forward/photograph/submitResult?result=1&ex_trade_id=' + data.data.ex_trade_id
+                                });
+                            } else {
+                                mui.openWindow({
+                                    url: $.centers.ctx + '/forward/photograph/submitResult?result=0&ex_trade_id=' + data.respDesc
+                                });
+                            }
+                        },
+                        error: function (xhr, type, errorThrown) {
+                            //异常处理；
+                            console.log(type);
+                        }
+                    });
+                })
+            }
+        }
+    idCardVerify.init();
+
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r != null) return unescape(r[2]);
+        return null; //返回参数值
+    }
+</script>
+
+
+</body>
+</html>
